@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Тренировки BALANS: библиотека упражнений, тренажёры, силовые, аэробные и интервальные тренировки." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Тренировки — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a href="/balans/assessment">Оценка</a><a href="/balans/control">Контроль</a><a href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a class="active" href="/balans/train">Тренировки</a><a href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/balans">← Все инструменты</a>
+      <section class="page-intro">
+        <p class="eyebrow">Физическая активность</p>
+        <h1>Тренировки</h1>
+        <p>Библиотека упражнений, ориентир по оборудованию и материалы о планировании нагрузки.</p>
+      </section>
+
+      <section class="training-directions">
+        <article><span>01</span><h2>Силовые тренировки</h2><p>Классификация упражнений, план, техника, адаптация, восстановление и безопасность.</p></article>
+        <article><span>02</span><h2>Аэробные тренировки</h2><p>Ходьба, бег, велосипед, плавание, зона 2, VO₂max и подготовка к старту.</p></article>
+        <article><span>03</span><h2>HIIT</h2><p>Короткие интенсивные интервалы как дополнение к силовой и аэробной работе.</p></article>
+      </section>
+
+      <section class="clinical-guide" aria-labelledby="child-train-title" style="margin-bottom:4rem">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Дети и подростки</p>
+          <h2 id="child-train-title">Тренировки по возрасту</h2>
+          <p>Отдельный модуль для 0–17 лет: возрастные рамки, сила, прогрессия, контроль нагрузки и безопасность.</p>
+        </div>
+        <a class="secondary-action inline-action" href="/balans/train-child-by-age">Открыть модуль по возрасту →</a>
+      </section>
+
+      <section class="exercise-section" aria-labelledby="exercise-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">29 упражнений</p>
+          <h2 id="exercise-title">Библиотека упражнений</h2>
+          <p>Ищите по названию или группе мышц. Откройте карточку, чтобы посмотреть видео, технику и частые ошибки.</p>
+        </div>
+        <div class="library-controls">
+          <label class="search-field"><span class="sr-only">Поиск упражнений</span><input id="exercise-search" type="search" placeholder="Например: приседания, спина, грудь" /></label>
+          <div class="filter-row" role="group" aria-label="Фильтр по группе мышц">
+            <button class="filter-button active" type="button" data-filter="all">Все</button>
+            <button class="filter-button" type="button" data-filter="legs">Ноги и ягодицы</button>
+            <button class="filter-button" type="button" data-filter="back">Спина</button>
+            <button class="filter-button" type="button" data-filter="chest">Грудь</button>
+            <button class="filter-button" type="button" data-filter="shoulders">Плечи</button>
+            <button class="filter-button" type="button" data-filter="arms">Руки</button>
+          </div>
+        </div>
+        <div class="exercise-grid" id="exercise-grid">
+          <article data-group="legs" data-search="приседания со штангой квадрицепс ягодицы"><span>Ноги и ягодицы</span><h3>Приседания со штангой</h3><p>Квадрицепс · большая ягодичная</p></article>
+          <article data-group="legs" data-search="жим ногами квадрицепс"><span>Ноги и ягодицы</span><h3>Жим ногами</h3><p>Квадрицепс · ягодицы</p></article>
+          <article data-group="legs" data-search="болгарские сплит приседания квадрицепс ягодицы"><span>Ноги и ягодицы</span><h3>Болгарские сплит-приседания</h3><p>Квадрицепс · большая ягодичная</p></article>
+          <article data-group="legs" data-search="ягодичный мост hip thrust ягодицы"><span>Ноги и ягодицы</span><h3>Ягодичный мост со штангой</h3><p>Большая ягодичная</p></article>
+          <article data-group="legs" data-search="разгибание ног квадрицепс"><span>Ноги и ягодицы</span><h3>Разгибание ног</h3><p>Квадрицепс</p></article>
+          <article data-group="legs" data-search="сгибание ног бицепс бедра"><span>Ноги и ягодицы</span><h3>Сгибание ног</h3><p>Задняя поверхность бедра</p></article>
+          <article data-group="back" data-search="тяга горизонтального блока широчайшие ромбовидные трапеция"><span>Спина</span><h3>Тяга горизонтального блока</h3><p>Широчайшие · ромбовидные · трапеция</p></article>
+          <article data-group="back" data-search="тяга гантели одной рукой широчайшие"><span>Спина</span><h3>Тяга гантели одной рукой</h3><p>Широчайшие</p></article>
+          <article data-group="back" data-search="тяга верхнего блока широчайшие"><span>Спина</span><h3>Тяга верхнего блока</h3><p>Широчайшие</p></article>
+          <article data-group="back" data-search="тяга т грифа t-bar ромбовидные"><span>Спина</span><h3>Тяга Т-грифа</h3><p>Широчайшие · ромбовидные · трапеция</p></article>
+          <article data-group="back" data-search="тяга штанги в наклоне широчайшие"><span>Спина</span><h3>Тяга штанги в наклоне</h3><p>Широчайшие · ромбовидные · трапеция</p></article>
+          <article data-group="back" data-search="гиперэкстензия разгибатели спины ягодицы"><span>Спина</span><h3>Гиперэкстензия</h3><p>Разгибатели спины · ягодицы</p></article>
+          <article data-group="back" data-search="подтягивания широчайшие бицепс"><span>Спина</span><h3>Подтягивания</h3><p>Широчайшие · бицепс</p></article>
+          <article data-group="chest" data-search="отжимания грудь трицепс"><span>Грудь</span><h3>Отжимания</h3><p>Большая грудная · трицепс</p></article>
+          <article data-group="chest" data-search="жим гантелей лёжа грудь трицепс"><span>Грудь</span><h3>Жим гантелей лёжа</h3><p>Большая грудная · трицепс</p></article>
+          <article data-group="chest" data-search="разведение гантелей лёжа грудь"><span>Грудь</span><h3>Разведение гантелей лёжа</h3><p>Большая грудная</p></article>
+          <article data-group="chest" data-search="жим штанги лёжа грудь трицепс"><span>Грудь</span><h3>Жим штанги лёжа</h3><p>Большая грудная · трицепс</p></article>
+          <article data-group="chest" data-search="жим штанги широким хватом грудь"><span>Грудь</span><h3>Жим штанги широким хватом</h3><p>Большая грудная</p></article>
+          <article data-group="chest" data-search="сведение рук pec deck бабочка грудь"><span>Грудь</span><h3>Сведение рук в тренажёре</h3><p>Большая грудная</p></article>
+          <article data-group="shoulders" data-search="жим гантелей сидя плечи дельтовидные"><span>Плечи</span><h3>Жим гантелей сидя</h3><p>Передняя и средняя дельтовидные</p></article>
+          <article data-group="shoulders" data-search="обратная бабочка задняя дельта"><span>Плечи</span><h3>Обратная «бабочка»</h3><p>Задняя дельтовидная</p></article>
+          <article data-group="shoulders" data-search="face pull тяга к лицу задняя дельта ромбовидные"><span>Плечи</span><h3>Тяга каната к лицу</h3><p>Задняя дельтовидная · ромбовидные</p></article>
+          <article data-group="shoulders" data-search="жим на плечи ошибки трицепс"><span>Плечи</span><h3>Жим на плечи: частые ошибки</h3><p>Дельтовидные · трицепс</p></article>
+          <article data-group="shoulders" data-search="махи гантелями стороны средняя дельта"><span>Плечи</span><h3>Подъём гантелей в стороны</h3><p>Средняя дельтовидная</p></article>
+          <article data-group="arms" data-search="гантели частые ошибки руки"><span>Руки</span><h3>Упражнения с гантелями: ошибки</h3><p>Зависит от упражнения</p></article>
+          <article data-group="arms" data-search="сгибание рук гантели сидя бицепс"><span>Руки</span><h3>Сгибание рук с гантелями сидя</h3><p>Бицепс</p></article>
+          <article data-group="arms" data-search="сгибание рук штанга бицепс"><span>Руки</span><h3>Сгибание рук со штангой</h3><p>Бицепс</p></article>
+          <article data-group="arms" data-search="разгибание рук канат блок трицепс"><span>Руки</span><h3>Разгибание рук с канатом</h3><p>Трицепс</p></article>
+          <article data-group="arms" data-search="французский жим лёжа трицепс"><span>Руки</span><h3>Разгибание рук лёжа</h3><p>Трицепс</p></article>
+        </div>
+        <p class="empty-result" id="exercise-empty" hidden>По вашему запросу упражнений не найдено.</p>
+      </section>
+
+      <section class="equipment-section" aria-labelledby="equipment-title">
+        <p class="eyebrow">Оборудование зала</p>
+        <h2 id="equipment-title">Тренажёры по зонам</h2>
+        <div class="equipment-tabs" role="tablist" aria-label="Зоны оборудования">
+          <button class="equipment-tab active" type="button" data-zone="machines">Тренажёры</button>
+          <button class="equipment-tab" type="button" data-zone="free">Свободные веса</button>
+          <button class="equipment-tab" type="button" data-zone="cardio">Кардио</button>
+        </div>
+        <div class="equipment-panel" id="equipment-panel"></div>
+      </section>
+
+      <dialog class="exercise-dialog" id="exercise-dialog" aria-labelledby="exercise-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Закрыть карточку">×</button>
+        <div id="exercise-dialog-content"></div>
+      </dialog>
+    </main>
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+    <script src="/balans/exercise-details.js"></script>
+  </body>
+</html>

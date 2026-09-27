@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Нарушения ритма: маршрутизация по типу аритмии, контроль интенсивности, устройства и мониторинг — клинический модуль BALANS." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Нарушения ритма — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .clinical-guide .table-scroll { margin: 1rem 0 0; }
+      .clinical-guide .table-scroll th,
+      .clinical-guide .table-scroll td { white-space: normal; vertical-align: top; }
+      .clinical-guide .table-scroll th:first-child,
+      .clinical-guide .table-scroll td:first-child { width: 28%; font-weight: 700; color: var(--ink); }
+      .clinical-guide h3 { margin-top: 1.75rem; }
+      .clinical-guide .section-heading + .table-scroll,
+      .clinical-guide .section-heading + .principle-grid,
+      .clinical-guide .section-heading + .check-list,
+      .clinical-guide .section-heading + p { margin-top: 1.25rem; }
+      .clinical-guide ol.algo-list { margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+      .clinical-guide ol.algo-list li + li { margin-top: .55rem; }
+      .source-list { margin: .75rem 0 0; padding-left: 1.15rem; }
+      .source-list li + li { margin-top: .55rem; }
+    </style>
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a href="/balans/assessment">Оценка</a><a href="/balans/control">Контроль</a><a href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a href="/balans/train">Тренировки</a><a class="active" href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/balans/clinical">← Все заболевания</a>
+
+      <section class="page-intro clinical-intro">
+        <p class="eyebrow">Сердце и сосуды</p>
+        <h1>Нарушения ритма</h1>
+        <p>Маршрутизация по типу аритмии, контроль интенсивности при ненадёжной ЧСС, особенности антикоагуляции и имплантированных устройств.</p>
+      </section>
+
+      <nav class="article-jump" aria-label="Содержание страницы">
+        <a href="#baseline">Исходные данные</a>
+        <a href="#routing">Маршрутизация</a>
+        <a href="#load">Назначение нагрузки</a>
+        <a href="#special">Специальные ситуации</a>
+        <a href="#af-factors">Факторы при ФП</a>
+        <a href="#stop">Прекращение</a>
+        <a href="#sources">Источники</a>
+      </nav>
+
+      <section class="clinical-guide" id="baseline">
+        <div class="section-heading compact-heading"><p class="eyebrow">01 · Исходная точка</p><h2>Исходные данные перед назначением нагрузки</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Параметр</th><th>Что определить</th></tr></thead>
+            <tbody>
+              <tr><td>Диагноз</td><td>ФП (фибрилляция предсердий)/трепетание, наджелудочковая тахикардия, желудочковая экстрасистолия/тахикардия, брадиаритмия, каналопатия, неуточнённые сердцебиения</td></tr>
+              <tr><td>Симптомы</td><td>Сердцебиение, боль, одышка, головокружение, пресинкопе/синкопе; связь с нагрузкой</td></tr>
+              <tr><td>Документация ритма</td><td>12-канальная ЭКГ, Холтер/регистратор, данные часов только как скрининг, а не окончательный диагноз</td></tr>
+              <tr><td>Структурное сердце</td><td>ЭхоКГ; по показаниям МРТ сердца и оценка ишемии</td></tr>
+              <tr><td>Нагрузочная оценка</td><td>Тест с ЭКГ или CPET (кардиопульмональный нагрузочный тест) для воспроизведения симптомов, оценки желудочковой реакции и порога аритмии</td></tr>
+              <tr><td>Устройство</td><td>Тип ЭКС (электрокардиостимулятор)/ICD (имплантируемый кардиовертер-дефибриллятор), зона детекции/терапии, недавние срабатывания, зависимость от стимуляции, ограничения после имплантации</td></tr>
+              <tr><td>Терапия</td><td>β-блокаторы/другие антиаритмические препараты, антикоагуляция, аблация, препараты с влиянием на QT</td></tr>
+              <tr><td>Обратимые факторы</td><td>K, Mg, функция почек, анемия, тиреоидная функция, инфекция, алкоголь, стимуляторы, гипогликемия, апноэ сна</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="routing">
+        <div class="section-heading compact-heading"><p class="eyebrow">02 · Маршрутизация</p><h2>Маршрутизация по риску</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Категория</th><th>Примеры</th><th>Действие</th></tr></thead>
+            <tbody>
+              <tr><td>Высокий риск</td><td>Нагрузочное синкопе; устойчивая ЖТ (желудочковая тахикардия); недавний разряд ICD; неконтролируемая тахиаритмия; симптомная тяжёлая брадиаритмия; удлинённый QT/CPVT (катехоламинергическая полиморфная желудочковая тахикардия)/Brugada с симптомами; аритмогенная кардиомиопатия</td><td>Нагрузку не начинать до оценки кардиолога/электрофизиолога</td></tr>
+              <tr><td>Требуется контролируемая программа</td><td>Новая ФП с неясным контролем частоты; сложная желудочковая эктопия; структурное заболевание сердца; устройство с неизвестными настройками; аритмия, воспроизводимая нагрузкой</td><td>Нагрузочный тест и индивидуальный предел под наблюдением</td></tr>
+              <tr><td>Допустима индивидуальная программа</td><td>Установленный диагноз, клиническая стабильность, контролируемая частота/ритм, понятные пределы и план действий</td><td>Программа с контролем симптомов и периодической переоценкой</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="load">
+        <div class="section-heading compact-heading"><p class="eyebrow">03 · Назначение нагрузки</p><h2>Общая рамка и контроль интенсивности</h2></div>
+
+        <h3>Общая рамка</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Параметр</th><th>Назначение</th></tr></thead>
+            <tbody>
+              <tr><td>Аэробный объём</td><td>150–300 минут умеренной или 75–150 минут высокой интенсивности в неделю, если конкретная аритмия и структурное заболевание не требуют ограничения</td></tr>
+              <tr><td>Частота</td><td>3–5 дней/неделю</td></tr>
+              <tr><td>Силовая работа</td><td>2–3 дня/неделю; 1–3 подхода по 8–15 повторений; без задержки дыхания</td></tr>
+              <tr><td>Прогрессия</td><td>Сначала продолжительность, затем интенсивность; резкие скачки тренировочного объёма исключить</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Контроль интенсивности</h3>
+        <ul>
+          <li>При синусовом ритме и адекватной хронотропной реакции — ЧСС по нагрузочному тесту/CPET.</li>
+          <li>При ФП, частой эктопии, стимуляции, β-блокаде или хронотропной недостаточности — приоритет внешней мощности/скорости, Борг 11–14/20 и симптомам; пульс не использовать как единственный показатель.</li>
+          <li>При аритмии, индуцированной нагрузкой, верхний предел устанавливают ниже документированного порога.</li>
+          <li>При ICD максимальную тренировочную ЧСС согласовать с электрофизиологом и оставить запас до зоны детекции/терапии; конкретный запас зависит от устройства и протокола, часто используется 10–20 уд/мин.</li>
+        </ul>
+      </section>
+
+      <section class="clinical-guide" id="special">
+        <div class="section-heading compact-heading"><p class="eyebrow">04 · Специальные ситуации</p><h2>Практические ограничения</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Ситуация</th><th>Практическое ограничение</th></tr></thead>
+            <tbody>
+              <tr><td>ФП</td><td>Использовать AF-CARE (комплексный подход к ведению ФП): лечение сопутствующих факторов, профилактика инсульта, контроль симптомов и регулярная переоценка</td></tr>
+              <tr><td>Антикоагуляция</td><td>Исключить контактные и травмоопасные виды спорта; учитывать падения и риск кровотечения</td></tr>
+              <tr><td>ЭКС/ICD после имплантации</td><td>Ограничения движений плечом и нагрузок на область устройства — только по инструкции имплантирующей команды; затем восстановление объёма движений и силы постепенно</td></tr>
+              <tr><td>Каналопатии/аритмогенная кардиомиопатия</td><td>Не переносить общие рекомендации автоматически; объём спорта определяет специалист по конкретному диагнозу и генотипу/фенотипу</td></tr>
+              <tr><td>Электролиты</td><td>Проверять K/Mg и функцию почек при клиническом показании; не назначать рутинные добавки без дефицита/показания</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="af-factors">
+        <div class="section-heading compact-heading"><p class="eyebrow">05 · Факторы при ФП</p><h2>Модифицируемые факторы при фибрилляции предсердий</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Фактор</th><th>Цель</th></tr></thead>
+            <tbody>
+              <tr><td>Масса тела</td><td>При избыточной массе/ожирении — снижение не менее чем на 10% как долгосрочная цель при безопасном сохранении мышечной массы</td></tr>
+              <tr><td>Физическая активность</td><td>Регулярная индивидуально подобранная аэробная и силовая нагрузка</td></tr>
+              <tr><td>Алкоголь</td><td>Не более 3 стандартных порций или 30 г алкоголя в неделю; при связи эпизодов с алкоголем — более строгое ограничение/исключение</td></tr>
+              <tr><td>Апноэ сна, АГ, диабет, СН</td><td>Активное выявление и контроль как часть AF-CARE</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="stop">
+        <div class="section-heading compact-heading"><p class="eyebrow">06 · Безопасность</p><h2>Прекращение нагрузки</h2></div>
+        <p>Немедленно прекратить при синкопе/пресинкопе, боли в груди, выраженной гипотонии, устойчивом быстром ритме с симптомами, новой сложной желудочковой аритмии, терапии ICD, внезапной необычной одышке или неврологических симптомах.</p>
+        <div class="practical-note"><b>Документация эпизода.</b> Время, нагрузка, симптомы, ЧСС/ЭКГ устройства, АД, принятые препараты.</div>
+      </section>
+
+      <section class="source-note" id="sources">
+        <b>Источники</b>
+        <ol class="source-list">
+          <li><a href="https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/atrial-fibrillation/" target="_blank" rel="noopener noreferrer">2024 ESC Guidelines for the Management of Atrial Fibrillation</a></li>
+          <li><a href="https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/ventricular-arrhythmias-and-the-prevention-of-sudden-cardiac-death/" target="_blank" rel="noopener noreferrer">2022 ESC Guidelines: Ventricular Arrhythmias and Prevention of Sudden Cardiac Death</a></li>
+          <li><a href="https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/sports-cardiology-and-exercise/" target="_blank" rel="noopener noreferrer">2020 ESC Guidelines on Sports Cardiology and Exercise</a></li>
+        </ol>
+      </section>
+      <section class="medical-note"><b>Важно.</b> Материал носит образовательный характер. Индивидуальные параметры нагрузки, питания и лекарственной терапии определяются вместе с лечащим врачом.</section>
+    </main>
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

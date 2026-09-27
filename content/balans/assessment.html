@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Базовая оценка BALANS: ИМТ, основной обмен и ориентировочные энергозатраты." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Базовая оценка — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a class="active" href="/balans/assessment">Оценка</a><a href="/balans/control">Контроль</a><a href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a href="/balans/train">Тренировки</a><a href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/balans">← Все инструменты</a>
+      <section class="page-intro">
+        <p class="eyebrow">Оценка · взрослые</p>
+        <h1>Базовая оценка</h1>
+        <p>Введите основные данные, чтобы получить стартовые ориентиры. Используйте динамику показателей, а не одну отдельную цифру.</p>
+      </section>
+
+      <section class="calculator-layout">
+        <form class="calculator" id="assessment-form">
+          <label>Пол<select id="sex" required><option value="male">Мужской</option><option value="female">Женский</option></select></label>
+          <label>Возраст, лет<input id="age" type="number" min="18" max="100" required placeholder="40" /></label>
+          <label>Рост, см<input id="height" type="number" min="130" max="230" step="0.1" required placeholder="175" /></label>
+          <label>Вес, кг<input id="weight" type="number" min="35" max="300" step="0.1" required placeholder="75" /></label>
+          <label>Талия, см<input id="waist" type="number" min="40" max="220" step="0.1" required placeholder="85" /></label>
+          <label>Активность<select id="activity" required><option value="1.2">Минимальная</option><option value="1.375">Лёгкая, 1–3 тренировки</option><option value="1.55" selected>Средняя, 3–5 тренировок</option><option value="1.725">Высокая, 6–7 тренировок</option></select></label>
+          <button class="primary-action" type="submit">Рассчитать</button>
+        </form>
+        <div class="results" id="assessment-results" aria-live="polite">
+          <p class="eyebrow">Ваши ориентиры</p>
+          <h2>Заполните данные</h2>
+          <p>Результаты появятся здесь.</p>
+        </div>
+      </section>
+
+      <section class="reference-grid" aria-labelledby="reference-title">
+        <h2 id="reference-title">Что используется</h2>
+        <article><h3>ИМТ</h3><p>Отношение веса к квадрату роста — грубый ориентир, который не различает мышечную и жировую массу.</p></article>
+        <article><h3>Талия / рост</h3><p>Простой дополнительный показатель формы тела и метаболического риска.</p></article>
+        <article><h3>Mifflin–St Jeor</h3><p>Стартовая оценка основного обмена и суточных энергозатрат при отсутствии точных данных о составе тела.</p></article>
+      </section>
+      <p class="medical-note">Расчёты предназначены для взрослых и являются ориентировочными. Они не являются медицинской рекомендацией.</p>
+    </main>
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+  </body>
+</html>

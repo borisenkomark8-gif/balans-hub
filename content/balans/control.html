@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Контроль BALANS — ежедневные записи веса, питания, активности, сна и самочувствия." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Контроль — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a href="/balans/assessment">Оценка</a><a class="active" href="/balans/control">Контроль</a><a href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a href="/balans/train">Тренировки</a><a href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+
+    <main class="platform-main narrow-main tracking-main">
+      <a class="back-link" href="/balans">← Все инструменты</a>
+      <section class="tracking-intro">
+        <div>
+          <p class="eyebrow">Сегодня</p>
+          <h1>Контроль</h1>
+          <p>Короткая запись занимает около минуты. Данные остаются на этом устройстве.</p>
+        </div>
+        <a class="secondary-action" href="/balans/progress">Смотреть прогресс →</a>
+      </section>
+
+      <section class="control-layout">
+        <form class="daily-form" id="daily-form">
+          <div class="form-section form-section-wide">
+            <div class="form-section-title"><span>01</span><h2>Дата и измерения</h2></div>
+            <div class="field-grid four-fields">
+              <label>Дата<input id="entry-date" type="date" required /></label>
+              <label>Вес, кг<input id="entry-weight" type="number" min="30" max="350" step="0.1" placeholder="82,5" /></label>
+              <label>Талия, см<input id="entry-waist" type="number" min="35" max="220" step="0.1" placeholder="86" /></label>
+              <label>Бёдра, см<input id="entry-hips" type="number" min="45" max="250" step="0.1" placeholder="100" /></label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title"><span>02</span><h2>Питание</h2></div>
+            <div class="field-grid two-fields">
+              <label>Калории, ккал<input id="entry-calories" type="number" min="0" max="10000" step="1" placeholder="2200" /></label>
+              <label>Белок, г<input id="entry-protein" type="number" min="0" max="500" step="1" placeholder="130" /></label>
+              <label>Жиры, г<input id="entry-fat" type="number" min="0" max="500" step="1" placeholder="70" /></label>
+              <label>Углеводы, г<input id="entry-carbs" type="number" min="0" max="1000" step="1" placeholder="240" /></label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title"><span>03</span><h2>Движение</h2></div>
+            <div class="field-grid two-fields">
+              <label>Шаги<input id="entry-steps" type="number" min="0" max="100000" step="100" placeholder="8000" /></label>
+              <label>Тренировка<select id="entry-training"><option value="">Не указано</option><option value="Нет">Нет</option><option value="Силовая">Силовая</option><option value="Кардио">Кардио</option><option value="Смешанная">Смешанная</option><option value="Другое">Другое</option></select></label>
+              <label>Продолжительность, мин<input id="entry-duration" type="number" min="0" max="600" step="5" placeholder="60" /></label>
+            </div>
+          </div>
+
+          <div class="form-section form-section-wide">
+            <div class="form-section-title"><span>04</span><h2>Самочувствие · от 1 до 10</h2></div>
+            <div class="score-grid">
+              <label>Сон<input id="entry-sleep" type="range" min="1" max="10" value="5" /><output for="entry-sleep">5</output></label>
+              <label>Голод<input id="entry-hunger" type="range" min="1" max="10" value="5" /><output for="entry-hunger">5</output></label>
+              <label>Настроение<input id="entry-mood" type="range" min="1" max="10" value="5" /><output for="entry-mood">5</output></label>
+              <label>Усталость<input id="entry-fatigue" type="range" min="1" max="10" value="5" /><output for="entry-fatigue">5</output></label>
+            </div>
+            <label class="notes-field">Заметка<textarea id="entry-notes" rows="3" placeholder="Самочувствие, особенности дня, тренировки или питания"></textarea></label>
+          </div>
+
+          <div class="form-actions form-section-wide">
+            <button class="primary-action" type="submit">Сохранить запись</button>
+            <p id="save-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <aside class="control-sidebar">
+          <div class="latest-entry" id="latest-entry">
+            <p class="eyebrow">Последняя запись</p>
+            <h2>Пока нет данных</h2>
+            <p>После сохранения здесь появится краткое резюме.</p>
+          </div>
+          <div class="data-tools">
+            <h2>Данные и резервная копия</h2>
+            <p>Скачайте копию, чтобы перенести записи на другое устройство или сохранить архив.</p>
+            <button type="button" id="export-csv">Скачать CSV</button>
+            <button type="button" id="export-json">Скачать JSON</button>
+            <label class="import-button">Импортировать JSON<input id="import-json" type="file" accept="application/json,.json" /></label>
+            <p class="tool-status" id="data-status" role="status" aria-live="polite"></p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+  </body>
+</html>

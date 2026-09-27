@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Прогресс BALANS — динамика веса, объёмов, шагов и самочувствия за 7, 28, 56 или 84 дня." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Прогресс — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a href="/balans/assessment">Оценка</a><a href="/balans/control">Контроль</a><a class="active" href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a href="/balans/train">Тренировки</a><a href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+
+    <main class="platform-main narrow-main tracking-main">
+      <a class="back-link" href="/balans">← Все инструменты</a>
+      <section class="tracking-intro">
+        <div>
+          <p class="eyebrow">Динамика</p>
+          <h1>Прогресс</h1>
+          <p>Смотрите тенденции за циклы BALANS, а не колебания одного дня.</p>
+        </div>
+        <a class="secondary-action" href="/balans/control">Добавить запись →</a>
+      </section>
+
+      <div class="period-switch" role="group" aria-label="Период графика">
+        <button type="button" data-days="7">7 дней</button>
+        <button class="active" type="button" data-days="28">28 дней</button>
+        <button type="button" data-days="56">56 дней</button>
+        <button type="button" data-days="84">84 дня</button>
+      </div>
+
+      <section id="progress-empty" class="progress-empty" hidden>
+        <p class="eyebrow">Пока пусто</p>
+        <h2>Добавьте первую запись</h2>
+        <p>После этого здесь появятся показатели и графики.</p>
+        <a class="primary-action" href="/balans/control">Перейти к контролю</a>
+      </section>
+
+      <section id="progress-content">
+        <div class="progress-kpis" id="progress-kpis"></div>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <div><p class="eyebrow">Вес</p><h2>Динамика веса</h2></div>
+            <div class="chart" id="weight-chart" aria-label="График веса"></div>
+          </article>
+          <article class="chart-card">
+            <div><p class="eyebrow">Активность</p><h2>Шаги</h2></div>
+            <div class="chart" id="steps-chart" aria-label="График количества шагов"></div>
+          </article>
+        </div>
+        <section class="history-section">
+          <div class="section-heading compact-heading"><p class="eyebrow">Записи</p><h2>История</h2></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Дата</th><th>Вес</th><th>Талия</th><th>Шаги</th><th>Сон</th><th>Тренировка</th></tr></thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+  </body>
+</html>

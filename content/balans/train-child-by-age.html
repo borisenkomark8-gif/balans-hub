@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Тренировки детей и подростков по возрасту: двигательная активность, сила, прогрессия и безопасность — модуль BALANS." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Тренировки детей и подростков по возрасту — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .clinical-guide .table-scroll { margin: 1rem 0 0; }
+      .clinical-guide .table-scroll th,
+      .clinical-guide .table-scroll td { white-space: normal; vertical-align: top; }
+      .clinical-guide h3 { margin-top: 1.75rem; }
+      .clinical-guide .section-heading + .table-scroll,
+      .clinical-guide .section-heading + .principle-grid,
+      .clinical-guide .section-heading + .check-list,
+      .clinical-guide .section-heading + p,
+      .clinical-guide .section-heading + ol { margin-top: 1.25rem; }
+      .clinical-guide ol.algo-list,
+      .clinical-guide ol.session-list { margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+      .clinical-guide ol.algo-list li + li,
+      .clinical-guide ol.session-list li + li { margin-top: .55rem; }
+      .clinical-guide ul.content-list { margin: .85rem 0 0; padding-left: 1.15rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+      .clinical-guide ul.content-list li + li { margin-top: .4rem; }
+      .age-jump { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 0 0 2.5rem; }
+      .age-jump a {
+        display: flex; align-items: center; justify-content: center; min-height: 3.1rem;
+        padding: .7rem .85rem; text-align: center; border: 1px solid var(--line); border-radius: .9rem;
+        background: #fff; color: var(--ink); font-size: .88rem; font-weight: 800; line-height: 1.25;
+      }
+      .age-jump a:hover { border-color: var(--cyan); color: var(--blue); }
+      .age-jump a span { display: block; color: var(--muted); font-size: .72rem; font-weight: 700; margin-top: .2rem; }
+      .source-list { margin: .75rem 0 0; padding-left: 1.15rem; }
+      .source-list li + li { margin-top: .55rem; }
+      .term { font-weight: 800; color: var(--ink); }
+      details.age-panel {
+        margin: 0 0 1rem; border: 1px solid var(--line); border-radius: 1rem; background: #fff; overflow: hidden;
+      }
+      details.age-panel > summary {
+        cursor: pointer; list-style: none; padding: 1.15rem 1.25rem; font-size: 1.15rem; font-weight: 800; color: var(--ink);
+      }
+      details.age-panel > summary::-webkit-details-marker { display: none; }
+      details.age-panel > summary::after { content: "+"; float: right; color: var(--blue); font-weight: 800; }
+      details.age-panel[open] > summary::after { content: "–"; }
+      details.age-panel .panel-body { padding: 0 1.25rem 1.35rem; }
+      details.age-panel .panel-body > :first-child { margin-top: 0; }
+      @media (max-width: 720px) {
+        .age-jump { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 420px) {
+        .age-jump { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="Разделы BALANS"><a href="/balans/assessment">Оценка</a><a href="/balans/control">Контроль</a><a href="/balans/progress">Прогресс</a><a href="/balans/learn">Знания</a><a class="active" href="/balans/train">Тренировки</a><a href="/balans/clinical">По заболеваниям</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/balans/train">← Тренировки</a>
+
+      <section class="page-intro clinical-intro">
+        <p class="eyebrow">Физическая активность · 0–17 лет</p>
+        <h1>Тренировки детей и подростков по возрасту</h1>
+        <p>Практический конструктор двигательной активности и тренировок для детей 0–17 лет. Возраст задаёт стартовый маршрут, но программа определяется также двигательным опытом, техникой, биологическим созреванием, суммарной нагрузкой и состоянием здоровья.</p>
+      </section>
+
+      <section class="clinical-guide" id="intro">
+        <div class="section-heading compact-heading"><p class="eyebrow">01 · Назначение</p><h2>Назначение модуля и быстрый алгоритм</h2></div>
+        <p>Окончательное решение зависит от:</p>
+        <ul class="content-list">
+          <li>двигательного опыта и качества базовых движений;</li>
+          <li>биологического созревания и темпа роста;</li>
+          <li>целей: здоровье, физическая подготовка, конкретный вид спорта;</li>
+          <li>суммарной нагрузки: школа, секции, самостоятельные занятия, соревнования;</li>
+          <li>хронических заболеваний, лекарственной терапии, травм и симптомов.</li>
+        </ul>
+        <ol class="algo-list">
+          <li>Выбрать возрастную группу.</li>
+          <li>Уточнить клинические ограничения и текущие симптомы.</li>
+          <li>Оценить тренировочный стаж, технику и недельную нагрузку.</li>
+          <li>Выбрать базовую программу: движение → навыки → сила → мощность/специализация.</li>
+          <li>Назначить объём и интенсивность с запасом, затем прогрессировать по одному параметру.</li>
+          <li>Контролировать переносимость, рост, сон, боль, мотивацию и восстановление.</li>
+        </ol>
+      </section>
+
+      <nav class="age-jump" aria-label="Быстрый выбор возраста">
+        <a href="#age-0-3">До 3 лет<span>движение, не тренинг</span></a>
+        <a href="#age-3-5">3–5 лет<span>базовые движения</span></a>
+        <a href="#age-6-9">6–9 лет<span>двигательная грамотность</span></a>
+        <a href="#age-10-12">10–12 лет<span>техника и системность</span></a>
+        <a href="#age-13-15">13–15 лет<span>созревание</span></a>
+        <a href="#age-16-17">16–17 лет<span>переход ко взрослому</span></a>
+      </nav>
+
+      <section class="clinical-guide" id="framework">
+        <div class="section-heading compact-heading"><p class="eyebrow">02 · Общая рамка</p><h2>Общая рамка активности</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Возраст</th><th>Минимальная основа</th></tr></thead>
+            <tbody>
+              <tr><td>Младенцы до 1 года</td><td>Активность несколько раз в день; для ещё не мобильных — не менее 30 минут положения на животе суммарно в течение бодрствования</td></tr>
+              <tr><td>1–2 года</td><td>Не менее 180 минут разнообразной активности любой интенсивности, распределённой в течение дня</td></tr>
+              <tr><td>3–4 года</td><td>Не менее 180 минут активности, из них не менее 60 минут умеренной или высокой интенсивности</td></tr>
+              <tr><td>5–17 лет</td><td>В среднем не менее 60 минут/день умеренной или высокой интенсивности; интенсивная аэробная, мышечная и костно-укрепляющая активность — не менее 3 дней/неделю</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="practical-note" style="margin-top:1.25rem"><b>Важно.</b> Это целевой общий объём движения, а не длительность одной организованной тренировки.</div>
+      </section>
+
+      <section class="clinical-guide" id="intensity">
+        <div class="section-heading compact-heading"><p class="eyebrow">03 · Интенсивность</p><h2>Шкала интенсивности</h2></div>
+        <p><span class="term">RPE (Rating of Perceived Exertion)</span> — субъективная оценка интенсивности нагрузки по шкале от 0 до 10, где 0 означает отсутствие нагрузки, а 10 — предельное усилие.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Уровень</th><th>Признаки</th><th>Практическая маркировка</th></tr></thead>
+            <tbody>
+              <tr><td>Лёгкий</td><td>Дыхание почти не меняется; свободная речь</td><td>RPE 2–3/10</td></tr>
+              <tr><td>Умеренный</td><td>Дыхание учащено; ребёнок говорит предложениями</td><td>RPE 4–5/10</td></tr>
+              <tr><td>Высокий</td><td>Выраженное учащение дыхания; отдельные фразы</td><td>RPE 6–8/10</td></tr>
+              <tr><td>Предельный</td><td>Речь затруднена; техника быстро ухудшается</td><td>RPE 9–10/10; в оздоровительных программах обычно не требуется</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:1.25rem">Для силовой работы основной регулятор — сохранение техники и <span class="term">RIR (Repetitions in Reserve — запас повторений до отказа)</span>. Базовый диапазон: завершать подход с запасом 2–4 качественных повторения. Частота сердечных сокращений у детей вариабельна и не должна быть единственным критерием интенсивности.</p>
+      </section>
+
+      <section class="clinical-guide" id="ages">
+        <div class="section-heading compact-heading"><p class="eyebrow">04 · По возрасту</p><h2>Возрастные программы</h2></div>
+        <p>Выберите группу ниже. Контент доступен и без JavaScript: блоки раскрываются средствами HTML.</p>
+
+        <details class="age-panel" id="age-0-3" open>
+          <summary>До 3 лет — двигательная активность, не тренинг</summary>
+          <div class="panel-body">
+            <h3>Приоритеты</h3>
+            <ul class="content-list">
+              <li>свободное движение на полу и безопасное исследование среды;</li>
+              <li>перевороты, ползание, вставание, ходьба, перенос лёгких предметов;</li>
+              <li>бег, лазание, броски, ловля крупных мячей, равновесие;</li>
+              <li>минимизация длительной фиксации в коляске, стуле или автокресле вне необходимости.</li>
+            </ul>
+            <h3>Формат</h3>
+            <ul class="content-list">
+              <li>короткие эпизоды по 3–10 минут многократно в течение дня;</li>
+              <li>игра с участием взрослого, без формального плана подходов и повторений;</li>
+              <li>сложность повышается изменением среды и задачи, а не внешним отягощением.</li>
+            </ul>
+            <h3>Не использовать</h3>
+            <ul class="content-list">
+              <li>форсированное обучение двигательному навыку, к которому ребёнок не готов;</li>
+              <li>длительную монотонную нагрузку;</li>
+              <li>соревнование и выполнение через страх, боль или выраженную усталость.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-3-5">
+          <summary>3–5 лет — базовые движения</summary>
+          <div class="panel-body">
+            <h3>Цели</h3>
+            <ul class="content-list">
+              <li>бег, остановка и смена направления;</li>
+              <li>прыжок и безопасное приземление;</li>
+              <li>бросок, ловля, удар по мячу;</li>
+              <li>равновесие, ритм, ориентация в пространстве;</li>
+              <li>положительная связь между движением и игрой.</li>
+            </ul>
+            <h3>Организованное занятие</h3>
+            <p><b>20–35 минут, 2–4 раза/неделю</b>, как часть общего дневного движения.</p>
+            <ol class="session-list">
+              <li>Динамическая игра — 5 минут.</li>
+              <li>Два-три двигательных навыка — 10–15 минут.</li>
+              <li>Простая полоса препятствий или эстафета — 5–10 минут.</li>
+              <li>Спокойное завершение — 3–5 минут.</li>
+            </ol>
+            <h3>Силовой компонент</h3>
+            <ul class="content-list">
+              <li>приседание к опоре, подъём с пола, перенос, толкание, тяга резины, вис с поддержкой;</li>
+              <li>1–2 подхода по 6–12 качественных повторений либо игровые отрезки 10–20 секунд;</li>
+              <li>лёгкие предметы; задача — управление телом, не утомление.</li>
+            </ul>
+            <h3>Прогрессия</h3>
+            <p>Сначала точность движения, затем больше вариантов и немного большая продолжительность. Не превращать занятие в уменьшенную копию взрослой тренировки.</p>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-6-9">
+          <summary>6–9 лет — двигательная грамотность</summary>
+          <div class="panel-body">
+            <h3>Цели</h3>
+            <ul class="content-list">
+              <li>устойчивый набор базовых двигательных навыков;</li>
+              <li>двусторонняя координация и контроль положения тела;</li>
+              <li>освоение основных паттернов силы;</li>
+              <li>развитие скорости через короткие игровые ускорения;</li>
+              <li>знакомство с разными видами активности без ранней узкой специализации.</li>
+            </ul>
+            <h3>Неделя</h3>
+            <ul class="content-list">
+              <li>ежедневное движение в соответствии с общей нормой;</li>
+              <li><b>2 силовых занятия</b> по 25–40 минут;</li>
+              <li><b>2–4 блока</b> скорости, координации или прыжков по 10–20 минут, обычно внутри игры или тренировки;</li>
+              <li>аэробная работа преимущественно игровая и интервальная по естественному ритму.</li>
+            </ul>
+            <h3>Силовая работа</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Параметр</th><th>Стартовый диапазон</th></tr></thead>
+                <tbody>
+                  <tr><td>Упражнения</td><td>Присед, наклон/тяга, выпад, толкание, тяга, перенос, стабилизация, лазание</td></tr>
+                  <tr><td>Объём</td><td>1–2 подхода × 6–12 повторений</td></tr>
+                  <tr><td>Интенсивность</td><td>RPE 4–6/10; RIR 3–4</td></tr>
+                  <tr><td>Отдых</td><td>60–120 секунд или до восстановления техники</td></tr>
+                  <tr><td>Частота</td><td>2 раза/неделю, желательно не подряд</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Сопротивление допустимо при квалифицированном контроле. Критерий допуска — способность слушать инструкцию и повторять движение с устойчивой техникой, а не достижение определённого возраста.</p>
+            <h3>Скорость и прыжки</h3>
+            <ul class="content-list">
+              <li>ускорения 5–15 м, 4–8 повторений с полным восстановлением;</li>
+              <li>прыжки и приземления малого объёма: 2–3 упражнения × 3–5 повторений;</li>
+              <li>прекращать серию при падении скорости или ухудшении позиции.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-10-12">
+          <summary>10–12 лет — техника и системность</summary>
+          <div class="panel-body">
+            <h3>Цели</h3>
+            <ul class="content-list">
+              <li>закрепление техники основных силовых движений;</li>
+              <li>развитие относительной силы, координации и скорости;</li>
+              <li>освоение разминки, самоконтроля и дневника нагрузки;</li>
+              <li>сохранение разнообразия активности на фоне начала спортивной специализации.</li>
+            </ul>
+            <h3>Неделя</h3>
+            <ul class="content-list">
+              <li><b>2–3 силовых занятия</b> по 35–55 минут;</li>
+              <li><b>2 скоростно-координационных блока</b>;</li>
+              <li>аэробная работа: игры, циклическая нагрузка или интервалы умеренной/высокой интенсивности с учётом общего объёма спорта;</li>
+              <li>не менее одного дня без организованной интенсивной нагрузки.</li>
+            </ul>
+            <h3>Силовая работа</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Параметр</th><th>Базовый диапазон</th></tr></thead>
+                <tbody>
+                  <tr><td>Объём</td><td>2–3 подхода × 6–12 повторений</td></tr>
+                  <tr><td>Интенсивность</td><td>преимущественно RPE 5–7/10; RIR 2–4</td></tr>
+                  <tr><td>Упражнения</td><td>5–8 движений на всё тело</td></tr>
+                  <tr><td>Отдых</td><td>1–3 минуты по сложности упражнения</td></tr>
+                  <tr><td>Прогрессия</td><td>+1–2 повторения, затем минимальный шаг сопротивления при сохранении техники</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Периоды быстрого роста требуют временного снижения сложности и повторной настройки техники. Боль в области апофизов и стойкое снижение координации — повод корректировать объём прыжков, бега и спортивной нагрузки.</p>
+            <h3>Тестирование</h3>
+            <ul class="content-list">
+              <li>техника приседания, наклона, толкания, тяги и приземления;</li>
+              <li>прыжок в длину с места, бросок набивного мяча, короткий спринт;</li>
+              <li>субмаксимальный беговой тест при необходимости;</li>
+              <li>силовые тесты — преимущественно субмаксимальные. <span class="term">1ПМ (одноповторный максимум)</span> допустим только у технически подготовленных детей по валидированному протоколу и под квалифицированным наблюдением; для рутинного оздоровительного назначения не требуется.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-13-15">
+          <summary>13–15 лет — управление нагрузкой в период созревания</summary>
+          <div class="panel-body">
+            <h3>Цели</h3>
+            <ul class="content-list">
+              <li>развитие силы и мощности без потери качества движения;</li>
+              <li>управление резкими изменениями роста, массы и рычагов тела;</li>
+              <li>сочетание общей подготовки со спортивной специализацией;</li>
+              <li>обучение восстановлению и выявлению признаков перегрузки.</li>
+            </ul>
+            <h3>Неделя</h3>
+            <ul class="content-list">
+              <li><b>2–3 силовых занятия</b> по 45–70 минут;</li>
+              <li><b>1–2 целевых блока скорости/мощности</b>, если ребёнок восстановлен;</li>
+              <li>аэробная нагрузка распределяется с учётом секций и соревнований;</li>
+              <li>интенсивные дни разделять лёгкими или восстановительными.</li>
+            </ul>
+            <h3>Силовая работа</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Задача</th><th>Объём и интенсивность</th></tr></thead>
+                <tbody>
+                  <tr><td>Освоение/коррекция техники</td><td>2–3 × 8–12; RPE 4–6</td></tr>
+                  <tr><td>Общая сила</td><td>2–4 × 5–10; RPE 6–8; RIR 2–3</td></tr>
+                  <tr><td>Мощность</td><td>2–4 × 3–6; лёгкое/умеренное сопротивление; максимальное качество и скорость</td></tr>
+                  <tr><td>Локальная выносливость</td><td>2–3 × 10–15; RPE 5–7</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Тяжёлые подходы вводятся только после устойчивого освоения техники. Повторения «до отказа», форсированные повторения и частые максимальные попытки не являются базовым инструментом.</p>
+            <h3>Контроль в этом возрасте</h3>
+            <ul class="content-list">
+              <li>утреннее самочувствие, сон, мышечная болезненность, мотивация;</li>
+              <li>динамика боли и работоспособности;</li>
+              <li>рост и масса — для контекста, без ежедневного контроля;</li>
+              <li>признаки низкой энергетической доступности и RED-S (см. раздел «Контроль нагрузки»).</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-16-17">
+          <summary>16–17 лет — переход к взрослой модели</summary>
+          <div class="panel-body">
+            <h3>Цели</h3>
+            <ul class="content-list">
+              <li>индивидуальная программа под здоровье или спортивную задачу;</li>
+              <li>самостоятельная регуляция нагрузки;</li>
+              <li>развитие силы, мощности, аэробной мощности и специфической выносливости;</li>
+              <li>подготовка к безопасному продолжению тренировок во взрослом возрасте.</li>
+            </ul>
+            <h3>Базовая модель</h3>
+            <ul class="content-list">
+              <li><b>2–4 силовых занятия/неделю</b> в зависимости от стажа и спорта;</li>
+              <li>каждую основную мышечную группу тренировать 2 раза/неделю либо обеспечить эквивалентный недельный объём;</li>
+              <li>сочетать лёгкие, умеренные и тяжёлые дни;</li>
+              <li>высокоинтенсивную аэробную и скоростную работу учитывать вместе с игровой/соревновательной нагрузкой.</li>
+            </ul>
+            <h3>Силовая работа</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Уровень</th><th>Подход</th></tr></thead>
+                <tbody>
+                  <tr><td>Начинающий</td><td>2–3 × 6–12; RPE 5–7; техника и регулярность</td></tr>
+                  <tr><td>Подготовленный</td><td>3–5 × 3–10; RPE 6–8; периодизация по задаче</td></tr>
+                  <tr><td>Спортивная специализация</td><td>индивидуальные блоки силы/мощности; контроль суммарной нагрузки и календаря</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Возраст сам по себе не делает подростка подготовленным к взрослым объёмам. Программа прогрессирует по фактическому тренировочному стажу.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="clinical-guide" id="session">
+        <div class="section-heading compact-heading"><p class="eyebrow">05 · Структура занятия</p><h2>Универсальная структура силового занятия</h2></div>
+        <ol class="session-list">
+          <li><b>Готовность:</b> симптомы, боль, сон, восстановление — 1–2 минуты.</li>
+          <li><b>Разминка:</b> общая активность + динамическая подвижность — 5–10 минут.</li>
+          <li><b>Скорость/координация/прыжки:</b> пока ребёнок не утомлён — 5–15 минут.</li>
+          <li><b>Основные движения:</b> присед, наклон, толкание, тяга — 15–30 минут.</li>
+          <li><b>Односторонняя работа, переносы, корпус:</b> 5–15 минут.</li>
+          <li><b>Завершение и запись нагрузки:</b> 3–5 минут.</li>
+        </ol>
+        <h3>Правила прогрессии</h3>
+        <ul class="content-list">
+          <li>повышать один параметр за раз: повторения, подходы, сопротивление, сложность или частоту;</li>
+          <li>сначала стабильная техника во всех запланированных повторениях;</li>
+          <li>ориентир для увеличения сопротивления — минимальный доступный шаг, обычно не более 5–10%;</li>
+          <li>после болезни, травмы, каникул или периода быстрого роста возвращаться на один-два шага назад;</li>
+          <li>при заметном росте общей спортивной нагрузки силовой объём не увеличивать автоматически;</li>
+          <li>каждую 4–8-ю неделю рассматривать разгрузку по состоянию и календарю, а не по жёсткому шаблону.</li>
+        </ul>
+      </section>
+
+      <section class="clinical-guide" id="load">
+        <div class="section-heading compact-heading"><p class="eyebrow">06 · Контроль нагрузки</p><h2>Контроль нагрузки</h2></div>
+        <div class="check-list">
+          <p><span class="term">sRPE (session Rating of Perceived Exertion)</span> — субъективная оценка тяжести всей тренировки по шкале 0–10, обычно через 15–30 минут после её окончания.</p>
+          <p><b>Сессионная нагрузка</b> = <span class="term">sRPE × длительность занятия в минутах</span>. Пример: 60 минут × sRPE 6 = 360 условных единиц.</p>
+          <p><span class="term">RED-S (Relative Energy Deficiency in Sport)</span> — синдром относительного дефицита энергии в спорте: ухудшение восстановления и результатов, постоянная усталость, повторные травмы или стрессовые переломы, нарушения роста и полового созревания. RED-S возможен как у девушек, так и у юношей; нарушение менструального цикла — один из возможных признаков у девушек, но не единственный критерий.</p>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="safety">
+        <div class="section-heading compact-heading"><p class="eyebrow">07 · Безопасность</p><h2>Медицинская оценка и прекращение нагрузки</h2></div>
+        <h3>Когда нужна медицинская оценка до начала или изменения программы</h3>
+        <ul class="content-list">
+          <li>боль/давление в груди, необъяснимый обморок или предобморок при нагрузке;</li>
+          <li>сердцебиение с головокружением, болью или снижением работоспособности;</li>
+          <li>непропорциональная одышка, цианоз, падение сатурации;</li>
+          <li>известное заболевание сердца, неконтролируемая артериальная гипертензия;</li>
+          <li>плохо контролируемая астма или частые симптомы нагрузки;</li>
+          <li>диабет с повторными тяжёлыми гипогликемиями, кетозом или отсутствием плана коррекции;</li>
+          <li>острое заболевание, лихорадка, миокардит/перикардит в анамнезе без допуска;</li>
+          <li>прогрессирующая неврологическая симптоматика;</li>
+          <li>боль, меняющая походку или технику, ночная боль, нарастающий отёк;</li>
+          <li>признаки расстройства пищевого поведения или RED-S.</li>
+        </ul>
+        <h3>Немедленно прекратить нагрузку</h3>
+        <ul class="content-list">
+          <li>боль в груди, обморок, спутанность сознания;</li>
+          <li>внезапная выраженная одышка, свистящее дыхание без ответа на согласованный план;</li>
+          <li>признаки тяжёлой гипогликемии;</li>
+          <li>острый неврологический дефицит;</li>
+          <li>резкая локальная боль, деформация или невозможность опоры;</li>
+          <li>любые быстро нарастающие симптомы.</li>
+        </ul>
+      </section>
+
+      <section class="clinical-guide" id="routing">
+        <div class="section-heading compact-heading"><p class="eyebrow">08 · Маршрутизация</p><h2>Маршрутизация при заболеваниях</h2></div>
+        <p>Этот модуль задаёт общую тренировочную рамку. Клинические модификаторы должны открываться отдельными карточками и не смешиваться с возрастными программами.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Состояние</th><th>Что модифицировать</th></tr></thead>
+            <tbody>
+              <tr><td>Астма / бронхоконстрикция нагрузки</td><td>контроль заболевания, разминка, доступность препарата по индивидуальному плану, условия среды</td></tr>
+              <tr><td>Сахарный диабет 1 типа</td><td>глюкоза/CGM, активный инсулин, углеводы, тип и время нагрузки, отсроченная гипогликемия, кетоны</td></tr>
+              <tr><td>Ожирение</td><td>низкий порог входа, переносимость опорно-двигательной нагрузки, прогрессия объёма, силовой компонент, отсутствие стигмы</td></tr>
+              <tr><td>Врождённые и приобретённые заболевания сердца / аритмии</td><td>диагноз-специфический допуск, ограничения интенсивности и контакта, симптомы, терапия и устройства</td></tr>
+              <tr><td>Опорно-двигательные заболевания</td><td>болезненные структуры, амплитуда, ударная нагрузка, асимметрия, реабилитационный план</td></tr>
+              <tr><td>Неврологические заболевания / инвалидность</td><td>индивидуальная моторная функция, утомляемость, риск падения/судорог, адаптация оборудования</td></tr>
+              <tr><td>Онкологические заболевания / после лечения</td><td>фаза терапии, анализ крови, кардиопульмональные и костные риски, инфекционная безопасность</td></tr>
+              <tr><td>RED-S / расстройства пищевого поведения</td><td>энергетическая доступность, рост, половое созревание, менструальная функция, костный стресс; междисциплинарное ведение</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Минимальный набор данных для персонализации</h3>
+        <ul class="content-list">
+          <li>возраст, рост, масса и динамика роста;</li>
+          <li>стадия полового созревания — только когда клинически оправдано и с соблюдением приватности;</li>
+          <li>цель и предпочитаемые виды активности;</li>
+          <li>тренировки/соревнования за последние 4 недели;</li>
+          <li>тренировочный стаж и освоенные движения;</li>
+          <li>диагнозы, симптомы, травмы, лекарства и медицинские ограничения;</li>
+          <li>сон, учебная нагрузка, субъективное восстановление;</li>
+          <li>доступное оборудование и квалификация сопровождающего взрослого.</li>
+        </ul>
+      </section>
+
+      <section class="source-note" id="sources">
+        <b>Источники</b>
+        <ol class="source-list">
+          <li>World Health Organization. <a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener noreferrer">WHO guidelines on physical activity and sedentary behaviour</a>. 2020.</li>
+          <li>World Health Organization. <a href="https://www.who.int/publications/i/item/9789241550536" target="_blank" rel="noopener noreferrer">Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age</a>. 2019.</li>
+          <li>Stricker PR, Faigenbaum AD, McCambridge TM; AAP Council on Sports Medicine and Fitness. <a href="https://doi.org/10.1542/peds.2020-1011" target="_blank" rel="noopener noreferrer">Resistance Training for Children and Adolescents</a>. <i>Pediatrics</i>. 2020;145(6):e20201011.</li>
+          <li>Lloyd RS, et al. <a href="https://doi.org/10.1136/bjsports-2013-092952" target="_blank" rel="noopener noreferrer">Position statement on youth resistance training: the 2014 International Consensus</a>. <i>Br J Sports Med</i>. 2014;48:498–505.</li>
+          <li>Faigenbaum AD, et al. <a href="https://doi.org/10.1519/JSC.0b013e31819df407" target="_blank" rel="noopener noreferrer">Youth Resistance Training: Updated Position Statement Paper From the National Strength and Conditioning Association</a>. <i>J Strength Cond Res</i>. 2009;23(Suppl 5):S60–S79.</li>
+          <li>Bergeron MF, et al. <a href="https://doi.org/10.1136/bjsports-2015-094962" target="_blank" rel="noopener noreferrer">International Olympic Committee consensus statement on youth athletic development</a>. <i>Br J Sports Med</i>. 2015;49:843–851.</li>
+        </ol>
+      </section>
+      <section class="medical-note"><b>Важно.</b> Материал не заменяет индивидуальную медицинскую оценку. Возрастные границы — навигация, а не физиологические пороги. Конкретные нозологии не раскрываются внутри возрастной карточки: они подключаются отдельными профессиональными модулями. Дата планового пересмотра общей рамки: сентябрь 2027 или раньше при выходе новых руководств.</section>
+    </main>
+    <footer><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script>
+      (function () {
+        var jump = document.querySelectorAll('.age-jump a[href^="#"]');
+        jump.forEach(function (link) {
+          link.addEventListener('click', function () {
+            var id = link.getAttribute('href').slice(1);
+            var panel = document.getElementById(id);
+            if (panel && panel.tagName === 'DETAILS') panel.open = true;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
