@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "BALANS — нормальный образ жизни",
   description: "BALANS — оценка, питание, тренировки, восстановление и практические инструменты для здоровья.",
   alternates: { canonical: "/balans" },
-  openGraph: { url: "/balans" },
+  openGraph: {
+    url: "/balans",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "BALANS Hub" }],
+  },
 };
 
 export default function BalansPage() {
@@ -16,7 +19,7 @@ export default function BalansPage() {
           <section className="platform-hero">
             <div>
               <p className="eyebrow">Нормальный образ жизни</p>
-              <h1><span className="wordplay">с<span>BALANS</span>ированное</span>{" питание и физическая активность"}</h1>
+              <h1><span className="wordplay">с<span>BALANS</span><wbr />ированное</span>{" питание и физическая активность"}</h1>
               <p className="hero-lead">Оцените исходную точку, разберитесь в принципах питания и соберите понятную систему тренировок и восстановления.</p>
             </div>
             <div className="route-note" aria-label="Маршрут BALANS"><span>01 · Оценка</span><span>02 · Контроль</span><span>03 · Прогресс</span><span>04 · Знания</span><span>05 · Тренировки</span><span>06 · По заболеваниям</span></div>

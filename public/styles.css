@@ -694,9 +694,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .exercise-safety { margin: 1rem 0 0; padding: 1rem 1.2rem; border-left: 5px solid var(--mint); border-radius: .5rem .9rem .9rem .5rem; color: #315d50; background: #eaf8f3; font-size: .85rem; }
 
 @media (max-width: 900px) {
-  .site-header { gap: 1rem; }
-  nav { gap: 1.15rem; max-width: 62vw; overflow-x: auto; scrollbar-width: none; }
-  nav::-webkit-scrollbar { display: none; }
+  .site-header { flex-wrap: wrap; row-gap: .35rem; min-height: 0; padding-top: .9rem; padding-bottom: .55rem; }
+  nav { width: 100%; max-width: none; flex-wrap: wrap; gap: .4rem 1.05rem; overflow: visible; }
   nav a { white-space: nowrap; }
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 2rem; padding-top: 4rem; }
   .hero-map {
@@ -723,16 +722,9 @@ tbody tr:last-child td { border-bottom: 0; }
 
 @media (max-width: 620px) {
   .site-header, .hero, .projects, .author, footer { width: min(100% - 2rem, 1180px); }
-  .site-header { min-height: 4.75rem; gap: .75rem; }
-  nav {
-    gap: .85rem;
-    max-width: 62vw;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  nav::-webkit-scrollbar { display: none; }
-  nav a { white-space: nowrap; font-size: .82rem; }
+  .site-header { gap: .75rem; }
+  nav { gap: .45rem .9rem; }
+  nav a { font-size: .9rem; }
   .hero { padding: 1.25rem 0 2.5rem; gap: 1.6rem; }
   .hero h1 { max-width: 16ch; font-size: clamp(2.15rem, 8.6vw, 2.8rem); }
   .hero-lead { margin: .9rem 0 1.15rem; font-size: 1rem; }
@@ -819,10 +811,9 @@ tbody tr:last-child td { border-bottom: 0; }
   .author-photo { width: 6.75rem; }
   footer { grid-template-columns: 1fr; gap: 1rem; }
   .platform-main, .narrow-main { width: min(100% - 2rem, 1180px); }
-  .platform-header nav { max-width: 68vw; overflow-x: auto; padding: 1rem 0; }
-  .platform-header nav a { white-space: nowrap; }
-  .platform-hero { min-height: auto; padding: 4rem 0; }
-  .platform-hero h1, .page-intro h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .platform-header nav { max-width: none; overflow: visible; flex-wrap: wrap; padding: .2rem 0 .35rem; }
+  .platform-hero { min-height: auto; padding: 2.5rem 0 3rem; }
+  .platform-hero h1, .page-intro h1 { max-width: 100%; font-size: clamp(2rem, 8.4vw, 2.7rem); overflow-wrap: anywhere; }
   .module-grid, .exercise-grid, .training-directions, .condition-grid, .reference-grid, .article-columns, .principle-grid, .metric-row, .migration-note { grid-template-columns: 1fr; }
   .module-card { min-height: 16rem; }
   .calculator { grid-template-columns: 1fr; }

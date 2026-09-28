@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "Новости здоровья и медицины — BALANS",
   description: "Новости BALANS: короткие разборы важных обновлений в медицине, питании и тренировках.",
   alternates: { canonical: "/news" },
-  openGraph: { url: "/news" },
+  openGraph: {
+    url: "/news",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "BALANS Hub" }],
+  },
 };
 
 export default function NewsPage() {
