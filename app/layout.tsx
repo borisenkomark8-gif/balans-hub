@@ -8,10 +8,32 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const siteUrl = "https://balans-hub.vercel.app";
+const description =
+  "BALANS Hub — авторские проекты врача о питании, тренировках, практической медицине и подготовке к медицинским экзаменам.";
+
 export const metadata: Metadata = {
-  title: "BALANS — здоровье, движение, медицинские знания",
-  description:
-    "BALANS — авторские проекты врача о здоровье, питании, тренировках и медицинском образовании.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "BALANS Hub — здоровье, движение, медицинские знания",
+    template: "%s",
+  },
+  description,
+  applicationName: "BALANS Hub",
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: siteUrl,
+    siteName: "BALANS Hub",
+    title: "BALANS Hub — здоровье, движение, медицинские знания",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BALANS Hub — здоровье, движение, медицинские знания",
+    description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {

@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "BALANS — нормальный образ жизни",
   description: "BALANS — оценка, питание, тренировки, восстановление и практические инструменты для здоровья.",
+  alternates: { canonical: "/balans" },
+  openGraph: { url: "/balans" },
 };
 
 export default function BalansPage() {
@@ -28,10 +30,10 @@ export default function BalansPage() {
           </section>
           <section className="migration-note">
             <div>
-              <p className="eyebrow">Переезд проекта</p>
-              <h2>Все материалы собираются здесь</h2>
+              <p className="eyebrow">Как устроен раздел</p>
+              <h2>Шесть шагов — одна система</h2>
             </div>
-            <p>Содержание старой платформы переносится поэтапно. Уже перенесены оценка, контроль, прогресс, раздел знаний, клинические направления и каталог упражнений.</p>
+            <p>Оценка задаёт исходную точку. Контроль и прогресс показывают динамику. Знания и тренировки дают практику, а раздел по заболеваниям помогает учесть диагноз, возраст и ограничения.</p>
           </section>
         </main>
         <footer><a className="brand footer-brand" href="/"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>Dr.Mark · BALANS</span></a><p>Информация носит образовательный характер и не заменяет консультацию врача.</p><p>© 2026 BALANS</p></footer>
