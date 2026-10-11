@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <header className="site-header"><a className="brand" href="#top" aria-label="BALANS — на главную"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>BALANS</span></a><nav aria-label="Основная навигация"><a href="/balans">BALANS</a><a href="#projects">Проекты</a><a href="/news">Новости</a><a href="#author">Об авторе</a></nav></header>
+      <header className="site-header"><a className="brand" href="#top" aria-label="BALANS — на главную"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>BALANS</span></a><nav aria-label="Основная навигация"><a href="/balans">BALANS</a><a href="#projects">Проекты</a><a href="/news">Новости</a><a href="/coaching">Сопровождение</a><a href="#author">Об авторе</a></nav></header>
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy"><p className="eyebrow">Здоровье · движение · медицинские знания</p><h1 id="hero-title">Понятные инструменты для вашего здоровья</h1><p className="hero-lead">Авторские проекты врача и персонального тренера: от питания и силовых тренировок до практической медицины и подготовки к медицинским экзаменам.</p><a className="primary-action" href="#projects">Смотреть проекты<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg></a></div>
@@ -48,7 +48,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <footer><a className="brand footer-brand" href="#top"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>BALANS</span></a><p>Информация на сайте носит образовательный характер и не заменяет консультацию врача.</p><p>© 2026 BALANS</p></footer>
+      <footer><a className="brand footer-brand" href="#top"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>BALANS</span></a><p>Информация на сайте носит образовательный характер и не заменяет консультацию врача. Все приложения остаются бесплатными.</p><div className="footer-actions"><a className="support-link" href="https://ko-fi.com/balans" target="_blank" rel="noopener noreferrer">Поддержать проект</a><p>© 2026 BALANS</p></div></footer>
     </>
   );
 }

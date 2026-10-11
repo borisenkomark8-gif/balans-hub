@@ -5,6 +5,7 @@ const siteUrl = "https://balans-hub.vercel.app";
 const paths = [
   "/",
   "/news",
+  "/coaching",
   "/balans",
   "/balans/assessment",
   "/balans/control",
@@ -31,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}${path}`,
     lastModified,
     changeFrequency: path === "/" || path === "/news" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : path === "/balans" || path === "/news" ? 0.8 : 0.6,
+    priority:
+      path === "/" ? 1 : path === "/balans" || path === "/news" || path === "/coaching" ? 0.8 : 0.6,
   }));
 }
