@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
+import { headers } from "next/headers";
 import "../public/styles.css";
+import { defaultLocale, isLocale } from "@/lib/i18n/config";
 
 const manrope = Manrope({
   subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "greek", "vietnamese"],
@@ -42,9 +44,12 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headerLocale = (await headers()).get("x-balans-locale");
+  const lang = headerLocale && isLocale(headerLocale) ? headerLocale : defaultLocale;
+
   return (
-    <html lang="ru">
+    <html lang={lang} suppressHydrationWarning>
       <body className={manrope.className}>{children}</body>
     </html>
   );

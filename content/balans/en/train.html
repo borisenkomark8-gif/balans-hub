@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BALANS training: exercise library, machines, strength, aerobic and interval training." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Training — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/en/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="BALANS sections"><a href="/en/balans/assessment">Assessment</a><a href="/en/balans/control">Tracking</a><a href="/en/balans/progress">Progress</a><a href="/en/balans/learn">Knowledge</a><a class="active" href="/en/balans/train">Training</a><a href="/en/balans/clinical">By condition</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/en/balans">← All tools</a>
+      <section class="page-intro">
+        <p class="eyebrow">Physical activity</p>
+        <h1>Training</h1>
+        <p>An exercise library, a guide to gym equipment and materials on planning training load.</p>
+      </section>
+      <p class="source-note"><b>Practical conclusions on training load are checked against</b> <a href="https://massresearchreview.com/" target="_blank" rel="noopener noreferrer">MASS Research Review</a>. We carry over the conclusion, not the text of paywalled issues.</p>
+
+      <section class="training-directions">
+        <article><span>01</span><h2>Strength training</h2><p>Exercise classification, programming, technique, adaptation, recovery and safety.</p></article>
+        <article><span>02</span><h2>Aerobic training</h2><p>Walking, running, cycling, swimming, zone 2, VO₂max and race preparation.</p></article>
+        <article><span>03</span><h2>HIIT</h2><p>Short high-intensity intervals as a complement to strength and aerobic work.</p></article>
+      </section>
+
+      <section class="clinical-guide" aria-labelledby="child-train-title" style="margin-bottom:4rem">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Children and adolescents</p>
+          <h2 id="child-train-title">Training by age</h2>
+          <p>A separate module for ages 0–17: age ranges, strength, progression, load monitoring and safety.</p>
+        </div>
+        <a class="secondary-action inline-action" href="/en/balans/train-child-by-age">Open the age-based module →</a>
+      </section>
+
+      <section class="exercise-section" aria-labelledby="exercise-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">29 exercises</p>
+          <h2 id="exercise-title">Exercise library</h2>
+          <p>Search by name or muscle group. Open a card to see the video, technique and common mistakes.</p>
+        </div>
+        <div class="library-controls">
+          <label class="search-field"><span class="sr-only">Search exercises</span><input id="exercise-search" type="search" placeholder="For example: squats, back, chest" /></label>
+          <div class="filter-row" role="group" aria-label="Filter by muscle group">
+            <button class="filter-button active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="legs">Legs and glutes</button>
+            <button class="filter-button" type="button" data-filter="back">Back</button>
+            <button class="filter-button" type="button" data-filter="chest">Chest</button>
+            <button class="filter-button" type="button" data-filter="shoulders">Shoulders</button>
+            <button class="filter-button" type="button" data-filter="arms">Arms</button>
+          </div>
+        </div>
+        <div class="exercise-grid" id="exercise-grid">
+          <article data-group="legs" data-search="barbell squat quadriceps glutes"><span>Legs and glutes</span><h3>Barbell squat</h3><p>Quadriceps · gluteus maximus</p></article>
+          <article data-group="legs" data-search="leg press quadriceps"><span>Legs and glutes</span><h3>Leg press</h3><p>Quadriceps · glutes</p></article>
+          <article data-group="legs" data-search="bulgarian split squat quadriceps glutes"><span>Legs and glutes</span><h3>Bulgarian split squat</h3><p>Quadriceps · gluteus maximus</p></article>
+          <article data-group="legs" data-search="glute bridge hip thrust glutes"><span>Legs and glutes</span><h3>Barbell hip thrust</h3><p>Gluteus maximus</p></article>
+          <article data-group="legs" data-search="leg extension quadriceps"><span>Legs and glutes</span><h3>Leg extension</h3><p>Quadriceps</p></article>
+          <article data-group="legs" data-search="leg curl hamstrings biceps femoris"><span>Legs and glutes</span><h3>Leg curl</h3><p>Hamstrings</p></article>
+          <article data-group="back" data-search="seated cable row lats rhomboids trapezius"><span>Back</span><h3>Seated cable row</h3><p>Lats · rhomboids · trapezius</p></article>
+          <article data-group="back" data-search="one-arm dumbbell row lats"><span>Back</span><h3>One-arm dumbbell row</h3><p>Lats</p></article>
+          <article data-group="back" data-search="lat pulldown lats"><span>Back</span><h3>Lat pulldown</h3><p>Lats</p></article>
+          <article data-group="back" data-search="t-bar row rhomboids"><span>Back</span><h3>T-bar row</h3><p>Lats · rhomboids · trapezius</p></article>
+          <article data-group="back" data-search="bent-over barbell row lats"><span>Back</span><h3>Bent-over barbell row</h3><p>Lats · rhomboids · trapezius</p></article>
+          <article data-group="back" data-search="back extension hyperextension spinal erectors glutes"><span>Back</span><h3>Back extension</h3><p>Spinal erectors · glutes</p></article>
+          <article data-group="back" data-search="pull-ups chin-ups lats biceps"><span>Back</span><h3>Pull-ups</h3><p>Lats · biceps</p></article>
+          <article data-group="chest" data-search="push-ups chest triceps"><span>Chest</span><h3>Push-ups</h3><p>Pectoralis major · triceps</p></article>
+          <article data-group="chest" data-search="dumbbell bench press chest triceps"><span>Chest</span><h3>Dumbbell bench press</h3><p>Pectoralis major · triceps</p></article>
+          <article data-group="chest" data-search="dumbbell fly chest"><span>Chest</span><h3>Dumbbell fly</h3><p>Pectoralis major</p></article>
+          <article data-group="chest" data-search="barbell bench press chest triceps"><span>Chest</span><h3>Barbell bench press</h3><p>Pectoralis major · triceps</p></article>
+          <article data-group="chest" data-search="wide-grip barbell bench press chest"><span>Chest</span><h3>Wide-grip barbell bench press</h3><p>Pectoralis major</p></article>
+          <article data-group="chest" data-search="pec deck machine fly chest"><span>Chest</span><h3>Machine chest fly</h3><p>Pectoralis major</p></article>
+          <article data-group="shoulders" data-search="seated dumbbell press shoulders deltoids"><span>Shoulders</span><h3>Seated dumbbell press</h3><p>Anterior and lateral deltoids</p></article>
+          <article data-group="shoulders" data-search="reverse fly rear delt"><span>Shoulders</span><h3>Reverse fly</h3><p>Posterior deltoid</p></article>
+          <article data-group="shoulders" data-search="face pull rear delt rhomboids"><span>Shoulders</span><h3>Rope face pull</h3><p>Posterior deltoid · rhomboids</p></article>
+          <article data-group="shoulders" data-search="shoulder press mistakes triceps"><span>Shoulders</span><h3>Shoulder press: common mistakes</h3><p>Deltoids · triceps</p></article>
+          <article data-group="shoulders" data-search="dumbbell lateral raise side delt"><span>Shoulders</span><h3>Dumbbell lateral raise</h3><p>Lateral deltoid</p></article>
+          <article data-group="arms" data-search="dumbbell common mistakes arms"><span>Arms</span><h3>Dumbbell exercises: mistakes</h3><p>Depends on the exercise</p></article>
+          <article data-group="arms" data-search="seated dumbbell curl biceps"><span>Arms</span><h3>Seated dumbbell curl</h3><p>Biceps</p></article>
+          <article data-group="arms" data-search="barbell curl biceps"><span>Arms</span><h3>Barbell curl</h3><p>Biceps</p></article>
+          <article data-group="arms" data-search="rope triceps pushdown cable triceps"><span>Arms</span><h3>Rope triceps pushdown</h3><p>Triceps</p></article>
+          <article data-group="arms" data-search="skull crusher lying triceps extension triceps"><span>Arms</span><h3>Lying triceps extension</h3><p>Triceps</p></article>
+        </div>
+        <p class="empty-result" id="exercise-empty" hidden>No exercises found for your search.</p>
+      </section>
+
+      <section class="equipment-section" aria-labelledby="equipment-title">
+        <p class="eyebrow">Gym equipment</p>
+        <h2 id="equipment-title">Equipment by zone</h2>
+        <div class="equipment-tabs" role="tablist" aria-label="Equipment zones">
+          <button class="equipment-tab active" type="button" data-zone="machines">Machines</button>
+          <button class="equipment-tab" type="button" data-zone="free">Free weights</button>
+          <button class="equipment-tab" type="button" data-zone="cardio">Cardio</button>
+        </div>
+        <div class="equipment-panel" id="equipment-panel"></div>
+      </section>
+
+      <dialog class="exercise-dialog" id="exercise-dialog" aria-labelledby="exercise-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close card">×</button>
+        <div id="exercise-dialog-content"></div>
+      </dialog>
+    </main>
+    <footer><a class="brand footer-brand" href="/en"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Information is educational and does not replace a medical consultation.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+    <script src="/balans/exercise-details.en.js"></script>
+  </body>
+</html>

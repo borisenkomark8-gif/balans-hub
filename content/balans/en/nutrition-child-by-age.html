@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nutrition of children and adolescents by age: energy, protein, fats, complementary feeding, growth and common mistakes - BALANS module for parents." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Nutrition for children and adolescents by age - BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+.clinical-guide .table-scroll { margin: 1rem 0 0; }
+.clinical-guide .table-scroll th,
+.clinical-guide .table-scroll td { white-space: normal; vertical-align: top; }
+.clinical-guide h3 { margin-top: 1.75rem; }
+.clinical-guide h4 { margin-top: 1.35rem; font-size: 1.05rem; }
+.clinical-guide .section-heading + .table-scroll,
+.clinical-guide .section-heading + .principle-grid,
+.clinical-guide .section-heading + .check-list,
+.clinical-guide .section-heading + p,
+.clinical-guide .section-heading + ol,
+.clinical-guide .section-heading + ul { margin-top: 1.25rem; }
+.clinical-guide ol.algo-list { margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+.clinical-guide ol.algo-list li + li { margin-top: .55rem; }
+.clinical-guide ul.content-list { margin: .85rem 0 0; padding-left: 1.15rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.clinical-guide ul.content-list li + li { margin-top: .4rem; }
+.clinical-guide p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.clinical-guide p + p { margin-top: .85rem; }
+.clinical-guide code { font-size: .92em; background: #f0f6fa; padding: .1rem .35rem; border-radius: .35rem; color: var(--ink); }
+.status-line { color: var(--muted); font-size: .92rem; }
+.age-jump { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; margin: 0 0 2.5rem; }
+.age-jump a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 3.1rem;
+  padding: .7rem .85rem; text-align: center; border: 1px solid var(--line); border-radius: .9rem;
+  background: #fff; color: var(--ink); font-size: .88rem; font-weight: 800; line-height: 1.25;
+}
+.age-jump a:hover { border-color: var(--cyan); color: var(--blue); }
+.age-jump a span { display: block; color: var(--muted); font-size: .72rem; font-weight: 700; margin-top: .2rem; }
+.age-jump .group-label {
+  grid-column: 1 / -1; margin: .35rem 0 0; color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .02em;
+}
+.source-list, .source-note ol { margin: .75rem 0 0; padding-left: 1.15rem; }
+.source-list li + li, .source-note ol li + li { margin-top: .55rem; }
+details.age-panel {
+  margin: 0 0 1rem; border: 1px solid var(--line); border-radius: 1rem; background: #fff; overflow: hidden;
+}
+details.age-panel > summary {
+  cursor: pointer; list-style: none; padding: 1.15rem 1.25rem; font-size: 1.15rem; font-weight: 800; color: var(--ink);
+}
+details.age-panel > summary::-webkit-details-marker { display: none; }
+details.age-panel > summary::after { content: "+"; float: right; color: var(--blue); font-weight: 800; }
+details.age-panel[open] > summary::after { content: "–"; }
+details.age-panel .panel-body { padding: 0 1.25rem 1.35rem; }
+details.age-panel .panel-body > :first-child { margin-top: 0; }
+.calc-stack { display: grid; gap: 1.25rem; margin-top: 1.25rem; }
+.calc-card { border: 1px solid var(--line); border-radius: 1.25rem; background: #fff; padding: 1.25rem; }
+.calc-card h3 { margin: 0 0 1rem; font-size: 1.1rem; }
+.calc-form { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+.calc-form .calc-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .65rem; }
+.calc-form .check-label {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: .55rem; min-height: 2.75rem;
+  color: var(--ink); font-size: .9rem; font-weight: 700;
+}
+.calc-form .check-label input { width: 1.15rem; height: 1.15rem; }
+.calc-form label[hidden], .calc-form .check-label[hidden] { display: none !important; }
+.calc-result { margin-top: 1rem; padding: 1rem 1.1rem; border-radius: .9rem; background: #edf9fc; color: var(--ink); font-size: .95rem; line-height: 1.65; }
+.calc-result:empty { display: none; }
+.calc-result p + p { margin-top: .55rem; }
+.calc-formula, .calc-units, .calc-disclaimer, .calc-hint { color: var(--muted); font-size: .88rem; }
+.calc-hint { margin: .75rem 0 0; }
+.md-h1 { display: none; }
+@media (max-width: 900px) {
+  .age-jump { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .age-jump { grid-template-columns: 1fr; }
+  .calc-form { grid-template-columns: 1fr; }
+}
+
+    </style>
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/en/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="BALANS sections"><a href="/en/balans/assessment">Assessment</a><a href="/en/balans/control">Tracking</a><a href="/en/balans/progress">Progress</a><a class="active" href="/en/balans/learn">Knowledge</a><a href="/en/balans/train">Training</a><a href="/en/balans/clinical">By condition</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/en/balans/learn#nutrition">← Nutrition in Learn</a>
+
+      <section class="page-intro clinical-intro">
+        <p class="eyebrow">NORMAL LIFESTYLE · Nutrition · 0–17 years</p>
+        <h1>Nutrition for children and adolescents by age</h1>
+        <p class="status-line"><b>Educational material for parents</b></p>
+        <p>Most mistakes in child nutrition are not about missing “healthy foods,” but about misjudging the child’s needs: overfeeding milk, restricting fat, replacing meals with juice and purées, fearing allergens, pressuring to finish plates, or putting a teenager on an adult weight-loss diet.</p>
+<p>This module answers five practice questions:</p>
+<ol class="algo-list"><li>How much energy, protein, and fat do children need at different ages?</li><li>How does breast milk differ from formula, and when is formula truly needed?</li><li>How do you start complementary foods and increase portion size and texture?</li><li>How can you tell whether nutrition supports normal growth?</li><li>Which common tips are mistakes or myths?</li></ol>
+<p>Age-based numbers are a starting point, not a personal prescription. Two healthy children the same age can have very different energy needs because of body size, growth rate, and activity.</p>
+      </section>
+
+      <nav class="age-jump" aria-label="Quick age selection">
+        <p class="group-label">First year of life</p>
+        <a href="#age-0-6">0–6 months<span>breast milk/formula</span></a>
+        <a href="#age-6-11">6–11 months<span>complementary foods</span></a>
+        <a href="#age-1-3">1–3 years<span>after the first year</span></a>
+        <a href="#age-4-6">4–6 years<span>family food</span></a>
+        <a href="#age-7-10">7–10 years<span>school and sports</span></a>
+        <a href="#age-11-14">11–14 years<span>puberty</span></a>
+        <a href="#age-15-17">15–17 years<span>teens</span></a>
+        <a href="#age-athlete">Young athlete<span>energy and protein</span></a>
+      </nav>
+
+      <nav class="article-jump" aria-label="Page sections" style="margin-bottom:2rem">
+        <a href="#basics">Key figures</a>
+        <a href="#growth">Growth</a>
+        <a href="#year1">First year</a>
+        <a href="#calculators">Calculators</a>
+        <a href="#errors">Common mistakes</a>
+        <a href="#myths">Myths</a>
+        <a href="#sources">Sources</a>
+      </nav>
+
+      <section class="clinical-guide" id="basics">
+        <div class="section-heading compact-heading"><p class="eyebrow">01 · Key figures</p><h2>Key figures</h2></div>
+        <h3>Energy, protein, and fat by age</h3>
+<p>Calorie ranges are given for a child with reference height and weight. After age 3, the range roughly matches low to moderate activity. Sport, rapid growth, and higher body weight can increase needs substantially.</p>
+<div class="table-scroll"><table><thead><tr><th>Age</th><th>Energy, approximate</th><th>Protein</th><th>Fat</th><th>What matters</th></tr></thead><tbody><tr><td>0–5 months</td><td style="text-align:right">about 450–650 kcal/day</td><td style="text-align:right">provided by breast milk or formula</td><td style="text-align:right">about half of milk energy</td><td>Calories are not counted separately; feeding and growth are assessed</td></tr><tr><td>6–11 months</td><td style="text-align:right">about 600–850 kcal/day total</td><td style="text-align:right">about 1.1 g/kg/day</td><td style="text-align:right">30–45 E%</td><td>Milk remains the base, but iron-rich foods quickly become more important</td></tr><tr><td>12–23 months</td><td style="text-align:right">about 750–1050 kcal/day</td><td style="text-align:right">about 1.0 g/kg/day</td><td style="text-align:right">30–40 E%</td><td>A low-fat diet is not advisable</td></tr><tr><td>2–3 years</td><td style="text-align:right">about 1000–1400 kcal/day</td><td style="text-align:right">0.9–1.0 g/kg/day</td><td style="text-align:right">30–40 E%</td><td>Appetite often becomes less stable — that is frequently normal</td></tr><tr><td>4–6 years</td><td style="text-align:right">about 1200–1800 kcal/day</td><td style="text-align:right">0.85–0.9 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>Calorie needs depend more on movement than on sex</td></tr><tr><td>7–10 years</td><td style="text-align:right">about 1400–2200 kcal/day</td><td style="text-align:right">about 0.9 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>School and sports clubs change meal rhythm</td></tr><tr><td>11–14 years, girls</td><td style="text-align:right">about 1700–2450 kcal/day</td><td style="text-align:right">0.87–0.90 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>After menarche, iron needs more attention</td></tr><tr><td>11–14 years, boys</td><td style="text-align:right">about 1850–2850 kcal/day</td><td style="text-align:right">0.89–0.91 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>Needs rise sharply during a growth spurt</td></tr><tr><td>15–17 years, girls</td><td style="text-align:right">about 1950–2600 kcal/day</td><td style="text-align:right">0.83–0.85 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>Active athletes may need much more energy</td></tr><tr><td>15–17 years, boys</td><td style="text-align:right">about 2350–3300 kcal/day</td><td style="text-align:right">0.86–0.88 g/kg/day</td><td style="text-align:right">25–40 E%</td><td>High calorie intake does not mean sports supplements are required</td></tr></tbody></table></div>
+<p><b>E%</b> is the share of total dietary energy. For example, 30 E% fat on a 1600 kcal diet is about 53 g of fat: <code>1600 × 0.30 ÷ 9</code>.</p>
+<h4>How to estimate protein</h4>
+<p><code>body weight × guideline g/kg = daily protein target</code></p>
+<p>Examples:</p>
+<ul class="content-list"><li>2-year-old, 12 kg: <code>12 × 0.97 ≈ 12 g/day</code>;</li><li>8-year-old, 26 kg: <code>26 × 0.92 ≈ 24 g/day</code>;</li><li>15-year-old girl, 55 kg: <code>55 × 0.85 ≈ 47 g/day</code>;</li><li>16-year-old boy, 65 kg: <code>65 × 0.87 ≈ 57 g/day</code>.</li></ul>
+<p>This is a reference for adequate intake, not a ceiling. A typical mixed diet often provides more protein. Extra protein does not automatically become extra height or muscle.</p>
+<h4>Protein in common foods</h4>
+<div class="table-scroll"><table><thead><tr><th>Food</th><th>Portion</th><th>Protein, approx.</th></tr></thead><tbody><tr><td>Egg</td><td style="text-align:right">1 egg</td><td style="text-align:right">6–7 g</td></tr><tr><td>Milk</td><td style="text-align:right">200 ml</td><td style="text-align:right">6–7 g</td></tr><tr><td>Plain yogurt</td><td style="text-align:right">150 g</td><td style="text-align:right">5–9 g</td></tr><tr><td>Cottage cheese</td><td style="text-align:right">100 g</td><td style="text-align:right">14–18 g</td></tr><tr><td>Chicken/turkey</td><td style="text-align:right">70 g cooked</td><td style="text-align:right">18–22 g</td></tr><tr><td>Fish</td><td style="text-align:right">70 g</td><td style="text-align:right">14–18 g</td></tr><tr><td>Lentils/beans</td><td style="text-align:right">100 g cooked</td><td style="text-align:right">7–9 g</td></tr><tr><td>Tofu</td><td style="text-align:right">100 g</td><td style="text-align:right">10–15 g</td></tr></tbody></table></div>
+<p>Values vary by product and brand; use the label for calculations.</p>
+<h3>Fat is not the enemy of child nutrition</h3>
+<p>Fat provides 9 kcal/g, supplies essential fatty acids, and helps absorb vitamins A, D, E, and K. In early childhood it is especially important because energy needs are high relative to stomach size.</p>
+<div class="table-scroll"><table><thead><tr><th>Age</th><th>Share of energy from fat</th></tr></thead><tbody><tr><td>6–11 months</td><td style="text-align:right">30–45 E%</td></tr><tr><td>12–23 months</td><td style="text-align:right">30–40 E%</td></tr><tr><td>After age 2</td><td style="text-align:right">25–40 E%</td></tr></tbody></table></div>
+<p>Preferred sources: vegetable oils, fish, avocado, nut butters, and ground seeds in a safe form. After age 2, saturated fat should be under 10 E%; trans fats should be minimal.</p>
+<h3>Carbohydrates and dietary fiber</h3>
+<ul class="content-list"><li>After 6 months, carbohydrates usually provide 45–60 E%.</li><li>After age 2, the professional fiber target is at least 3 g/MJ.</li><li>1 MJ ≈ 239 kcal.</li></ul>
+<div class="table-scroll"><table><thead><tr><th>Calorie level</th><th>Dietary fiber target</th></tr></thead><tbody><tr><td style="text-align:right">1000 kcal</td><td style="text-align:right">about 12–13 g/day</td></tr><tr><td style="text-align:right">1400 kcal</td><td style="text-align:right">about 17–18 g/day</td></tr><tr><td style="text-align:right">1800 kcal</td><td style="text-align:right">about 22–23 g/day</td></tr><tr><td style="text-align:right">2200 kcal</td><td style="text-align:right">about 27–28 g/day</td></tr></tbody></table></div>
+<p>A sudden increase in fiber can cause pain and bloating and may displace calorie-dense food in a small child. Increase fiber gradually and with adequate fluids.</p>
+<h3>Water</h3>
+<p>Figures include water from drinks and food.</p>
+<div class="table-scroll"><table><thead><tr><th>Age</th><th>Total water intake</th></tr></thead><tbody><tr><td>6–11 months</td><td style="text-align:right">0.8–1.0 L/day</td></tr><tr><td>1–2 years</td><td style="text-align:right">1.1–1.2 L/day</td></tr><tr><td>2–3 years</td><td style="text-align:right">about 1.3 L/day</td></tr><tr><td>4–8 years</td><td style="text-align:right">about 1.6 L/day</td></tr><tr><td>9–13 years, girls</td><td style="text-align:right">about 1.9 L/day</td></tr><tr><td>9–13 years, boys</td><td style="text-align:right">about 2.1 L/day</td></tr><tr><td>14–17 years, girls</td><td style="text-align:right">about 2.0 L/day</td></tr><tr><td>14–17 years, boys</td><td style="text-align:right">about 2.5 L/day</td></tr></tbody></table></div>
+<p>In heat, with fever, diarrhea, or training, needs increase. Sweet drinks are not a routine way to quench thirst.</p>
+      </section>
+      <section class="clinical-guide" id="growth">
+        <div class="section-heading compact-heading"><p class="eyebrow">02 · Growth</p><h2>Growth: the main sign that nutrition is adequate</h2></div>
+        <h3>How weight gain changes with age</h3>
+<div class="table-scroll"><table><thead><tr><th>Age</th><th>Approximate weight gain</th></tr></thead><tbody><tr><td>0–3 months</td><td style="text-align:right">150–200 g/week, about 20–30 g/day</td></tr><tr><td>3–6 months</td><td style="text-align:right">100–150 g/week, about 15–20 g/day</td></tr><tr><td>6–12 months</td><td style="text-align:right">70–90 g/week, about 10–13 g/day</td></tr><tr><td>1–2 years</td><td style="text-align:right">about 2–2.5 kg per year</td></tr><tr><td>2–5 years</td><td style="text-align:right">usually about 1.5–2.5 kg per year</td></tr><tr><td>School age before puberty</td><td style="text-align:right">often about 2–3 kg per year</td></tr><tr><td>Puberty</td><td style="text-align:right">highly individual; rate rises markedly during a growth spurt</td></tr></tbody></table></div>
+<p>Classic benchmarks: birth weight usually doubles by about 4–6 months, triples near one year, and is about four times birth weight by age 2. These are not deadlines for every child — they help you see overall trends.</p>
+<p>In the first 3 months, growth uses about <b>35% of total energy</b>; by 12 months about <b>5%</b>; in the second year less than <b>2%</b>. That is why lower appetite after the first birthday is often physiological, not a sign of illness.</p>
+<h3>One number does not tell the story</h3>
+<p>Growth is assessed from a series of measurements on the appropriate age- and sex-specific chart:</p>
+<ul class="content-list"><li>under 2 years: weight-for-age, length-for-age, and weight-for-length;</li><li>after 2 years: height, weight, and BMI-for-age;</li><li>for children born preterm, use corrected age;</li><li>the rate and direction of the curve matter, not only the percentile.</li></ul>
+<p>A low percentile in a steadily growing child can be a normal variant. Crossing down through several major percentile bands, failure to gain as expected, or weight loss needs evaluation.</p>
+<h3>When to see a doctor</h3>
+<ul class="content-list"><li>a newborn lost more than 10% of birth weight or did not regain birth weight on time;</li><li>the child is lethargic, feeds poorly, urinates rarely, or vomits repeatedly;</li><li>weight has stopped increasing or the curve trends downward;</li><li>length/height growth has slowed;</li><li>feeds take unusually long, or there is cough, choking, or pain with feeding;</li><li>persistent diarrhea, constipation, blood in stool, or marked bloating;</li><li>a teenager is losing weight quickly, skipping meals, fearing certain foods, or overtraining.</li></ul>
+      </section>
+      <section class="clinical-guide" id="year1">
+        <div class="section-heading compact-heading"><p class="eyebrow">03 · First year</p><h2>The first year of life</h2></div>
+        <p>Separate sections cover breast milk, formula, and complementary foods. Content works without JavaScript.</p>
+
+        <details class="age-panel" id="age-0-6" open>
+          <summary>0–6 months — breast milk</summary>
+          <div class="panel-body">
+            <h3>0–6 months: breast milk</h3>
+<p>For a healthy term infant, breast milk is the preferred food for the first 6 months. Its composition changes during a feed and as the baby grows, so it is not a single fixed formula.</p>
+<h4>Approximate composition of mature breast milk per 100 ml</h4>
+<div class="table-scroll"><table><thead><tr><th>Component</th><th>Average content</th></tr></thead><tbody><tr><td>Energy</td><td style="text-align:right">65–70 kcal</td></tr><tr><td>Protein</td><td style="text-align:right">about 0.9–1.3 g</td></tr><tr><td>Fat</td><td style="text-align:right">about 3.5–4.5 g</td></tr><tr><td>Lactose</td><td style="text-align:right">about 6.7–7.8 g</td></tr></tbody></table></div>
+<p>About half of milk energy comes from fat. Beyond macronutrients, breast milk contains immunoglobulins, lactoferrin, oligosaccharides, enzymes, and other bioactive components. Formula supports nutrition and normal growth but does not fully reproduce this biological system.</p>
+<h4>How often to feed</h4>
+<p>In the first weeks, many babies nurse <b>8–12 times per day</b>, sometimes in clusters. Responsive feeding to hunger cues is usually more informative than a rigid schedule. Crying is a late hunger signal.</p>
+<p>You cannot reliably estimate intake from feed duration, breast fullness, or pumped volume. Assess effective sucking and swallowing, wet diapers, overall condition, and weight trend.</p>
+<h4>Common mistakes</h4>
+<ul class="content-list"><li>limiting feeds to fixed 10–15 minutes;</li><li>giving water or tea instead of feeding a healthy infant without a specific indication;</li><li>treating frequent evening nursing as proof of “empty milk”;</li><li>judging milk supply only by pumping output;</li><li>trying to raise milk fat with a special maternal diet;</li><li>weighing the baby after every feed daily without a clinical reason.</li></ul>
+<h4>Myths</h4>
+<p><b>“Breast milk becomes empty after a few months.”</b> No. Composition changes, but milk remains a source of energy, nutrients, and bioactive factors.</p>
+<p><b>“Thin or bluish milk is not nutritious.”</b> Appearance does not define energy value.</p>
+<p><b>“You must eat lots of dairy to make milk.”</b> Lactation depends first on effective, regular milk removal; no specific food starts it automatically.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-formula">
+          <summary>If formula is used</summary>
+          <div class="panel-body">
+            <h3>If formula is used</h3>
+<p>Standard adapted infant formula is a complete alternative when breastfeeding is impossible, insufficient, or not chosen by the family. It is not a reason for guilt or a competition between feeding methods.</p>
+<p>Under EU rules, ready-to-feed standard formula provides <b>60–70 kcal per 100 ml</b>. Protein, fat, carbohydrate, vitamin, and mineral content is regulated; a higher price does not mean better growth or proven benefit.</p>
+<h4>Safety rules</h4>
+<ul class="content-list"><li>use only the water-to-powder ratio on the label;</li><li>measure water first, then powder;</li><li>do not add an extra scoop “for fullness”;</li><li>do not dilute more for constipation or to save money;</li><li>do not add cereal to the bottle without a medical indication;</li><li>prepare and store formula as instructed; keep hands and equipment clean;</li><li>do not save leftover formula from a started feed for the next time.</li></ul>
+<p>Formula that is too concentrated increases osmolar and renal load and can cause dehydration; formula that is too dilute provides insufficient energy and electrolytes.</p>
+<h4>Types of formula</h4>
+<div class="table-scroll"><table><thead><tr><th>Type</th><th>When it is used</th></tr></thead><tbody><tr><td>Standard cow’s-milk protein</td><td>Most healthy term infants</td></tr><tr><td>Anti-reflux</td><td>Selected cases of marked regurgitation after individual assessment</td></tr><tr><td>Lactose-free</td><td>Some conditions with lactase deficiency; does not treat cow’s-milk protein allergy</td></tr><tr><td>Partially hydrolyzed</td><td>Not considered a therapeutic formula for established allergy</td></tr><tr><td>Extensively hydrolyzed</td><td>Usually first therapeutic line for confirmed cow’s-milk protein allergy</td></tr><tr><td>Amino acid–based</td><td>Severe allergy or no response to hydrolysate, per physician</td></tr><tr><td>Soy-based</td><td>Limited indications; not a universal substitute in allergy</td></tr></tbody></table></div>
+<p>Goat’s milk and routine goat-protein formula are not hypoallergenic: goat and cow proteins can cross-react.</p>
+<h4>Formula myths</h4>
+<p><b>“Formula must suit the stool perfectly.”</b> Stool frequency and consistency vary; changing formula with every stool change often disrupts adaptation.</p>
+<p><b>“Hypoallergenic formula prevents any allergy.”</b> Labeling is not a diagnosis, and preventive benefit of a specific product must be supported by evidence.</p>
+<p><b>“Lactose-free formula is needed for milk allergy.”</b> Allergy is usually to protein; lactose is a carbohydrate.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-6-11">
+          <summary>6–11 months — complementary foods</summary>
+          <div class="panel-body">
+            <h3>6–11 months: complementary foods</h3>
+<p>Complementary foods usually start around 6 months when the infant is developmentally ready; they should not begin before 4 months and should generally not be delayed past 6 months without a reason.</p>
+<h4>Signs of readiness</h4>
+<ul class="content-list"><li>the baby holds the head up and sits steadily with support;</li><li>reaches for food and opens the mouth when offered;</li><li>can move food in the mouth and swallow, not only push it out with the tongue;</li><li>coordinates hands, mouth, and objects.</li></ul>
+<p>Teeth are not required.</p>
+<h4>How much energy complementary foods should provide</h4>
+<p>For a breastfed infant with average milk intake:</p>
+<div class="table-scroll"><table><thead><tr><th>Age</th><th>Energy from complementary foods</th><th>Frequency</th></tr></thead><tbody><tr><td>6–8 months</td><td style="text-align:right">about 200 kcal/day</td><td>2–3 meals</td></tr><tr><td>9–11 months</td><td style="text-align:right">about 300 kcal/day</td><td>3–4 meals</td></tr><tr><td>12–23 months</td><td style="text-align:right">about 550 kcal/day</td><td>3–4 meals plus 1–2 snacks if needed</td></tr></tbody></table></div>
+<p>That does not mean a portion must be forced. At first, 1–2 teaspoons is enough; volume increases with appetite and skills. By 9–11 months many infants can eat about half a 250 ml cup per meal, but individual variation is wide.</p>
+<h4>What to offer first</h4>
+<p>There is no mandatory order of “vegetables → cereal → meat.” From the start, offer nutrient-dense foods regularly, especially iron sources:</p>
+<ul class="content-list"><li>meat, poultry, fish;</li><li>egg;</li><li>legumes and tofu;</li><li>iron-fortified cereals;</li><li>plant iron sources paired with vitamin C–rich foods.</li></ul>
+<p>Iron need at 7–11 months per NNR 2023 is about <b>10 mg/day</b>, so complementary feeding based only on fruit and vegetables does not meet the main nutritional goal of this age.</p>
+<h4>Texture matters as much as composition</h4>
+<ul class="content-list"><li>around 6 months: thick purée, mashed soft food;</li><li>then: lumps, soft pieces, and safe finger foods;</li><li>by about 9 months: varied lumpy textures and self-exploration of food;</li><li>by 12 months: adapted family meals for most children.</li></ul>
+<p>Feeding only smooth purées for a long time can delay chewing skills and acceptance of textures.</p>
+<h4>Allergens</h4>
+<p>Egg, peanut, fish, wheat, and other potential allergens do not need to be delayed for years. Introduce them after complementary feeding begins, in a safe form, and keep them in the diet if tolerated. With severe eczema, existing allergy, or reaction to a food, plan with a clinician.</p>
+<h4>Not for routine use in the first year</h4>
+<ul class="content-list"><li>honey before 12 months;</li><li>unpasteurized products;</li><li>whole nuts, whole grapes, popcorn, and other high choking-risk foods;</li><li>whole cow’s or goat’s milk as the main drink before 12 months;</li><li>juice and sweet drinks;</li><li>foods with added sugar and excess salt.</li></ul>
+<h4>Common complementary-feeding mistakes</h4>
+<ul class="content-list"><li>starting with juice or sweet fruit purées;</li><li>offering only one food for months;</li><li>making complementary foods too thin: the stomach is full but energy is low;</li><li>delaying meat, egg, and other iron sources;</li><li>fearing any lump and staying on purées only;</li><li>feeding in front of a screen so the child “won’t notice” the amount;</li><li>forcing a jar or preset portion to be finished;</li><li>replacing milk with cereal in the bottle;</li><li>treating refusal after one try as permanent dislike.</li></ul>
+<h4>Complementary-feeding myths</h4>
+<p><b>“Zucchini must be the first food.”</b> There is no universally required first food.</p>
+<p><b>“Allergens should be introduced as late as possible.”</b> Current guidance does not support unnecessary delay; allergens are introduced during complementary feeding in a safe form.</p>
+<p><b>“Salt is absolutely forbidden before one year, even in family food.”</b> You should not add salt for the baby, but the goal is to limit excess — not to fear trace amounts.</p>
+<p><b>“A child without teeth cannot eat pieces.”</b> Soft food can be mashed with gums; shape, softness, and adult supervision matter.</p>
+<p><b>“Baby-led weaning is better than purées for everyone.”</b> Self-feeding can be part of complementary feeding but need not be the only method. Safety, iron, adequate energy, and texture progression matter.</p>
+          </div>
+        </details>
+      </section>
+      <section class="clinical-guide" id="ages">
+        <div class="section-heading compact-heading"><p class="eyebrow">04 · By age</p><h2>Age-based sections</h2></div>
+
+        <details class="age-panel" id="age-1-3">
+          <summary>1–3 years — toddlers</summary>
+          <div class="panel-body">
+            <p>After the first year, growth slows down, so the child may eat noticeably less than parents expect. Appetite can change from day to day. It is more correct to evaluate the diet over several days and growth dynamics, rather than one plate.</p>
+<h4>Landmarks</h4>
+<ul class="content-list"><li>energy: approximately 750–1050 kcal at 1–2 years and 1000–1400 kcal by 2–3 years;</li><li>protein: about 1.0 g/kg at 1–2 years and 0.9–1.0 g/kg by 2–3 years;</li><li>fat: 30–40 E%;</li><li>regimen: 3 main meals and 2–3 planned snacks;</li><li>water is the main drink between meals.</li></ul>
+<h4>Example of the day, not a mandatory menu</h4>
+<div class="table-scroll"><table><thead><tr><th>Eating</th><th>Example</th></tr></thead><tbody><tr><td>Breakfast</td><td>Porridge with milk/mixture or water, egg or yogurt, soft fruit</td></tr><tr><td>Snack</td><td>Natural yogurt and berries or bread with legume paste</td></tr><tr><td>Dinner</td><td>Potatoes/rice/cereals, meat/fish/legumes, vegetables, a little oil</td></tr><tr><td>Snack</td><td>Fruit and cheese or avocado bread</td></tr><tr><td>Dinner</td><td>Omelet/fish/tofu, cereal or bread, vegetables</td></tr></tbody></table></div>
+<p>Portions are determined by appetite. The adult is responsible for available products, time and place; child - for choosing from what is offered and quantity.</p>
+<h4>Milk after a year</h4>
+<p>Milk and dairy products are convenient as a source of protein and calcium, but drinking too much milk can crowd out regular food and sources of iron. A practical guideline is usually around <b>300–500 ml milk/dairy equivalents per day</b>, including yogurt and cheese. Regular volumes well above 500–600 ml require evaluation of the entire diet.</p>
+<p>“Baby milk” or 3rd stage formula after one year is not needed by most healthy children with a varied diet; they can be used as one of the products, but do not have a unique mandatory role.</p>
+<h4>Common mistakes</h4>
+<ul class="content-list"><li>free access to milk, juice and snacks all day;</li><li>large bottles of milk at night;</li><li>low-fat foods and eliminating oils for fear of calories;</li><li>a separate “children’s menu” of pasta, sausages and sweet yoghurt;</li><li>feeding in pursuit, in front of a screen or just for fun;</li><li>sweetness as a reward for the main meal;</li><li>pressure: “three more spoons”, “for mom”, “until you finish eating, you won’t leave.”</li></ul>
+<h4>Myths</h4>
+<p><b>“The child must eat soup every day.”</b> Soup is one of the dish options, and not a physiological necessity. Nutritional value depends on composition and density.</p>
+<p><b>“After a year, you definitely need a special mixture.”</b> For most healthy children, no.</p>
+<p><b>“If a child doesn’t eat meat, he definitely doesn’t have enough protein.”</b> Protein is easily obtained from dairy products, eggs, fish, legumes and soy; the issue of iron is assessed separately.</p>
+<p><b>“I haven’t eaten enough, I need to supplement with cookies.”</b> This reinforces the refusal of staple foods and shifts the diet towards less nutritious calories.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-4-6">
+          <summary>4–6 years</summary>
+          <div class="panel-body">
+            <h3>Numbers</h3>
+<ul class="content-list"><li>energy: approximately 1200–1800 kcal/day depending on body size and movement;</li><li>protein: about 0.85–0.9 g/kg/day;</li><li>fat: 25–40 E%;</li><li>dietary fiber: often about 15–20 g/day with appropriate calorie content;</li><li>calcium: approximately 750–850 mg/day according to age;</li><li>vitamin D: 10 mcg/day as NNR reference; National supplementation patterns may vary.</li></ul>
+<h3>Simple main meal design</h3>
+<ul class="content-list"><li>protein source;</li><li>cereals, potatoes, bread or other source of carbohydrates;</li><li>vegetables/fruits;</li><li>source of fat;</li><li>water.</li></ul>
+<p>It is not necessary that the child eats each component in equal quantities. What's more important is repeatable structure and variety throughout the week.</p>
+<h3>Common mistakes</h3>
+<ul class="content-list"><li>a separate sweet “children’s” menu instead of family food;</li><li>constant snacking, due to which there is no appetite for meals;</li><li>juice, compote or drinking yogurt as the main drink;</li><li>requests to finish an adult portion;</li><li>the ban on all desserts, creating increased interest in them;</li><li>discussion of the child’s weight and “fatness” at the table.</li></ul>
+<h3>Myths</h3>
+<p><b>"Sugar causes hyperactivity."</b> No convincing causal relationship with hyperactivity has been demonstrated. Limiting free sugars should be based on the quality of your diet and dental health, not because of the myth of instant behavior change.</p>
+<p><b>“Vitamin gummies will correct a bad diet.”</b> The supplement is not a substitute for nutrition and may lead to excess intake of certain substances.</p>
+<p><b>“A healthy product must be forced to be eaten.”</b> Pressure usually worsens attitudes towards a product. More effective is a regular neutral offer without the requirement to finish eating.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-7-10">
+          <summary>7–10 years</summary>
+          <div class="panel-body">
+            <h3>Numbers</h3>
+<ul class="content-list"><li>energy: approximately 1400–2200 kcal/day;</li><li>protein: about 0.9 g/kg/day;</li><li>fat: 25–40 E%;</li><li>dietary fiber: often around 18–28 g/day depending on energy;</li><li>iron: approximately 8–11 mg/day according to age;</li><li>calcium: about 800 mg/day.</li></ul>
+<h3>What's changing</h3>
+<p>The child spends more time outside the home and chooses some of his food independently. The task of parents is not to control every calorie, but to provide a working system: an affordable breakfast or first meal, school food, a snack before the section and a normal dinner.</p>
+<h4>School day example</h4>
+<ul class="content-list"><li>at home: porridge/bread + egg/yogurt + fruit;</li><li>school: full lunch;</li><li>before the section: banana and yogurt, cheese sandwich or other familiar snack;</li><li>after the section: a regular dinner with carbohydrates and protein;</li><li>water is available.</li></ul>
+<h3>Common mistakes</h3>
+<ul class="content-list"><li>lack of food from the morning until returning from school;</li><li>money only for sweet pastries and a drink instead of an organized snack;</li><li>energy drink before training;</li><li>the diet of the whole family, automatically transferred to the child;</li><li>health assessment based only on appearance;</li><li>using food as punishment or reward.</li></ul>
+<h3>Myths</h3>
+<p><b>“Breakfast is a must for everyone and at any cost.”</b> The general diet and performance are important. If the child cannot eat immediately after waking up, the first full meal can be organized later.</p>
+<p><b>“Children should not eat after 18:00.”</b> Meal times vary depending on sleep, school, and workouts. What is more important is the overall diet and the absence of constant uncontrolled snacking.</p>
+<p><b>“Natural juice is equal to fruit.”</b> Juice contains less fiber and releases excess free sugars more easily; whole fruit is preferable.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-11-14">
+          <summary>11–14 years</summary>
+          <div class="panel-body">
+            <h3>Numbers</h3>
+<div class="table-scroll"><table><thead><tr><th>Indicator</th><th>Girls</th><th>Boys</th></tr></thead><tbody><tr><td>Energy</td><td style="text-align:right">approximately 1700–2450 kcal/day</td><td style="text-align:right">approximately 1850–2850 kcal/day</td></tr><tr><td>Protein</td><td style="text-align:right">0.87–0.90 g/kg/day</td><td style="text-align:right">0.89–0.91 g/kg/day</td></tr><tr><td>Fats</td><td style="text-align:right">25–40 E%</td><td style="text-align:right">25–40 E%</td></tr><tr><td>Iron</td><td style="text-align:right">usually about 13 mg/day in 11–13 years; further depends on menstruation</td><td style="text-align:right">approximately 9–13 mg/day according to age</td></tr><tr><td>Calcium</td><td style="text-align:right">about 1150 mg/day during peak growth</td><td style="text-align:right">about 1150 mg/day during peak growth</td></tr></tbody></table></div>
+<p>The rate of maturation is more important than the passport age. A teenager before a growth spurt and a teenager of the same age in the midst of a growth spurt may have very different needs.</p>
+<h3>Common mistakes</h3>
+<ul class="content-list"><li>skipping meals the entire school day with evening overeating;</li><li>trying to lose weight by giving up carbohydrates;</li><li>fear of fats and choosing only low-fat foods;</li><li>training on an empty stomach after a whole day without food;</li><li>ignoring heavy menstruation, fatigue and decreased results;</li><li>uncontrolled iron, vitamin D and sports supplements without indications.</li></ul>
+<h3>Myths</h3>
+<p><b>“Carbohydrates turn into fat in the evening.”</b> The change in mass is determined by the long-term energy balance, and not by the time of one product.</p>
+<p><b>“An overweight teenager just needs to eat less.”</b> Growth, stage of maturation, sleep, medications, family environment, activity, and feeding behavior are assessed. Severe restriction can impair growth and provoke an eating disorder.</p>
+<p><b>“It’s normal for an athlete not to menstruate.”</b> No. This is a possible sign of low energy availability and requires evaluation.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-15-17">
+          <summary>15–17 years</summary>
+          <div class="panel-body">
+            <h3>Numbers</h3>
+<div class="table-scroll"><table><thead><tr><th>Indicator</th><th>Girls</th><th>Boys</th></tr></thead><tbody><tr><td>Energy</td><td style="text-align:right">approximately 1950–2600 kcal/day</td><td style="text-align:right">approximately 2350–3300 kcal/day</td></tr><tr><td>Protein without big sports</td><td style="text-align:right">0.83–0.85 g/kg/day</td><td style="text-align:right">0.86–0.88 g/kg/day</td></tr><tr><td>Fats</td><td style="text-align:right">25–40 E%</td><td style="text-align:right">25–40 E%</td></tr><tr><td>Calcium</td><td style="text-align:right">about 1150 mg/day</td><td style="text-align:right">about 1150 mg/day</td></tr><tr><td>Iron</td><td style="text-align:right">approximately 12–15 mg/day, taking into account menstrual losses</td><td style="text-align:right">approximately 11–13 mg/day</td></tr></tbody></table></div>
+<p>A teenager’s need for sports may exceed the upper limit of the table. If your weight is decreasing, results are deteriorating, you are constantly hungry or recovery is impaired, check your overall energy first rather than adding another protein product.</p>
+<h3>Common mistakes</h3>
+<ul class="content-list"><li>“drying” and cutting weight for competitions;</li><li>a diet of protein and vegetables without sufficient carbohydrates and fats;</li><li>energy drinks instead of sleep and food;</li><li>replacing breakfast or lunch with a protein bar;</li><li>taking fat burners, pre-workout supplements and several supplements at the same time;</li><li>assessment of nutritional normality only by BMI.</li></ul>
+<h3>Myths</h3>
+<p><b>“Protein is hormones or chemistry.”</b> Protein powder is a concentrated food protein. But most teenagers do not need it: the required amount is easier and safer to get with regular food.</p>
+<p><b>“The more protein, the faster the muscles grow.”</b> Without adequate energy, carbohydrates, exercise, and sleep, excess protein provides no benefit.</p>
+<p><b>“For relief, you need to remove fats.”</b> This increases the risk of energy deficiency and hormonal dysfunction.</p>
+          </div>
+        </details>
+        <details class="age-panel" id="age-athlete">
+          <summary>Young athlete</summary>
+          <div class="panel-body">
+            <p>The most common serious problem for an exercising teenager is not a lack of protein, but a lack of overall energy. Growth, puberty, school and sports compete for the same energy budget.</p>
+<p>For a regularly exercising teenager, the protein target is often around <b>1.2–1.6 g/kg/day</b>, and about <b>1.5 g/kg/day</b> usually sufficient with adequate energy. It is better to distribute it over 4–5 meals, approximately 0.25–0.3 g/kg at a time.</p>
+<p>Example for a 60 kg athlete:</p>
+<ul class="content-list"><li>daily guideline: approximately 72–96 g of protein;</li><li>distribution: about 15–20 g in 4–5 divided doses;</li><li>this is achievable with a regular diet without powder.</li></ul>
+<h3>Around the workout</h3>
+<div class="table-scroll"><table><thead><tr><th>When</th><th>What do you need</th></tr></thead><tbody><tr><td>In 1–3 hours</td><td>Familiar foods with carbohydrates, moderate protein, and fluids; less fatty and very voluminous for sensitive gastrointestinal tracts</td></tr><tr><td>During a short normal workout</td><td>Usually water</td></tr><tr><td>During prolonged exercise, heat or heavy sweating</td><td>Carbohydrates and electrolytes may be required individually</td></tr><tr><td>Within 1–2 hours after</td><td>Regular meal with carbohydrates, 0.25–0.3 g/kg protein and liquid</td></tr></tbody></table></div>
+<h4>Examples before training</h4>
+<ul class="content-list"><li>banana + yogurt;</li><li>bread/lavash with turkey or cheese;</li><li>porridge with milk;</li><li>rice or pasta with a small amount of protein.</li></ul>
+<h4>Examples after training</h4>
+<ul class="content-list"><li>full dinner: potatoes/rice/pasta + meat/fish/legumes + vegetables;</li><li>yogurt and a sandwich if the main meal is later;</li><li>milk/kefir and banana as a temporary option, and not a mandatory “anabolic cocktail”.</li></ul>
+<h3>Signs of Low Energy Availability and RED-S</h3>
+<ul class="content-list"><li>reduction or cessation of growth;</li><li>puberty disorder;</li><li>irregular or disappeared menstruation;</li><li>constant fatigue and cold;</li><li>decreased results;</li><li>repeated illnesses and injuries;</li><li>stress damage to bones;</li><li>irritability, decreased concentration and sleep;</li><li>obsessive control of food and weight;</li><li>decreased libido in older adolescents.</li></ul>
+<p>RED-S is possible in girls and boys. A single symptom does not establish a diagnosis, but a combination of signs requires clinical evaluation.</p>
+          </div>
+        </details>
+      </section>
+      <section class="clinical-guide" id="calculators">
+        <div class="section-heading compact-heading"><p class="eyebrow">05 · Calculators</p><h2>Working calculators</h2></div>
+        <p>All calculations are performed locally in the browser. No data is sent or stored. Results are guidelines, not personal prescriptions.</p>
+
+        <div class="calc-stack">
+          <article class="calc-card" id="calc-energy">
+            <h3>1. Energy guideline by age</h3>
+            <form class="calculator calc-form" id="form-energy" novalidate>
+              <label for="energy-age">Age group
+                <select id="energy-age" required>
+                  <option value="">Select...</option>
+                  <option value="0-5">0–5 months</option>
+                  <option value="6-11">6–11 months</option>
+                  <option value="12-23">12–23 months</option>
+                  <option value="2-3">2–3 years</option>
+                  <option value="4-6">4–6 years</option>
+                  <option value="7-10">7–10 years</option>
+                  <option value="11-14">11–14 years</option>
+                  <option value="15-17">15–17 years</option>
+                </select>
+              </label>
+              <label for="energy-sex" id="energy-sex-wrap" hidden>Sex
+                <select id="energy-sex">
+                  <option value="f">Girls</option>
+                  <option value="m">Boys</option>
+                </select>
+              </label>
+              <label for="energy-activity">Activity level
+                <select id="energy-activity">
+                  <option value="low">Low</option>
+                  <option value="mod" selected>Moderate</option>
+                </select>
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <div class="calc-result" id="result-energy" aria-live="polite"></div>
+          </article>
+
+          <article class="calc-card" id="calc-protein">
+            <h3>2. Protein</h3>
+            <form class="calculator calc-form" id="form-protein" novalidate>
+              <label for="protein-weight">Body weight, kg
+                <input id="protein-weight" type="text" inputmode="decimal" autocomplete="off" placeholder="for example 26" />
+              </label>
+              <label for="protein-age">Age
+                <select id="protein-age" required>
+                  <option value="">Select...</option>
+                  <option value="6-11m">6–11 months</option>
+                  <option value="12-23m">12–23 months</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3 years</option>
+                  <option value="4">4 years</option>
+                  <option value="5">5 years</option>
+                  <option value="6">6 years</option>
+                  <option value="7">7 years</option>
+                  <option value="8">8 years</option>
+                  <option value="9-10">9–10 years</option>
+                  <option value="11">11 years</option>
+                  <option value="12">12 years</option>
+                  <option value="13">13 years</option>
+                  <option value="14">14 years</option>
+                  <option value="15">15 years</option>
+                  <option value="16">16 years</option>
+                  <option value="17">17 years</option>
+                </select>
+              </label>
+              <label for="protein-sex" id="protein-sex-wrap" hidden>Sex (11–17 years)
+                <select id="protein-sex">
+                  <option value="m">Boys</option>
+                  <option value="f">Girls</option>
+                </select>
+              </label>
+              <label class="check-label" for="protein-athlete" id="protein-athlete-wrap" hidden>
+                <input id="protein-athlete" type="checkbox" />
+                Teenager exercising regularly
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <p class="calc-hint">For ages up to 6 months, the protein calculator is not used: nutrition is assessed based on breast milk or formula and growth dynamics.</p>
+            <div class="calc-result" id="result-protein" aria-live="polite"></div>
+          </article>
+
+          <article class="calc-card" id="calc-fat">
+            <h3>3. Fats</h3>
+            <form class="calculator calc-form" id="form-fat" novalidate>
+              <label for="fat-kcal">Daily calorie content, kcal
+                <input id="fat-kcal" type="text" inputmode="decimal" autocomplete="off" placeholder="for example 1600" />
+              </label>
+              <label for="fat-age">Age group
+                <select id="fat-age" required>
+                  <option value="">Select...</option>
+                  <option value="6-11">6–11 months (30–45 E%)</option>
+                  <option value="12-23">12–23 months (30–40 E%)</option>
+                  <option value="2plus">After 2 years (25–40 E%)</option>
+                </select>
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <div class="calc-result" id="result-fat" aria-live="polite"></div>
+          </article>
+
+          <article class="calc-card" id="calc-fiber">
+            <h3>4. Dietary fiber</h3>
+            <form class="calculator calc-form" id="form-fiber" novalidate>
+              <label for="fiber-kcal">Daily calorie content, kcal (children over 2 years old)
+                <input id="fiber-kcal" type="text" inputmode="decimal" autocomplete="off" placeholder="for example 1600" />
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <div class="calc-result" id="result-fiber" aria-live="polite"></div>
+          </article>
+
+          <article class="calc-card" id="calc-water">
+            <h3>5. Water</h3>
+            <form class="calculator calc-form" id="form-water" novalidate>
+              <label for="water-age">Age
+                <select id="water-age" required>
+                  <option value="">Select...</option>
+                  <option value="6-11">6–11 months</option>
+                  <option value="1-2">1–2 years</option>
+                  <option value="2-3">2–3 years</option>
+                  <option value="4-8">4–8 years</option>
+                  <option value="9-13">9–13 years</option>
+                  <option value="14-17">14–17 years</option>
+                </select>
+              </label>
+              <label for="water-sex" id="water-sex-wrap" hidden>Sex
+                <select id="water-sex">
+                  <option value="f">Girls</option>
+                  <option value="m">Boys</option>
+                </select>
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <div class="calc-result" id="result-water" aria-live="polite"></div>
+          </article>
+
+          <article class="calc-card" id="calc-complementary">
+            <h3>6. Complementary feeding</h3>
+            <form class="calculator calc-form" id="form-comp" novalidate>
+              <label for="comp-months">Child's age, months
+                <input id="comp-months" type="text" inputmode="decimal" autocomplete="off" placeholder="for example 7" />
+              </label>
+              <div class="calc-actions">
+                <button class="primary-action" type="submit">Calculate</button>
+                <button class="secondary-action" type="reset">Reset</button>
+              </div>
+            </form>
+            <div class="calc-result" id="result-comp" aria-live="polite"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="errors">
+        <div class="section-heading compact-heading"><p class="eyebrow">06 · Common mistakes</p><h2>Main mistakes in child nutrition</h2></div>
+        <div class="table-scroll"><table><thead><tr><th>Error</th><th>Why is this a problem</th><th>What to do instead</th></tr></thead><tbody><tr><td>Feeding at the adult's request, not at the child's signals</td><td>Impairs recognition of hunger and satiety</td><td>A stable schedule and the child’s right to determine the amount</td></tr><tr><td>Constant snacking</td><td>The child never has time to get hungry</td><td>3 main meals and planned snacks</td></tr><tr><td>Liquid calories</td><td>Milk, juices and sugary drinks replace food</td><td>Between meals - water; count dairy products as food</td></tr><tr><td>Lack of iron in complementary foods</td><td>Rapid growth increases demand and iron stores decrease</td><td>From 6 months, regularly offer sources of iron</td></tr><tr><td>Too little fat</td><td>Energy density and intake of fat-soluble vitamins are reduced</td><td>Add suitable sources of unsaturated fats</td></tr><tr><td>Excess protein “for growth”</td><td>Does not accelerate linear growth and may crowd out other products</td><td>Focus on g/kg and varied diet</td></tr><tr><td>Late introduction of textures</td><td>May make transition to family foods difficult</td><td>Gradually increase the consistency in the first year</td></tr><tr><td>Eating in front of a screen</td><td>Reduces attention to hunger, satiety and the skill of eating itself</td><td>Calm eating together without distractions</td></tr><tr><td>Sweetness as a reward</td><td>Increases the value of sweets and reduces the value of main foods</td><td>It is neutral to include dessert in the diet structure</td></tr><tr><td>Early weight loss for a teenager without evaluation</td><td>Risk of energy deficiency, stunting and eating disorder</td><td>Assess growth curves, maturation, nutrition, sleep and activity</td></tr></tbody></table></div>
+      </section>
+      <section class="clinical-guide" id="myths">
+        <div class="section-heading compact-heading"><p class="eyebrow">07 · Myths</p><h2>Myths — in brief</h2></div>
+        <div class="table-scroll"><table><thead><tr><th>Myth</th><th>Right</th></tr></thead><tbody><tr><td>“Soup is a must every day.”</td><td>No. The composition of the diet is important, not the form of the dish</td></tr><tr><td>“Juice is healthier than water”</td><td>No. Thirst requires water; whole fruit is preferable to juice</td></tr><tr><td>“Brown sugar and honey are healthier than regular sugar.”</td><td>They are also free sugars</td></tr><tr><td>“Until two years of age you need to eat low fat”</td><td>No. Fats are especially important at an early age</td></tr><tr><td>“Without meat, a child will not get protein”</td><td>Get it with a properly formulated diet; iron, B12 and other nutrients are controlled separately</td></tr><tr><td>“It is better to introduce allergens after a year”</td><td>Unnecessary delay is not recommended</td></tr><tr><td>“Goat mixture is hypoallergenic”</td><td>No</td></tr><tr><td>“Lactose-free formula treats milk protein allergy”</td><td>No: lactose is a sugar, the allergy is related to protein</td></tr><tr><td>“Special baby milk is required after one year”</td><td>No for most healthy children</td></tr><tr><td>“The child must finish the portion”</td><td>No. An adult's portion is an offer, not an obligation.</td></tr><tr><td>"Protein accelerates growth"</td><td>Height depends on overall nutrition, health, genetics and hormonal regulation</td></tr><tr><td>“Carbohydrates after 18:00 cause obesity”</td><td>No</td></tr><tr><td>“Protein is a must for a young athlete”</td><td>Usually not; first regular food and sufficient energy</td></tr><tr><td>“Amenorrhea in an athlete is normal”</td><td>No, that's a red flag</td></tr></tbody></table></div>
+      </section>
+      <section class="source-note" id="sources">
+        <b>Sources</b>
+<ol class="algo-list"><li><a href="https://www.who.int/publications/i/item/9789240081864" target="_blank" rel="noopener noreferrer">WHO. Guideline for complementary feeding of infants and young children 6–23 months (2023)</a>.</li><li><a href="https://www.who.int/health-topics/complementary-feeding" target="_blank" rel="noopener noreferrer">WHO. Complementary feeding</a>.</li><li><a href="https://www.paho.org/en/documents/guiding-principles-complementary-feeding-breastfed-child" target="_blank" rel="noopener noreferrer">WHO/PAHO. Guiding Principles for Complementary Feeding of the Breastfed Child</a>.</li><li><a href="https://pub.norden.org/nord2023-003/" target="_blank" rel="noopener noreferrer">Nordic Nutrition Recommendations 2023</a>.</li><li><a href="https://pub.norden.org/nord2023-003/recommendations.html" target="_blank" rel="noopener noreferrer">NNR 2023. Recommendations</a>.</li><li><a href="https://pub.norden.org/nord2023-003/appendix.html" target="_blank" rel="noopener noreferrer">NNR 2023. Dietary Reference Values for children</a>.</li><li><a href="https://knowledge4policy.ec.europa.eu/health-promotion-knowledge-gateway/dietary-protein-recommendations-children-5_en" target="_blank" rel="noopener noreferrer">European Commission Knowledge4Policy. Protein recommendations for children</a>.</li><li><a href="https://www.efsa.europa.eu/en/efsajournal/pub/2557" target="_blank" rel="noopener noreferrer">EFSA. Dietary Reference Values for protein</a>.</li><li><a href="https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2010.1461" target="_blank" rel="noopener noreferrer">EFSA. Dietary Reference Values for fats</a>.</li><li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0127" target="_blank" rel="noopener noreferrer">EU Delegated Regulation 2016/127: infant and follow-on formula composition</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/28027215/" target="_blank" rel="noopener noreferrer">ESPGHAN. Complementary Feeding Position Paper</a>.</li><li><a href="https://www.eatforhealth.gov.au/nutrient-reference-values/nutrients/dietary-energy" target="_blank" rel="noopener noreferrer">Australian/New Zealand Nutrient Reference Values: energy tables</a>.</li><li><a href="https://www.rch.org.au/clinicalguide/guideline_index/Slow_weight_gain/" target="_blank" rel="noopener noreferrer">Royal Children’s Hospital Melbourne. Slow weight gain</a>.</li><li><a href="https://www.who.int/tools/child-growth-standards" target="_blank" rel="noopener noreferrer">WHO Child Growth Standards</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37752011/" target="_blank" rel="noopener noreferrer">IOC consensus statement on RED-S, 2023</a>.</li><li><a href="https://link.springer.com/article/10.1007/s40279-021-01534-6" target="_blank" rel="noopener noreferrer">Youth Athlete Development and Nutrition</a>.</li><li><a href="https://publications.aap.org/pediatrics/article/139/6/e20170967/38754/Fruit-Juice-in-Infants-Children-and-Adolescents" target="_blank" rel="noopener noreferrer">AAP. Fruit Juice in Infants, Children, and Adolescents</a>.</li></ol>
+<p><b>Date of verification of sources:</b> September 20, 2026.</p>
+      </section>
+      <section class="medical-note"><b>Important.</b> The material is educational in nature and does not replace medical advice. Individual nutritional parameters are determined together with the attending physician.</section>
+    </main>
+    <footer><a class="brand footer-brand" href="/en"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Information is for educational purposes and does not replace medical advice.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+<script>
+(function () {
+  function openHashPanel() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    var panel = document.getElementById(id);
+    if (panel && panel.tagName === "DETAILS") panel.open = true;
+  }
+
+  window.addEventListener("hashchange", openHashPanel);
+  openHashPanel();
+
+  function parseNum(raw) {
+    if (raw == null) return NaN;
+    var s = String(raw).trim().replace(/\s+/g, "").replace(",", ".");
+    if (!s) return NaN;
+    if (!/^-?\d+(\.\d+)?$/.test(s)) return NaN;
+    var n = Number(s);
+    if (!Number.isFinite(n)) return NaN;
+    return n;
+  }
+
+  function fmt(n, digits) {
+    if (!Number.isFinite(n)) return "—";
+    return new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits
+    }).format(n);
+  }
+
+  function setResult(el, html) {
+    el.innerHTML = html;
+  }
+
+  function orientNote() {
+    return '<p class="calc-disclaimer">A guideline, not a personal prescription. No data is saved.</p>';
+  }
+
+  function formulaBlock(text) {
+    return '<p class="calc-formula"><b>Formula/Base:</b> ' + text + "</p>";
+  }
+
+  var energyAge = document.getElementById("energy-age");
+  var energySexWrap = document.getElementById("energy-sex-wrap");
+  var ENERGY = {
+    "0-5": { range: "approximately 450–650 kcal/day", note: "Calories are not counted separately; assess feeding and growth. Range from source summary table." },
+    "6-11": { range: "approximately 600–850 kcal/day in total", note: "Milk remains the basis; The role of foods rich in iron is increasing." },
+    "12-23": { range: "about 750–1050 kcal/day", note: "A low-fat diet is not advisable." },
+    "2-3": { range: "approximately 1000–1400 kcal/day", note: "After 3 years, the range is approximately low to moderate activity." },
+    "4-6": { range: "approximately 1200–1800 kcal/day", note: "Calorie intake depends more on movement than on gender." },
+    "7-10": { range: "approximately 1400–2200 kcal/day", note: "School and sections change the rhythm of nutrition." },
+    "11-14": {
+      f: "approximately 1700–2450 kcal/day",
+      m: "approximately 1850–2850 kcal/day"
+    },
+    "15-17": {
+      f: "approximately 1950–2600 kcal/day",
+      m: "approximately 2350–3300 kcal/day"
+    }
+  };
+
+  energyAge.addEventListener("change", function () {
+    var v = energyAge.value;
+    energySexWrap.hidden = !(v === "11-14" || v === "15-17");
+  });
+
+  document.getElementById("form-energy").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-energy");
+    var key = energyAge.value;
+    if (!key) {
+      setResult(box, "<p>Select an age group.</p>");
+      return;
+    }
+    var activity = document.getElementById("energy-activity").value;
+    var actLabel = activity === "low" ? "low" : "moderate";
+    var range;
+    if (key === "11-14" || key === "15-17") {
+      var sex = document.getElementById("energy-sex").value;
+      range = ENERGY[key][sex];
+    } else {
+      range = ENERGY[key].range;
+    }
+    var note = ENERGY[key].note || "The range is given according to the summary table of the source for a child with reference height and weight.";
+    setResult(box,
+      "<p><b>Energy reference:</b> " + range + "</p>" +
+      "<p>The specified activity level is " + actLabel + ". For groups after 3 years, the range of the table corresponds approximately to low-moderate activity; a separate personal formula for energy consumption does not apply.</p>" +
+      formulaBlock("approved range from source summary table (without personal TEE formula)") +
+      '<p class="calc-units">Units: kcal/day.</p>' +
+      "<p>" + note + "</p>" +
+      orientNote()
+    );
+  });
+  document.getElementById("form-energy").addEventListener("reset", function () {
+    setTimeout(function () {
+      energySexWrap.hidden = true;
+      setResult(document.getElementById("result-energy"), "");
+    }, 0);
+  });
+
+  var PROT = {
+    "6-11m": 1.10,
+    "12-23m": 1.00,
+    "2": 0.97,
+    "3": 0.90,
+    "4": 0.86,
+    "5": 0.85,
+    "6": 0.89,
+    "7": 0.91,
+    "8": 0.92,
+    "9-10": 0.91
+  };
+  var PROT_M = { "11": 0.91, "12": 0.90, "13": 0.90, "14": 0.89, "15": 0.88, "16": 0.87, "17": 0.86 };
+  var PROT_F = { "11": 0.90, "12": 0.89, "13": 0.88, "14": 0.87, "15": 0.85, "16": 0.84, "17": 0.83 };
+
+  var proteinAge = document.getElementById("protein-age");
+  var proteinSexWrap = document.getElementById("protein-sex-wrap");
+  var proteinAthleteWrap = document.getElementById("protein-athlete-wrap");
+
+  function syncProteinUI() {
+    var v = proteinAge.value;
+    var teen = ["11", "12", "13", "14", "15", "16", "17"].indexOf(v) >= 0;
+    proteinSexWrap.hidden = !teen;
+    proteinAthleteWrap.hidden = !teen;
+    if (!teen) document.getElementById("protein-athlete").checked = false;
+  }
+  proteinAge.addEventListener("change", syncProteinUI);
+
+  document.getElementById("form-protein").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-protein");
+    var w = parseNum(document.getElementById("protein-weight").value);
+    var age = proteinAge.value;
+    if (!age) {
+      setResult(box, "<p>Select your age.</p>");
+      return;
+    }
+    if (!Number.isFinite(w) || w <= 0) {
+      setResult(box, "<p>Enter the correct body weight (positive number, kg).</p>");
+      return;
+    }
+    if (w < 2 || w > 150) {
+      setResult(box, "<p>Weight is outside the realistic range for this calculator (2–150 kg). Check your input.</p>");
+      return;
+    }
+    var teen = ["11", "12", "13", "14", "15", "16", "17"].indexOf(age) >= 0;
+    var athlete = teen && document.getElementById("protein-athlete").checked;
+    if (athlete) {
+      var low = w * 1.2;
+      var high = w * 1.6;
+      setResult(box,
+        "<p><b>Protein guidelines for a regularly exercising teenager:</b> " +
+        fmt(low, 0) + "–" + fmt(high, 0) + " g/day (" + fmt(low, 1) + "–" + fmt(high, 1) + " g).</p>" +
+        formulaBlock("body weight × 1.2–1.6 g/kg/day") +
+        "<p>About 1.5 g/kg/day is usually sufficient if total energy is adequate. First, check the energy of the diet rather than adding a protein product.</p>" +
+        '<p class="calc-units">Units: g protein/day; coefficient in g/kg/day.</p>' +
+        orientNote()
+      );
+      return;
+    }
+    var coef;
+    if (teen) {
+      var sexP = document.getElementById("protein-sex").value;
+      coef = sexP === "f" ? PROT_F[age] : PROT_M[age];
+    } else {
+      coef = PROT[age];
+    }
+    var grams = w * coef;
+    setResult(box,
+      "<p><b>Protein Landmark:</b> " + fmt(grams, 2) + " g/day (about " + fmt(Math.round(grams), 0) + " g/day).</p>" +
+      formulaBlock(fmt(w, 2).replace(/\u00a0/g, " ") + " kg × " + String(coef) + " g/kg = " + fmt(grams, 2) + " g/day") +
+      '<p class="calc-units">Units: g protein/day.</p>' +
+      "<p>This is a reference for sufficient consumption, not a limit.</p>" +
+      orientNote()
+    );
+  });
+  document.getElementById("form-protein").addEventListener("reset", function () {
+    setTimeout(function () {
+      syncProteinUI();
+      setResult(document.getElementById("result-protein"), "");
+    }, 0);
+  });
+
+  document.getElementById("form-fat").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-fat");
+    var kcal = parseNum(document.getElementById("fat-kcal").value);
+    var age = document.getElementById("fat-age").value;
+    if (!age) {
+      setResult(box, "<p>Select an age group.</p>");
+      return;
+    }
+    if (!Number.isFinite(kcal) || kcal <= 0) {
+      setResult(box, "<p>Enter the correct daily calorie content (positive number, kcal).</p>");
+      return;
+    }
+    if (kcal < 200 || kcal > 6000) {
+      setResult(box, "<p>Caloric content is outside the realistic range (200–6000 kcal). Check your input.</p>");
+      return;
+    }
+    var loE, hiE, label;
+    if (age === "6-11") { loE = 0.30; hiE = 0.45; label = "30–45 E%"; }
+    else if (age === "12-23") { loE = 0.30; hiE = 0.40; label = "30–40 E%"; }
+    else { loE = 0.25; hiE = 0.40; label = "25–40 E%"; }
+    var loG = kcal * loE / 9;
+    var hiG = kcal * hiE / 9;
+    setResult(box,
+      "<p><b>Fat reference:</b> " + fmt(loG, 1) + "–" + fmt(hiG, 1) + " g/day (" + label + ").</p>" +
+      formulaBlock("kcal × E% ÷ 9 = grams of fat per day") +
+      '<p class="calc-units">Units: g fat/day; 1 g fat = 9 kcal.</p>' +
+      orientNote()
+    );
+  });
+  document.getElementById("form-fat").addEventListener("reset", function () {
+    setTimeout(function () { setResult(document.getElementById("result-fat"), ""); }, 0);
+  });
+
+  document.getElementById("form-fiber").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-fiber");
+    var kcal = parseNum(document.getElementById("fiber-kcal").value);
+    if (!Number.isFinite(kcal) || kcal <= 0) {
+      setResult(box, "<p>Enter the correct daily calorie content (positive number, kcal). The calculator is only for children over 2 years old.</p>");
+      return;
+    }
+    if (kcal < 200 || kcal > 6000) {
+      setResult(box, "<p>Caloric content is outside the realistic range (200–6000 kcal). Check your input.</p>");
+      return;
+    }
+    var grams = kcal / 239 * 3;
+    setResult(box,
+      "<p><b>Dietary fiber guidelines:</b> about " + fmt(grams, 1) + " g/day.</p>" +
+      formulaBlock("kcal ÷ 239 × 3 = grams of dietary fiber per day (at least 3 g/MJ; 1 MJ ≈ 239 kcal)") +
+      '<p class="calc-units">Units: g/day. Only for children over 2 years old.</p>' +
+      orientNote()
+    );
+  });
+  document.getElementById("form-fiber").addEventListener("reset", function () {
+    setTimeout(function () { setResult(document.getElementById("result-fiber"), ""); }, 0);
+  });
+
+  var waterAge = document.getElementById("water-age");
+  var waterSexWrap = document.getElementById("water-sex-wrap");
+  waterAge.addEventListener("change", function () {
+    var v = waterAge.value;
+    waterSexWrap.hidden = !(v === "9-13" || v === "14-17");
+  });
+  document.getElementById("form-water").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-water");
+    var age = waterAge.value;
+    if (!age) {
+      setResult(box, "<p>Select your age.</p>");
+      return;
+    }
+    var text;
+    if (age === "6-11") text = "0.8–1.0 l/day";
+    else if (age === "1-2") text = "1.1–1.2 l/day";
+    else if (age === "2-3") text = "about 1.3 l/day";
+    else if (age === "4-8") text = "about 1.6 l/day";
+    else if (age === "9-13") {
+      text = document.getElementById("water-sex").value === "m" ? "about 2.1 l/day": "about 1.9 l/day";
+    } else {
+      text = document.getElementById("water-sex").value === "m" ? "about 2.5 l/day" : "about 2.0 l/day";
+    }
+    setResult(box,
+      "<p><b>Total water supply:</b> " + text + ".</p>" +
+      formulaBlock("table of total water flow from the source") +
+      "<p>The meaning includes water from drinks and food.</p>" +
+      '<p class="calc-units">Units: l/day.</p>' +
+      orientNote()
+    );
+  });
+  document.getElementById("form-water").addEventListener("reset", function () {
+    setTimeout(function () {
+      waterSexWrap.hidden = true;
+      setResult(document.getElementById("result-water"), "");
+    }, 0);
+  });
+
+  document.getElementById("form-comp").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var box = document.getElementById("result-comp");
+    var m = parseNum(document.getElementById("comp-months").value);
+    if (!Number.isFinite(m) || m <= 0) {
+      setResult(box, "<p>Enter your age in months (a positive number).</p>");
+      return;
+    }
+    if (m < 6 || m >= 24) {
+      setResult(box,
+        "<p>Energy values ​​from complementary foods in this calculator are based on age <b>6–23 months</b>. " +
+        "For " + fmt(m, m % 1 ? 1 : 0) + " months. use the appropriate sections of the page (breast milk/formula or age section after one year) rather than this calculation.</p>" +
+        orientNote()
+      );
+      return;
+    }
+    var energy, freq;
+    if (m < 9) {
+      energy = "about 200 kcal/day from complementary foods";
+      freq = "2–3 meals";
+    } else if (m < 12) {
+      energy = "about 300 kcal/day from complementary foods";
+      freq = "3–4 meals";
+    } else {
+      energy = "about 550 kcal/day from complementary foods";
+      freq = "3–4 meals plus 1–2 snacks if needed";
+    }
+    setResult(box,
+      "<p><b>Energy from complementary foods:</b> " + energy + ".</p>" +
+      "<p><b>Frequency:</b> " + freq + ".</p>" +
+      formulaBlock("approved WHO/source guidelines for complementary feeding age") +
+      "<p>This does not mean that you need to force the portion to be eaten. The volume increases according to appetite and skills.</p>" +
+      '<p class="calc-units">Units: kcal/day; number of meals.</p>' +
+      orientNote()
+    );
+  });
+  document.getElementById("form-comp").addEventListener("reset", function () {
+    setTimeout(function () { setResult(document.getElementById("result-comp"), ""); }, 0);
+  });
+})();
+
+</script>
+  </body>
+</html>

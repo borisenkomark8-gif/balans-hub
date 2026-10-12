@@ -1,3 +1,6 @@
+const pageLocale =
+  document.documentElement.lang === "en" || location.pathname.startsWith("/en/") ? "en" : "ru";
+
 const assessmentForm = document.querySelector("#assessment-form");
 
 if (assessmentForm) {
@@ -16,9 +19,36 @@ if (assessmentForm) {
     const tdee = bmr * activity;
     const proteinLow = weight * 1.4;
     const proteinHigh = weight * 1.8;
-    const bmiText = bmi < 18.5 ? "ниже обычного диапазона" : bmi < 25 ? "обычный диапазон" : bmi < 30 ? "выше обычного диапазона" : "значительно выше обычного диапазона";
+    const bmiText =
+      pageLocale === "en"
+        ? bmi < 18.5
+          ? "below the usual range"
+          : bmi < 25
+            ? "usual range"
+            : bmi < 30
+              ? "above the usual range"
+              : "well above the usual range"
+        : bmi < 18.5
+          ? "ниже обычного диапазона"
+          : bmi < 25
+            ? "обычный диапазон"
+            : bmi < 30
+              ? "выше обычного диапазона"
+              : "значительно выше обычного диапазона";
 
-    document.querySelector("#assessment-results").innerHTML = `
+    document.querySelector("#assessment-results").innerHTML =
+      pageLocale === "en"
+        ? `
+      <p class="eyebrow">Your guideposts</p>
+      <h2>${Math.round(tdee)} kcal/day</h2>
+      <p>Estimated daily energy expenditure at the selected activity level.</p>
+      <div class="result-list">
+        <span><b>${bmi.toFixed(1)}</b> BMI · ${bmiText}</span>
+        <span><b>${waistHeight.toFixed(2)}</b> waist / height</span>
+        <span><b>${Math.round(bmr)} kcal</b> resting metabolic rate</span>
+        <span><b>${Math.round(proteinLow)}–${Math.round(proteinHigh)} g</b> protein per day</span>
+      </div>`
+        : `
       <p class="eyebrow">Ваши ориентиры</p>
       <h2>${Math.round(tdee)} ккал/сутки</h2>
       <p>Ориентировочные суточные энергозатраты при выбранной активности.</p>
@@ -58,11 +88,20 @@ filterButtons.forEach((button) => button.addEventListener("click", () => {
   filterExercises();
 }));
 
-const equipment = {
-  machines: ["Жим ногами", "Тяга верхнего блока", "Горизонтальная тяга", "Машина Смита", "Жим от груди", "Жим на плечи", "Pec deck / обратная бабочка", "Кроссовер", "Сгибание и разгибание ног", "Гиперэкстензия", "Гравитрон", "Приведение и отведение бедра"],
-  free: ["Стойка для приседаний", "Скамья для жима", "Штанги и диски", "Гантельный ряд", "Гири", "Скамьи", "Турник", "Помост для тяги"],
-  cardio: ["Беговая дорожка", "Велотренажёр", "Эллиптический тренажёр", "Гребной тренажёр", "Степпер", "Лестница"]
+const equipmentByLocale = {
+  ru: {
+    machines: ["Жим ногами", "Тяга верхнего блока", "Горизонтальная тяга", "Машина Смита", "Жим от груди", "Жим на плечи", "Pec deck / обратная бабочка", "Кроссовер", "Сгибание и разгибание ног", "Гиперэкстензия", "Гравитрон", "Приведение и отведение бедра"],
+    free: ["Стойка для приседаний", "Скамья для жима", "Штанги и диски", "Гантельный ряд", "Гири", "Скамьи", "Турник", "Помост для тяги"],
+    cardio: ["Беговая дорожка", "Велотренажёр", "Эллиптический тренажёр", "Гребной тренажёр", "Степпер", "Лестница"],
+  },
+  en: {
+    machines: ["Leg press", "Lat pulldown", "Seated row", "Smith machine", "Chest press", "Shoulder press", "Pec deck / reverse fly", "Cable crossover", "Leg curl and extension", "Hyperextension", "Assisted pull-up machine", "Hip adduction / abduction"],
+    free: ["Squat rack", "Bench press station", "Barbells and plates", "Dumbbell rack", "Kettlebells", "Benches", "Pull-up bar", "Deadlift platform"],
+    cardio: ["Treadmill", "Exercise bike", "Elliptical", "Rowing machine", "Stepper", "Stair climber"],
+  },
 };
+
+const equipment = equipmentByLocale[pageLocale];
 
 const equipmentPanel = document.querySelector("#equipment-panel");
 const equipmentTabs = [...document.querySelectorAll(".equipment-tab")];
@@ -105,16 +144,62 @@ function numberOrNull(selector) {
   return value === "" || value == null ? null : Number(value);
 }
 
+const numberLocale = pageLocale === "en" ? "en-US" : "ru-RU";
+
 function formatNumber(value, digits = 0) {
   return value == null || Number.isNaN(value)
     ? "—"
-    : new Intl.NumberFormat("ru-RU", { maximumFractionDigits: digits }).format(value);
+    : new Intl.NumberFormat(numberLocale, { maximumFractionDigits: digits }).format(value);
 }
 
 function formatDate(value) {
-  return new Intl.DateTimeFormat("ru-RU", { day: "2-digit", month: "short", year: "numeric" })
+  return new Intl.DateTimeFormat(numberLocale, { day: "2-digit", month: "short", year: "numeric" })
     .format(new Date(`${value}T12:00:00`));
 }
+
+const ui = pageLocale === "en"
+  ? {
+      latestEyebrow: (date) => `Latest entry · ${date}`,
+      kg: "kg",
+      steps: "steps",
+      proteinG: "g protein",
+      sleep: "sleep",
+      training: "training",
+      saved: (date) => `Entry for ${date} saved.`,
+      imported: (n) => `Imported entries: ${n}.`,
+      importFail: "Could not read the file. Use a BALANS JSON backup.",
+      chartEmpty: "No data for the selected period.",
+      chartAria: (min, max, unit) => `Values from ${min} to ${max} ${unit}`,
+      currentWeight: "Current weight",
+      change: "Change",
+      avgSteps: "Average steps",
+      avgSleep: "Average sleep",
+      workouts: "Workouts",
+      noTraining: "None",
+      unitKg: "kg",
+      unitSteps: "steps",
+    }
+  : {
+      latestEyebrow: (date) => `Последняя запись · ${date}`,
+      kg: "кг",
+      steps: "шагов",
+      proteinG: "г белка",
+      sleep: "сон",
+      training: "тренировка",
+      saved: (date) => `Запись за ${date} сохранена.`,
+      imported: (n) => `Импортировано записей: ${n}.`,
+      importFail: "Не удалось прочитать файл. Нужна резервная копия BALANS в формате JSON.",
+      chartEmpty: "Нет данных за выбранный период.",
+      chartAria: (min, max, unit) => `Значения от ${min} до ${max} ${unit}`,
+      currentWeight: "Текущий вес",
+      change: "Изменение",
+      avgSteps: "Шаги в среднем",
+      avgSleep: "Сон в среднем",
+      workouts: "Тренировок",
+      noTraining: "Нет",
+      unitKg: "кг",
+      unitSteps: "шагов",
+    };
 
 const dailyForm = document.querySelector("#daily-form");
 
@@ -153,13 +238,13 @@ if (dailyForm) {
     const box = document.querySelector("#latest-entry");
     if (!latest) return;
     box.innerHTML = `
-      <p class="eyebrow">Последняя запись · ${formatDate(latest.date)}</p>
-      <h2>${formatNumber(latest.weight, 1)} кг</h2>
+      <p class="eyebrow">${ui.latestEyebrow(formatDate(latest.date))}</p>
+      <h2>${formatNumber(latest.weight, 1)} ${ui.kg}</h2>
       <div class="latest-metrics">
-        <span><b>${formatNumber(latest.steps)}</b> шагов</span>
-        <span><b>${formatNumber(latest.protein)}</b> г белка</span>
-        <span><b>${formatNumber(latest.sleep)}</b> сон</span>
-        <span><b>${latest.training || "—"}</b> тренировка</span>
+        <span><b>${formatNumber(latest.steps)}</b> ${ui.steps}</span>
+        <span><b>${formatNumber(latest.protein)}</b> ${ui.proteinG}</span>
+        <span><b>${formatNumber(latest.sleep)}</b> ${ui.sleep}</span>
+        <span><b>${latest.training || "—"}</b> ${ui.training}</span>
       </div>`;
   };
 
@@ -184,7 +269,7 @@ if (dailyForm) {
     saveEntries(entries);
     renderLatest();
     const status = document.querySelector("#save-status");
-    status.textContent = `Запись за ${formatDate(entry.date)} сохранена.`;
+    status.textContent = ui.saved(formatDate(entry.date));
     setTimeout(() => { status.textContent = ""; }, 3500);
   });
 
@@ -219,9 +304,9 @@ if (dailyForm) {
       imported.forEach((entry) => merged.set(entry.date, entry));
       saveEntries([...merged.values()].sort((a, b) => a.date.localeCompare(b.date)));
       renderLatest();
-      status.textContent = `Импортировано записей: ${imported.length}.`;
+      status.textContent = ui.imported(imported.length);
     } catch {
-      status.textContent = "Не удалось прочитать файл. Нужна резервная копия BALANS в формате JSON.";
+      status.textContent = ui.importFail;
     }
     event.target.value = "";
   });
@@ -246,7 +331,7 @@ if (progressContent) {
   const renderChart = (element, entries, key, unit, color) => {
     const points = entries.filter((entry) => Number.isFinite(entry[key]));
     if (!points.length) {
-      element.innerHTML = '<p class="chart-empty">Нет данных за выбранный период.</p>';
+      element.innerHTML = `<p class="chart-empty">${ui.chartEmpty}</p>`;
       return;
     }
     const values = points.map((entry) => entry[key]);
@@ -265,7 +350,7 @@ if (progressContent) {
     const polyline = coords.map((point) => `${point.x},${point.y}`).join(" ");
     const circles = coords.map((point) => `<circle cx="${point.x}" cy="${point.y}" r="4"><title>${formatDate(point.date)}: ${formatNumber(point.value, 1)} ${unit}</title></circle>`).join("");
     element.innerHTML = `
-      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Значения от ${formatNumber(min, 1)} до ${formatNumber(max, 1)} ${unit}">
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${ui.chartAria(formatNumber(min, 1), formatNumber(max, 1), unit)}">
         <line x1="${padX}" y1="${padY}" x2="${padX}" y2="${height - padY}" class="chart-axis" />
         <line x1="${padX}" y1="${height - padY}" x2="${width - padX}" y2="${height - padY}" class="chart-axis" />
         <text x="8" y="${padY + 4}">${formatNumber(max, 1)}</text>
@@ -289,17 +374,17 @@ if (progressContent) {
     const change = firstWeight != null && lastWeight != null ? lastWeight - firstWeight : null;
     const averageSteps = average(entries.map((entry) => entry.steps).filter(Number.isFinite));
     const averageSleep = average(entries.map((entry) => entry.sleep).filter(Number.isFinite));
-    const workouts = entries.filter((entry) => entry.training && entry.training !== "Нет").length;
+    const workouts = entries.filter((entry) => entry.training && entry.training !== "Нет" && entry.training !== "None").length;
 
     document.querySelector("#progress-kpis").innerHTML = `
-      <article><span>Текущий вес</span><b>${formatNumber(lastWeight, 1)} кг</b></article>
-      <article><span>Изменение</span><b>${change == null ? "—" : `${change > 0 ? "+" : ""}${formatNumber(change, 1)} кг`}</b></article>
-      <article><span>Шаги в среднем</span><b>${formatNumber(averageSteps)}</b></article>
-      <article><span>Сон в среднем</span><b>${formatNumber(averageSleep, 1)} / 10</b></article>
-      <article><span>Тренировок</span><b>${workouts}</b></article>`;
+      <article><span>${ui.currentWeight}</span><b>${formatNumber(lastWeight, 1)} ${ui.unitKg}</b></article>
+      <article><span>${ui.change}</span><b>${change == null ? "—" : `${change > 0 ? "+" : ""}${formatNumber(change, 1)} ${ui.unitKg}`}</b></article>
+      <article><span>${ui.avgSteps}</span><b>${formatNumber(averageSteps)}</b></article>
+      <article><span>${ui.avgSleep}</span><b>${formatNumber(averageSleep, 1)} / 10</b></article>
+      <article><span>${ui.workouts}</span><b>${workouts}</b></article>`;
 
-    renderChart(document.querySelector("#weight-chart"), entries, "weight", "кг", "#1174e6");
-    renderChart(document.querySelector("#steps-chart"), entries, "steps", "шагов", "#2ac18f");
+    renderChart(document.querySelector("#weight-chart"), entries, "weight", ui.unitKg, "#1174e6");
+    renderChart(document.querySelector("#steps-chart"), entries, "steps", ui.unitSteps, "#2ac18f");
 
     document.querySelector("#history-body").innerHTML = [...entries].reverse().map((entry) => `
       <tr><td>${formatDate(entry.date)}</td><td>${formatNumber(entry.weight, 1)}</td><td>${formatNumber(entry.waist, 1)}</td><td>${formatNumber(entry.steps)}</td><td>${formatNumber(entry.sleep)}</td><td>${entry.training || "—"}</td></tr>`).join("");

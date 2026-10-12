@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BALANS progress — weight, measurements, steps, and wellbeing over 7, 28, 56, or 84 days." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Progress — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/en/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="BALANS sections"><a href="/en/balans/assessment">Assessment</a><a href="/en/balans/control">Tracking</a><a class="active" href="/en/balans/progress">Progress</a><a href="/en/balans/learn">Knowledge</a><a href="/en/balans/train">Training</a><a href="/en/balans/clinical">By condition</a></nav>
+    </header>
+
+    <main class="platform-main narrow-main tracking-main">
+      <a class="back-link" href="/en/balans">← All tools</a>
+      <section class="tracking-intro">
+        <div>
+          <p class="eyebrow">Trends</p>
+          <h1>Progress</h1>
+          <p>Look at BALANS cycles, not day-to-day noise.</p>
+        </div>
+        <a class="secondary-action" href="/en/balans/control">Add entry →</a>
+      </section>
+
+      <div class="period-switch" role="group" aria-label="Chart period">
+        <button type="button" data-days="7">7 days</button>
+        <button class="active" type="button" data-days="28">28 days</button>
+        <button type="button" data-days="56">56 days</button>
+        <button type="button" data-days="84">84 days</button>
+      </div>
+
+      <section id="progress-empty" class="progress-empty" hidden>
+        <p class="eyebrow">Nothing yet</p>
+        <h2>Add your first entry</h2>
+        <p>Metrics and charts will appear here afterward.</p>
+        <a class="primary-action" href="/en/balans/control">Go to tracking</a>
+      </section>
+
+      <section id="progress-content">
+        <div class="progress-kpis" id="progress-kpis"></div>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <div><p class="eyebrow">Weight</p><h2>Weight trend</h2></div>
+            <div class="chart" id="weight-chart" aria-label="Weight chart"></div>
+          </article>
+          <article class="chart-card">
+            <div><p class="eyebrow">Activity</p><h2>Steps</h2></div>
+            <div class="chart" id="steps-chart" aria-label="Step count chart"></div>
+          </article>
+        </div>
+        <section class="history-section">
+          <div class="section-heading compact-heading"><p class="eyebrow">Entries</p><h2>History</h2></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Date</th><th>Weight</th><th>Waist</th><th>Steps</th><th>Sleep</th><th>Training</th></tr></thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="/en"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Information is educational and does not replace a medical consultation.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+  </body>
+</html>

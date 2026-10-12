@@ -1,12 +1,11 @@
 import type { MetadataRoute } from "next";
+import { locales } from "@/lib/i18n/config";
 
 const siteUrl = "https://balans-hub.vercel.app";
 
-const paths = [
-  "/",
-  "/news",
-  "/coaching",
-  "/balans",
+const hubPaths = ["", "/news", "/coaching", "/balans"];
+
+const balansPaths = [
   "/balans/assessment",
   "/balans/control",
   "/balans/progress",
@@ -27,12 +26,23 @@ const paths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-28");
-  return paths.map((path) => ({
-    url: `${siteUrl}${path}`,
-    lastModified,
-    changeFrequency: path === "/" || path === "/news" ? "weekly" : "monthly",
-    priority:
-      path === "/" ? 1 : path === "/balans" || path === "/news" || path === "/coaching" ? 0.8 : 0.6,
-  }));
+  const lastModified = new Date("2026-10-12");
+  const paths = [...hubPaths, ...balansPaths];
+
+  return locales.flatMap((locale) =>
+    paths.map((path) => {
+      const urlPath = path === "" ? `/${locale}` : `/${locale}${path}`;
+      return {
+        url: `${siteUrl}${urlPath}`,
+        lastModified,
+        changeFrequency: path === "" || path === "/news" ? "weekly" : "monthly",
+        priority:
+          path === ""
+            ? 1
+            : path === "/balans" || path === "/news" || path === "/coaching"
+              ? 0.8
+              : 0.6,
+      };
+    }),
+  ) as MetadataRoute.Sitemap;
 }

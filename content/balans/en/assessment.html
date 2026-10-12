@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BALANS baseline assessment: BMI, resting metabolic rate, and estimated daily energy needs." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Baseline assessment — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/en/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="BALANS sections"><a class="active" href="/en/balans/assessment">Assessment</a><a href="/en/balans/control">Tracking</a><a href="/en/balans/progress">Progress</a><a href="/en/balans/learn">Knowledge</a><a href="/en/balans/train">Training</a><a href="/en/balans/clinical">By condition</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/en/balans">← All tools</a>
+      <section class="page-intro">
+        <p class="eyebrow">Assessment · adults</p>
+        <h1>Baseline assessment</h1>
+        <p>Enter basic data to get starting reference points. Use trends over time rather than a single number.</p>
+      </section>
+
+      <section class="calculator-layout">
+        <form class="calculator" id="assessment-form">
+          <label>Sex<select id="sex" required><option value="male">Male</option><option value="female">Female</option></select></label>
+          <label>Age, years<input id="age" type="number" min="18" max="100" required placeholder="40" /></label>
+          <label>Height, cm<input id="height" type="number" min="130" max="230" step="0.1" required placeholder="175" /></label>
+          <label>Weight, kg<input id="weight" type="number" min="35" max="300" step="0.1" required placeholder="75" /></label>
+          <label>Waist, cm<input id="waist" type="number" min="40" max="220" step="0.1" required placeholder="85" /></label>
+          <label>Activity<select id="activity" required><option value="1.2">Minimal</option><option value="1.375">Light, 1–3 sessions</option><option value="1.55" selected>Moderate, 3–5 sessions</option><option value="1.725">High, 6–7 sessions</option></select></label>
+          <button class="primary-action" type="submit">Calculate</button>
+        </form>
+        <div class="results" id="assessment-results" aria-live="polite">
+          <p class="eyebrow">Your reference points</p>
+          <h2>Enter your data</h2>
+          <p>Results will appear here.</p>
+        </div>
+      </section>
+
+      <section class="reference-grid" aria-labelledby="reference-title">
+        <h2 id="reference-title">What we use</h2>
+        <article><h3>BMI</h3><p>Weight divided by height squared — a rough guide that does not separate muscle and fat mass.</p></article>
+        <article><h3>Waist / height</h3><p>A simple additional marker of body shape and metabolic risk.</p></article>
+        <article><h3>Mifflin–St Jeor</h3><p>Starting estimate of resting metabolic rate and daily energy needs when body composition is unknown.</p></article>
+      </section>
+      <p class="medical-note">Calculations are for adults and are approximate. They are not medical advice.</p>
+    </main>
+    <footer><a class="brand footer-brand" href="/en"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Information is educational and does not replace a medical consultation.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script src="/balans/balans.js"></script>
+  </body>
+</html>

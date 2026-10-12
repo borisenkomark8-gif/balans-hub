@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Training for children and adolescents by age: physical activity, strength, progression and safety — BALANS module." />
+    <meta name="theme-color" content="#081b2e" />
+    <title>Training for Children and Adolescents by Age — BALANS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .clinical-guide .table-scroll { margin: 1rem 0 0; }
+      .clinical-guide .table-scroll th,
+      .clinical-guide .table-scroll td { white-space: normal; vertical-align: top; }
+      .clinical-guide h3 { margin-top: 1.75rem; }
+      .clinical-guide .section-heading + .table-scroll,
+      .clinical-guide .section-heading + .principle-grid,
+      .clinical-guide .section-heading + .check-list,
+      .clinical-guide .section-heading + p,
+      .clinical-guide .section-heading + ol { margin-top: 1.25rem; }
+      .clinical-guide ol.algo-list,
+      .clinical-guide ol.session-list { margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+      .clinical-guide ol.algo-list li + li,
+      .clinical-guide ol.session-list li + li { margin-top: .55rem; }
+      .clinical-guide ul.content-list { margin: .85rem 0 0; padding-left: 1.15rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+      .clinical-guide ul.content-list li + li { margin-top: .4rem; }
+      .age-jump { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 0 0 2.5rem; }
+      .age-jump a {
+        display: flex; align-items: center; justify-content: center; min-height: 3.1rem;
+        padding: .7rem .85rem; text-align: center; border: 1px solid var(--line); border-radius: .9rem;
+        background: #fff; color: var(--ink); font-size: .88rem; font-weight: 800; line-height: 1.25;
+      }
+      .age-jump a:hover { border-color: var(--cyan); color: var(--blue); }
+      .age-jump a span { display: block; color: var(--muted); font-size: .72rem; font-weight: 700; margin-top: .2rem; }
+      .source-list { margin: .75rem 0 0; padding-left: 1.15rem; }
+      .source-list li + li { margin-top: .55rem; }
+      .term { font-weight: 800; color: var(--ink); }
+      details.age-panel {
+        margin: 0 0 1rem; border: 1px solid var(--line); border-radius: 1rem; background: #fff; overflow: hidden;
+      }
+      details.age-panel > summary {
+        cursor: pointer; list-style: none; padding: 1.15rem 1.25rem; font-size: 1.15rem; font-weight: 800; color: var(--ink);
+      }
+      details.age-panel > summary::-webkit-details-marker { display: none; }
+      details.age-panel > summary::after { content: "+"; float: right; color: var(--blue); font-weight: 800; }
+      details.age-panel[open] > summary::after { content: "–"; }
+      details.age-panel .panel-body { padding: 0 1.25rem 1.35rem; }
+      details.age-panel .panel-body > :first-child { margin-top: 0; }
+      @media (max-width: 720px) {
+        .age-jump { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 420px) {
+        .age-jump { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body class="platform-page">
+    <header class="site-header platform-header">
+      <a class="brand" href="/en/balans"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>BALANS</span></a>
+      <nav aria-label="BALANS sections"><a href="/en/balans/assessment">Assessment</a><a href="/en/balans/control">Tracking</a><a href="/en/balans/progress">Progress</a><a href="/en/balans/learn">Knowledge</a><a class="active" href="/en/balans/train">Training</a><a href="/en/balans/clinical">By condition</a></nav>
+    </header>
+    <main class="platform-main narrow-main">
+      <a class="back-link" href="/en/balans/train">← Training</a>
+
+      <section class="page-intro clinical-intro">
+        <p class="eyebrow">Physical activity · ages 0–17</p>
+        <h1>Training for children and adolescents by age</h1>
+        <p>A practical framework for building physical activity and training programs for children aged 0–17. Age sets the starting route, but the program is also shaped by movement experience, technique, biological maturation, total training load and health status.</p>
+      </section>
+
+      <section class="clinical-guide" id="intro">
+        <div class="section-heading compact-heading"><p class="eyebrow">01 · Purpose</p><h2>Purpose of the module and a quick algorithm</h2></div>
+        <p>The final decision depends on:</p>
+        <ul class="content-list">
+          <li>movement experience and the quality of fundamental movements;</li>
+          <li>biological maturation and growth rate;</li>
+          <li>goals: health, physical fitness, or a specific sport;</li>
+          <li>total load: school, sports clubs, independent activity, competitions;</li>
+          <li>chronic conditions, medication, injuries and symptoms.</li>
+        </ul>
+        <ol class="algo-list">
+          <li>Select the age group.</li>
+          <li>Clarify clinical restrictions and current symptoms.</li>
+          <li>Assess training history, technique and weekly load.</li>
+          <li>Choose the base program: movement → skills → strength → power/specialization.</li>
+          <li>Set volume and intensity conservatively, then progress one variable at a time.</li>
+          <li>Monitor tolerance, growth, sleep, pain, motivation and recovery.</li>
+        </ol>
+      </section>
+
+      <nav class="age-jump" aria-label="Quick age selection">
+        <a href="#age-0-3">Under 3 years<span>movement, not training</span></a>
+        <a href="#age-3-5">3–5 years<span>fundamental movements</span></a>
+        <a href="#age-6-9">6–9 years<span>physical literacy</span></a>
+        <a href="#age-10-12">10–12 years<span>technique and structure</span></a>
+        <a href="#age-13-15">13–15 years<span>maturation</span></a>
+        <a href="#age-16-17">16–17 years<span>transition to adult training</span></a>
+      </nav>
+
+      <section class="clinical-guide" id="framework">
+        <div class="section-heading compact-heading"><p class="eyebrow">02 · General framework</p><h2>General activity framework</h2></div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Age</th><th>Minimum baseline</th></tr></thead>
+            <tbody>
+              <tr><td>Infants under 1 year</td><td>Activity several times a day; for infants who are not yet crawling or walking, at least 30 minutes of tummy time in total across waking periods</td></tr>
+              <tr><td>1–2 years</td><td>At least 180 minutes of varied physical activity of any intensity, spread throughout the day</td></tr>
+              <tr><td>3–4 years</td><td>At least 180 minutes of activity, including at least 60 minutes of moderate- or vigorous-intensity activity</td></tr>
+              <tr><td>5–17 years</td><td>An average of at least 60 minutes/day of moderate- or vigorous-intensity activity; vigorous aerobic, muscle-strengthening and bone-strengthening activity on at least 3 days/week</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="practical-note" style="margin-top:1.25rem"><b>Important.</b> This is a target for total daily movement, not the duration of a single organized training session.</div>
+      </section>
+
+      <section class="clinical-guide" id="intensity">
+        <div class="section-heading compact-heading"><p class="eyebrow">03 · Intensity</p><h2>Intensity scale</h2></div>
+        <p><span class="term">RPE (Rating of Perceived Exertion)</span> is a subjective rating of exercise intensity on a scale of 0 to 10, where 0 means no effort and 10 means maximal effort.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Level</th><th>Signs</th><th>Practical marker</th></tr></thead>
+            <tbody>
+              <tr><td>Light</td><td>Breathing barely changes; the child can speak freely</td><td>RPE 2–3/10</td></tr>
+              <tr><td>Moderate</td><td>Breathing is faster; the child speaks in sentences</td><td>RPE 4–5/10</td></tr>
+              <tr><td>Vigorous</td><td>Markedly faster breathing; the child speaks in short phrases</td><td>RPE 6–8/10</td></tr>
+              <tr><td>Maximal</td><td>Speech is difficult; technique deteriorates quickly</td><td>RPE 9–10/10; usually not required in health-oriented programs</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:1.25rem">For strength work, the main regulators are maintaining technique and <span class="term">RIR (Repetitions in Reserve — repetitions left before failure)</span>. Base range: finish each set with 2–4 good-quality repetitions in reserve. Heart rate varies widely in children and should not be the only criterion of intensity.</p>
+      </section>
+
+      <section class="clinical-guide" id="ages">
+        <div class="section-heading compact-heading"><p class="eyebrow">04 · By age</p><h2>Age-based programs</h2></div>
+        <p>Select a group below. The content works without JavaScript: the panels expand using native HTML.</p>
+
+        <details class="age-panel" id="age-0-3" open>
+          <summary>Under 3 years — physical activity, not training</summary>
+          <div class="panel-body">
+            <h3>Priorities</h3>
+            <ul class="content-list">
+              <li>free movement on the floor and safe exploration of the environment;</li>
+              <li>rolling, crawling, pulling up to stand, walking, carrying light objects;</li>
+              <li>running, climbing, throwing, catching large balls, balance;</li>
+              <li>minimizing prolonged restraint in a stroller, high chair or car seat when it is not necessary.</li>
+            </ul>
+            <h3>Format</h3>
+            <ul class="content-list">
+              <li>short episodes of 3–10 minutes, repeated many times throughout the day;</li>
+              <li>play with an adult, without a formal plan of sets and repetitions;</li>
+              <li>difficulty increases by changing the environment and the task, not by adding external load.</li>
+            </ul>
+            <h3>Avoid</h3>
+            <ul class="content-list">
+              <li>forced teaching of a motor skill the child is not ready for;</li>
+              <li>prolonged monotonous activity;</li>
+              <li>competition, or performing activity through fear, pain or marked fatigue.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-3-5">
+          <summary>3–5 years — fundamental movements</summary>
+          <div class="panel-body">
+            <h3>Goals</h3>
+            <ul class="content-list">
+              <li>running, stopping and changing direction;</li>
+              <li>jumping and landing safely;</li>
+              <li>throwing, catching and kicking a ball;</li>
+              <li>balance, rhythm and spatial orientation;</li>
+              <li>a positive association between movement and play.</li>
+            </ul>
+            <h3>Organized session</h3>
+            <p><b>20–35 minutes, 2–4 times/week</b>, as part of overall daily movement.</p>
+            <ol class="session-list">
+              <li>Active game — 5 minutes.</li>
+              <li>Two or three movement skills — 10–15 minutes.</li>
+              <li>A simple obstacle course or relay — 5–10 minutes.</li>
+              <li>Calm cool-down — 3–5 minutes.</li>
+            </ol>
+            <h3>Strength component</h3>
+            <ul class="content-list">
+              <li>squatting to a support, getting up from the floor, carrying, pushing, resistance-band pulling, supported hanging;</li>
+              <li>1–2 sets of 6–12 good-quality repetitions, or playful intervals of 10–20 seconds;</li>
+              <li>light objects; the aim is body control, not fatigue.</li>
+            </ul>
+            <h3>Progression</h3>
+            <p>Accuracy of movement comes first, followed by more variations and slightly longer duration. Do not turn the session into a scaled-down copy of an adult workout.</p>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-6-9">
+          <summary>6–9 years — physical literacy</summary>
+          <div class="panel-body">
+            <h3>Goals</h3>
+            <ul class="content-list">
+              <li>a solid repertoire of fundamental movement skills;</li>
+              <li>bilateral coordination and control of body position;</li>
+              <li>learning the main strength movement patterns;</li>
+              <li>developing speed through short, playful accelerations;</li>
+              <li>exposure to a variety of activities without early narrow specialization.</li>
+            </ul>
+            <h3>Week</h3>
+            <ul class="content-list">
+              <li>daily movement in line with the general guideline;</li>
+              <li><b>2 strength sessions</b> of 25–40 minutes;</li>
+              <li><b>2–4 blocks</b> of speed, coordination or jumping work of 10–20 minutes, usually within a game or training session;</li>
+              <li>aerobic work that is mostly playful and interval-based, following the child's natural rhythm.</li>
+            </ul>
+            <h3>Strength work</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Parameter</th><th>Starting range</th></tr></thead>
+                <tbody>
+                  <tr><td>Exercises</td><td>Squat, hinge/pull, lunge, push, pull, carry, stabilization, climbing</td></tr>
+                  <tr><td>Volume</td><td>1–2 sets × 6–12 repetitions</td></tr>
+                  <tr><td>Intensity</td><td>RPE 4–6/10; RIR 3–4</td></tr>
+                  <tr><td>Rest</td><td>60–120 seconds, or until technique has recovered</td></tr>
+                  <tr><td>Frequency</td><td>2 times/week, preferably on non-consecutive days</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Resistance is acceptable under qualified supervision. The criterion for starting is the ability to follow instructions and repeat the movement with consistent technique, not reaching a particular age.</p>
+            <h3>Speed and jumping</h3>
+            <ul class="content-list">
+              <li>accelerations of 5–15 m, 4–8 repetitions with full recovery;</li>
+              <li>low-volume jumps and landings: 2–3 exercises × 3–5 repetitions;</li>
+              <li>stop the series when speed drops or body position deteriorates.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-10-12">
+          <summary>10–12 years — technique and structure</summary>
+          <div class="panel-body">
+            <h3>Goals</h3>
+            <ul class="content-list">
+              <li>consolidating technique in the main strength movements;</li>
+              <li>developing relative strength, coordination and speed;</li>
+              <li>learning to warm up, self-monitor and keep a training log;</li>
+              <li>maintaining variety in activity as sport specialization begins.</li>
+            </ul>
+            <h3>Week</h3>
+            <ul class="content-list">
+              <li><b>2–3 strength sessions</b> of 35–55 minutes;</li>
+              <li><b>2 speed and coordination blocks</b>;</li>
+              <li>aerobic work: games, continuous activity or moderate/vigorous intervals, taking into account the total volume of sport;</li>
+              <li>at least one day without organized vigorous activity.</li>
+            </ul>
+            <h3>Strength work</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Parameter</th><th>Base range</th></tr></thead>
+                <tbody>
+                  <tr><td>Volume</td><td>2–3 sets × 6–12 repetitions</td></tr>
+                  <tr><td>Intensity</td><td>mostly RPE 5–7/10; RIR 2–4</td></tr>
+                  <tr><td>Exercises</td><td>5–8 whole-body movements</td></tr>
+                  <tr><td>Rest</td><td>1–3 minutes depending on exercise complexity</td></tr>
+                  <tr><td>Progression</td><td>+1–2 repetitions, then the smallest possible increase in resistance while maintaining technique</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Periods of rapid growth call for a temporary reduction in difficulty and re-tuning of technique. Pain around the apophyses and a persistent decline in coordination are reasons to adjust the volume of jumping, running and sport-specific load.</p>
+            <h3>Testing</h3>
+            <ul class="content-list">
+              <li>technique in squatting, hinging, pushing, pulling and landing;</li>
+              <li>standing long jump, medicine-ball throw, short sprint;</li>
+              <li>a submaximal running test when needed;</li>
+              <li>strength tests — mostly submaximal. <span class="term">1RM (one-repetition maximum)</span> is acceptable only in technically proficient children, using a validated protocol and under qualified supervision; it is not required for routine health-oriented programming.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-13-15">
+          <summary>13–15 years — load management during maturation</summary>
+          <div class="panel-body">
+            <h3>Goals</h3>
+            <ul class="content-list">
+              <li>developing strength and power without loss of movement quality;</li>
+              <li>managing abrupt changes in height, body mass and limb leverage;</li>
+              <li>combining general conditioning with sport specialization;</li>
+              <li>teaching recovery and recognition of the signs of overload.</li>
+            </ul>
+            <h3>Week</h3>
+            <ul class="content-list">
+              <li><b>2–3 strength sessions</b> of 45–70 minutes;</li>
+              <li><b>1–2 targeted speed/power blocks</b>, if the child is recovered;</li>
+              <li>aerobic load is distributed around sports clubs and competitions;</li>
+              <li>separate hard days with light or recovery days.</li>
+            </ul>
+            <h3>Strength work</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Goal</th><th>Volume and intensity</th></tr></thead>
+                <tbody>
+                  <tr><td>Learning/correcting technique</td><td>2–3 × 8–12; RPE 4–6</td></tr>
+                  <tr><td>General strength</td><td>2–4 × 5–10; RPE 6–8; RIR 2–3</td></tr>
+                  <tr><td>Power</td><td>2–4 × 3–6; light/moderate resistance; maximal quality and speed</td></tr>
+                  <tr><td>Local muscular endurance</td><td>2–3 × 10–15; RPE 5–7</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Heavy sets are introduced only after technique is firmly established. Repetitions to failure, forced repetitions and frequent maximal attempts are not a basic tool.</p>
+            <h3>Monitoring at this age</h3>
+            <ul class="content-list">
+              <li>morning well-being, sleep, muscle soreness, motivation;</li>
+              <li>trends in pain and performance;</li>
+              <li>height and weight — for context, without daily monitoring;</li>
+              <li>signs of low energy availability and RED-S (see the "Load monitoring" section).</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age-panel" id="age-16-17">
+          <summary>16–17 years — transition to the adult model</summary>
+          <div class="panel-body">
+            <h3>Goals</h3>
+            <ul class="content-list">
+              <li>an individualized program for health or a sport-specific goal;</li>
+              <li>self-regulation of training load;</li>
+              <li>developing strength, power, aerobic capacity and sport-specific endurance;</li>
+              <li>preparing to continue training safely into adulthood.</li>
+            </ul>
+            <h3>Base model</h3>
+            <ul class="content-list">
+              <li><b>2–4 strength sessions/week</b>, depending on training history and sport;</li>
+              <li>train each major muscle group twice a week, or provide an equivalent weekly volume;</li>
+              <li>combine light, moderate and heavy days;</li>
+              <li>account for high-intensity aerobic and speed work together with game and competition load.</li>
+            </ul>
+            <h3>Strength work</h3>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Level</th><th>Approach</th></tr></thead>
+                <tbody>
+                  <tr><td>Beginner</td><td>2–3 × 6–12; RPE 5–7; technique and consistency</td></tr>
+                  <tr><td>Trained</td><td>3–5 × 3–10; RPE 6–8; periodization according to the goal</td></tr>
+                  <tr><td>Sport specialization</td><td>individualized strength/power blocks; monitoring of total load and competition calendar</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top:1rem">Age alone does not make an adolescent ready for adult training volumes. The program progresses according to actual training history.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="clinical-guide" id="session">
+        <div class="section-heading compact-heading"><p class="eyebrow">05 · Session structure</p><h2>Universal structure of a strength session</h2></div>
+        <ol class="session-list">
+          <li><b>Readiness check:</b> symptoms, pain, sleep, recovery — 1–2 minutes.</li>
+          <li><b>Warm-up:</b> general activity + dynamic mobility — 5–10 minutes.</li>
+          <li><b>Speed/coordination/jumps:</b> while the child is not yet fatigued — 5–15 minutes.</li>
+          <li><b>Main movements:</b> squat, hinge, push, pull — 15–30 minutes.</li>
+          <li><b>Unilateral work, carries, core:</b> 5–15 minutes.</li>
+          <li><b>Cool-down and logging the session:</b> 3–5 minutes.</li>
+        </ol>
+        <h3>Progression rules</h3>
+        <ul class="content-list">
+          <li>increase one variable at a time: repetitions, sets, resistance, difficulty or frequency;</li>
+          <li>stable technique across all planned repetitions comes first;</li>
+          <li>as a guide, increase resistance by the smallest available step, usually no more than 5–10%;</li>
+          <li>after illness, injury, school holidays or a period of rapid growth, step back by one or two levels;</li>
+          <li>when overall sport load rises noticeably, do not automatically increase strength volume;</li>
+          <li>consider a deload every 4–8 weeks based on condition and calendar rather than a rigid template.</li>
+        </ul>
+      </section>
+
+      <section class="clinical-guide" id="load">
+        <div class="section-heading compact-heading"><p class="eyebrow">06 · Load monitoring</p><h2>Load monitoring</h2></div>
+        <div class="check-list">
+          <p><span class="term">sRPE (session Rating of Perceived Exertion)</span> is a subjective rating of how hard the whole session was on a 0–10 scale, usually given 15–30 minutes after it ends.</p>
+          <p><b>Session load</b> = <span class="term">sRPE × session duration in minutes</span>. Example: 60 minutes × sRPE 6 = 360 arbitrary units.</p>
+          <p><span class="term">RED-S (Relative Energy Deficiency in Sport)</span> is a syndrome of relative energy deficiency in sport: poorer recovery and performance, persistent fatigue, recurrent injuries or stress fractures, and disturbances of growth and puberty. RED-S can occur in both girls and boys; menstrual disturbance is one possible sign in girls but not the only criterion.</p>
+        </div>
+      </section>
+
+      <section class="clinical-guide" id="safety">
+        <div class="section-heading compact-heading"><p class="eyebrow">07 · Safety</p><h2>Medical assessment and stopping activity</h2></div>
+        <h3>When medical assessment is needed before starting or changing a program</h3>
+        <ul class="content-list">
+          <li>chest pain/pressure, unexplained fainting or near-fainting during exercise;</li>
+          <li>palpitations with dizziness, pain or reduced performance;</li>
+          <li>disproportionate shortness of breath, cyanosis, falling oxygen saturation;</li>
+          <li>known heart disease, uncontrolled arterial hypertension;</li>
+          <li>poorly controlled asthma or frequent exercise-related symptoms;</li>
+          <li>diabetes with recurrent severe hypoglycemia, ketosis or no management plan;</li>
+          <li>acute illness, fever, or a history of myocarditis/pericarditis without clearance;</li>
+          <li>progressive neurological symptoms;</li>
+          <li>pain that changes gait or technique, night pain, increasing swelling;</li>
+          <li>signs of an eating disorder or RED-S.</li>
+        </ul>
+        <h3>Stop activity immediately</h3>
+        <ul class="content-list">
+          <li>chest pain, fainting, confusion;</li>
+          <li>sudden marked shortness of breath, or wheezing that does not respond to the agreed plan;</li>
+          <li>signs of severe hypoglycemia;</li>
+          <li>acute neurological deficit;</li>
+          <li>sudden sharp localized pain, deformity or inability to bear weight;</li>
+          <li>any rapidly worsening symptoms.</li>
+        </ul>
+      </section>
+
+      <section class="clinical-guide" id="routing">
+        <div class="section-heading compact-heading"><p class="eyebrow">08 · Routing</p><h2>Routing for medical conditions</h2></div>
+        <p>This module provides the general training framework. Clinical modifiers should open as separate cards and should not be mixed with the age-based programs.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Condition</th><th>What to modify</th></tr></thead>
+            <tbody>
+              <tr><td>Asthma / exercise-induced bronchoconstriction</td><td>disease control, warm-up, access to medication per an individual plan, environmental conditions</td></tr>
+              <tr><td>Type 1 diabetes</td><td>glucose/CGM, insulin on board, carbohydrates, type and timing of exercise, delayed hypoglycemia, ketones</td></tr>
+              <tr><td>Obesity</td><td>low entry threshold, tolerance of musculoskeletal load, volume progression, strength component, no stigma</td></tr>
+              <tr><td>Congenital and acquired heart disease / arrhythmias</td><td>diagnosis-specific clearance, limits on intensity and contact, symptoms, therapy and devices</td></tr>
+              <tr><td>Musculoskeletal conditions</td><td>painful structures, range of motion, impact load, asymmetry, rehabilitation plan</td></tr>
+              <tr><td>Neurological conditions / disability</td><td>individual motor function, fatigability, risk of falls/seizures, equipment adaptation</td></tr>
+              <tr><td>Cancer / after treatment</td><td>treatment phase, blood counts, cardiopulmonary and bone risks, infection safety</td></tr>
+              <tr><td>RED-S / eating disorders</td><td>energy availability, growth, puberty, menstrual function, bone stress; multidisciplinary care</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Minimum data set for personalization</h3>
+        <ul class="content-list">
+          <li>age, height, weight and growth trajectory;</li>
+          <li>pubertal stage — only when clinically justified and with respect for privacy;</li>
+          <li>goal and preferred types of activity;</li>
+          <li>training/competitions over the past 4 weeks;</li>
+          <li>training history and movements already mastered;</li>
+          <li>diagnoses, symptoms, injuries, medications and medical restrictions;</li>
+          <li>sleep, school workload, perceived recovery;</li>
+          <li>available equipment and the qualifications of the supervising adult.</li>
+        </ul>
+      </section>
+
+      <section class="source-note" id="sources">
+        <b>Sources</b>
+        <ol class="source-list">
+          <li>World Health Organization. <a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener noreferrer">WHO guidelines on physical activity and sedentary behaviour</a>. 2020.</li>
+          <li>World Health Organization. <a href="https://www.who.int/publications/i/item/9789241550536" target="_blank" rel="noopener noreferrer">Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age</a>. 2019.</li>
+          <li>Stricker PR, Faigenbaum AD, McCambridge TM; AAP Council on Sports Medicine and Fitness. <a href="https://doi.org/10.1542/peds.2020-1011" target="_blank" rel="noopener noreferrer">Resistance Training for Children and Adolescents</a>. <i>Pediatrics</i>. 2020;145(6):e20201011.</li>
+          <li>Lloyd RS, et al. <a href="https://doi.org/10.1136/bjsports-2013-092952" target="_blank" rel="noopener noreferrer">Position statement on youth resistance training: the 2014 International Consensus</a>. <i>Br J Sports Med</i>. 2014;48:498–505.</li>
+          <li>Faigenbaum AD, et al. <a href="https://doi.org/10.1519/JSC.0b013e31819df407" target="_blank" rel="noopener noreferrer">Youth Resistance Training: Updated Position Statement Paper From the National Strength and Conditioning Association</a>. <i>J Strength Cond Res</i>. 2009;23(Suppl 5):S60–S79.</li>
+          <li>Bergeron MF, et al. <a href="https://doi.org/10.1136/bjsports-2015-094962" target="_blank" rel="noopener noreferrer">International Olympic Committee consensus statement on youth athletic development</a>. <i>Br J Sports Med</i>. 2015;49:843–851.</li>
+        </ol>
+      </section>
+      <section class="medical-note"><b>Important.</b> This material does not replace an individual medical assessment. Age bands are for navigation, not physiological thresholds. Specific conditions are not covered within the age cards: they are handled by separate professional modules. Scheduled review date for the general framework: September 2027, or earlier if new guidelines are published.</section>
+    </main>
+    <footer><a class="brand footer-brand" href="/en"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Dr.Mark · BALANS</span></a><p>Information is educational and does not replace a medical consultation.</p><p>© <span id="year"></span> BALANS</p></footer>
+    <script src="/app.js"></script>
+    <script>
+      (function () {
+        var jump = document.querySelectorAll('.age-jump a[href^="#"]');
+        jump.forEach(function (link) {
+          link.addEventListener('click', function () {
+            var id = link.getAttribute('href').slice(1);
+            var panel = document.getElementById(id);
+            if (panel && panel.tagName === 'DETAILS') panel.open = true;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
