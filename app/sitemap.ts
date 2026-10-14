@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n/config";
 
 const siteUrl = "https://balans-hub.vercel.app";
 
-const hubPaths = ["", "/news", "/coaching", "/balans"];
+const hubPaths = ["", "/news", "/coaching", "/balans", "/feedback", "/ask", "/services"];
 
 const balansPaths = [
   "/balans/assessment",
@@ -26,7 +26,7 @@ const balansPaths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-10-12");
+  const lastModified = new Date("2026-10-14");
   const paths = [...hubPaths, ...balansPaths];
 
   return locales.flatMap((locale) =>

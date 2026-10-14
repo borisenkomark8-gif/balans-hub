@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import SiteFooter from "@/app/components/site-footer";
 import SiteHeader from "@/app/components/site-header";
 import InquiryForm from "./inquiry-form";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -76,33 +77,16 @@ export default async function CoachingPage({ params }: { params: Promise<{ local
           <InquiryForm locale={locale} t={t.coaching} />
         </section>
 
+        <p className="services-related">
+          <a href={localePath(locale, "/services")}>{t.footer.services}</a>
+        </p>
+
         <a className="back-link" href={localePath(locale, "/")}>
           {t.coaching.back}
         </a>
       </main>
 
-      <footer>
-        <a className="brand footer-brand" href={localePath(locale, "/")}>
-          <span className="brand-mark" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>BALANS</span>
-        </a>
-        <p>{t.footer.disclaimerShort}</p>
-        <div className="footer-actions">
-          <a
-            className="support-link"
-            href="https://ko-fi.com/balans"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t.footer.support}
-          </a>
-          <p>{t.footer.copyright}</p>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} t={t} disclaimer="short" />
     </div>
   );
 }
