@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import SiteFooter from "@/app/components/site-footer";
 import SiteHeader from "@/app/components/site-header";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getMessages, localePath } from "@/lib/i18n/get-messages";
@@ -265,28 +266,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
       </main>
-      <footer>
-        <a className="brand footer-brand" href="#top">
-          <span className="brand-mark" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>BALANS</span>
-        </a>
-        <p>{t.footer.disclaimer}</p>
-        <div className="footer-actions">
-          <a
-            className="support-link"
-            href="https://ko-fi.com/balans"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t.footer.support}
-          </a>
-          <p>{t.footer.copyright}</p>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} t={t} homeHref="#top" />
     </>
   );
 }

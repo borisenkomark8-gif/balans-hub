@@ -37,7 +37,7 @@ export default function InquiryForm({ locale, t }: Props) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/coaching")
+    fetch("/api/contact")
       .then(async (response) => {
         if (!response.ok) throw new Error("config");
         return (await response.json()) as DeliveryConfig;

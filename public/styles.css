@@ -415,7 +415,30 @@ h3 { font-size: clamp(2rem, 3.2vw, 3.2rem); }
 footer { padding: 2rem 0 3rem; display: grid; grid-template-columns: 1fr 2fr auto; gap: 2rem; align-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
 .footer-brand { color: var(--ink); }
 footer p { margin: 0; }
+.footer-copy { display: grid; gap: .75rem; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; }
+.footer-nav a { color: var(--blue); font-weight: 700; }
+.footer-nav a:hover, .footer-nav a:focus-visible { color: var(--ink); }
 .footer-actions { display: grid; gap: .75rem; justify-items: end; text-align: right; align-content: center; }
+.services-cta { margin-top: 1.5rem; width: fit-content; }
+.services-related { margin: 0 0 1.5rem; }
+.services-related a { color: var(--blue); font-weight: 700; }
+.services-related a:hover, .services-related a:focus-visible { color: var(--ink); }
+.inquiry-consent {
+  display: grid !important;
+  grid-template-columns: auto 1fr;
+  gap: .65rem;
+  align-items: start;
+  font-weight: 600 !important;
+  color: var(--ink) !important;
+}
+.inquiry-consent input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  min-height: 1.1rem;
+  margin-top: .2rem;
+  accent-color: var(--blue);
+}
 .support-link {
   display: inline-flex;
   align-items: center;
@@ -947,6 +970,7 @@ tbody tr:last-child td { border-bottom: 0; }
   .author-summary { margin: .35rem 0 .55rem; font-size: .88rem; }
   footer { grid-template-columns: 1fr; gap: 1rem; }
   .footer-actions { justify-items: start; text-align: left; }
+  .services-cta { width: 100%; max-width: 22rem; justify-content: center; }
   .coaching-main { width: min(100% - 2rem, 1050px); }
   .coaching-form-section { grid-template-columns: 1fr; gap: 1.25rem; }
   .inquiry-form { grid-template-columns: 1fr; }
