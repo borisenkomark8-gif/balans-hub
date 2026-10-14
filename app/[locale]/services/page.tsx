@@ -35,11 +35,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const t = getMessages(locale);
   const s = t.services;
 
-  const areas = [
-    { title: s.area1Title, text: s.area1Text },
-    { title: s.area2Title, text: s.area2Text },
-    { title: s.area3Title, text: s.area3Text },
-  ];
+  const included = [s.included1, s.included2, s.included3, s.included4];
 
   return (
     <div className="platform-page">
@@ -54,13 +50,25 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           </a>
         </section>
 
-        <section className="coaching-directions" aria-labelledby="areas-title">
-          <h2 id="areas-title">{s.areasTitle}</h2>
+        <section className="personal-start-offer" aria-labelledby="offer-title">
+          <div className="personal-start-offer-card">
+            <p className="personal-start-price" aria-label={`${s.offerName} ${s.offerPrice}`}>
+              <span className="personal-start-offer-name">{s.offerName}</span>
+              <span className="personal-start-offer-amount">{s.offerPrice}</span>
+            </p>
+            <h2 id="offer-title" className="sr-only">
+              {s.offerName}
+            </h2>
+            <p className="personal-start-offer-lead">{s.offerLead}</p>
+          </div>
+        </section>
+
+        <section className="coaching-directions" aria-labelledby="included-title">
+          <h2 id="included-title">{s.includedTitle}</h2>
           <ul>
-            {areas.map((item) => (
-              <li key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+            {included.map((item) => (
+              <li key={item}>
+                <p>{item}</p>
               </li>
             ))}
           </ul>
@@ -88,7 +96,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           <ContactForm
             kind="consultation"
             locale={locale}
-            subjectPrefix="BALANS consultation"
+            subjectPrefix="BALANS Personal Start"
             requireName
             requireEmail
             id="consultation-form"
