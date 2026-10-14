@@ -80,7 +80,7 @@ export const en = {
     authorEyebrow: "About the author",
     authorName: "Mark Borisenko",
     authorSummary:
-      "A physician with many years of clinical experience and a certified personal trainer. Worked in general surgery, pediatric surgery, pediatric urology, and ultrasound diagnostics in Russia, and as a general practitioner in Finland. I currently live and work in Slovakia while completing medical licensing, which is why the Slovak medical exam preparation platform was created.",
+      "A physician and certified personal trainer. Clinical experience in Russia and Finland; I now live and work in Slovakia. Credentials — Menno Henselmans Personal Trainer and Wageningen University & Research, Nutrition, Exercise and Sports.",
     authorMore: "More about me",
     authorP1:
       "In 1997 I graduated from the Medical Faculty of Petrozavodsk State University with a degree in Pediatrics.",
