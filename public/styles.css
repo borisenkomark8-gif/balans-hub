@@ -448,6 +448,40 @@ footer p { margin: 0; }
 .services-related { margin: 0 0 1.5rem; }
 .services-related a { color: var(--blue); font-weight: 700; }
 .services-related a:hover, .services-related a:focus-visible { color: var(--ink); }
+.personal-start-offer { margin: 0 0 1.25rem; }
+.personal-start-offer-card {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(8, 27, 46, 0.12);
+  border-radius: 1rem;
+  background: linear-gradient(165deg, rgba(117, 221, 255, 0.08), rgba(255, 255, 255, 0.92));
+}
+.personal-start-price {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+}
+.personal-start-offer-name {
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.personal-start-offer-amount {
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -.02em;
+}
+.personal-start-offer-lead {
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.5;
+  max-width: 40rem;
+}
 .inquiry-consent {
   display: grid !important;
   grid-template-columns: auto 1fr;
