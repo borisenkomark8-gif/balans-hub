@@ -14,6 +14,11 @@ export function balansAppHomeUrl(locale: Locale | string) {
   return `${BALANS_APP_ORIGIN}/${balansAppLocale(locale)}`;
 }
 
+/** Beginner intro path in the live app. */
+export function balansAppStartUrl(locale: Locale | string) {
+  return `${balansAppHomeUrl(locale)}/start`;
+}
+
 /** Legacy Hub /balans/[slug] bookmarks → app paths. */
 const SLUG_TO_APP_PATH: Record<string, string> = {
   assessment: "/assessment",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "@/app/components/language-switcher";
-import { balansAppHomeUrl } from "@/lib/balans-app";
+import { balansAppStartUrl } from "@/lib/balans-app";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getMessages, localePath } from "@/lib/i18n/get-messages";
 
@@ -32,7 +32,7 @@ export default async function BalansPage({ params }: { params: Promise<{ locale:
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;
   const t = getMessages(locale);
-  const appUrl = balansAppHomeUrl(locale);
+  const appUrl = balansAppStartUrl(locale);
 
   return (
     <div className="balans-entry">
