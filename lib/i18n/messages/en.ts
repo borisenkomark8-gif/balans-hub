@@ -296,9 +296,9 @@ export const en = {
     homeAria: "Hub home",
     eyebrow: "A normal lifestyle",
     lead:
-      "A short intro path: nutrition, training, goals, and first actions — no questionnaire. Then the full tool library is available.",
-    openApp: "Start in BALANS",
-    openNote: "Opens the short BALANS intro path on balans-gamma.vercel.app with your selected language.",
+      "Assessment, tracking, progress, knowledge, and training — in one app. All tools open in BALANS.",
+    openApp: "Open BALANS",
+    openNote: "The app opens at balans-gamma.vercel.app with your selected language.",
     backHub: "← Back to Hub",
     footerDisclaimer:
       "Information is educational and does not replace a medical consultation.",
