@@ -15,144 +15,144 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
-    id: "bproad-bp",
+    id: "cagrisema-semaglutide",
     category: "medicine",
-    date: "2026-10-01",
+    date: "2026-10-02",
     featured: true,
-    dateLabel: { ru: "1 октября 2026", en: "1 October 2026" },
+    dateLabel: { ru: "2 октября 2026", en: "2 October 2026" },
     title: {
-      ru: "Интенсивный контроль давления при СД2 снизил крупные сердечно-сосудистые события",
-      en: "Intensive blood-pressure control in type 2 diabetes cut major cardiovascular events",
+      ru: "Кагрилинтид с семаглутидом снизил вес сильнее, чем семаглутид 2,4 мг",
+      en: "Cagrilintide plus semaglutide produced more weight loss than semaglutide 2.4 mg",
     },
     happened: {
-      ru: " В исследовании BPROAD 12 821 взрослых 50 лет и старше с сахарным диабетом 2-го типа и повышенным сердечно-сосудистым риском сравнили целевое систолическое давление ниже 120 мм рт. ст. и ниже 140 мм рт. ст. За медиану наблюдения 4,2 года комбинированная точка (нефатальный инсульт или инфаркт, госпитализация/лечение сердечной недостаточности, сердечно-сосудистая смерть) встречалась реже при интенсивной стратегии: 1,65 против 2,09 событий на 100 человеко-лет (ОР 0,79).",
-      en: " In BPROAD, 12,821 adults aged 50+ with type 2 diabetes and elevated cardiovascular risk were assigned to systolic targets below 120 mm Hg versus below 140 mm Hg. Over a median 4.2 years, the composite of nonfatal stroke or myocardial infarction, heart-failure treatment or hospitalization, or cardiovascular death was lower with intensive control: 1.65 vs 2.09 events per 100 person-years (HR 0.79).",
+      ru: " Систематический обзор пяти рандомизированных исследований (4746 участников) сравнил CagriSema — фиксированную комбинацию кагрилинтида и семаглутида — с семаглутидом 2,4 мг у взрослых с избыточной массой тела или ожирением, с сахарным диабетом 2-го типа и без него. Комбинация дала большее снижение веса: средняя разница −6,89 процентного пункта (95% ДИ −8,70 до −5,06), около −7,16 кг и −2,41 кг/м² по ИМТ. Шанс снижения веса на 20% и более был примерно вдвое выше (ОР 2,10). Дополнительного снижения HbA1c не было: разница −0,07 процентного пункта (95% ДИ −0,14 до 0,01); интервал для глюкозы натощак тоже лежал внутри заранее заданного порога значимости. Реакции в месте инъекции встречались чаще (ОР 3,14; 95% ДИ 1,42–6,96). Желудочно-кишечные нежелательные явления значимо не участились (ОР 1,09; 95% ДИ 0,97–1,21).",
+      en: " A systematic review of five randomized trials (4,746 participants) compared CagriSema, a fixed-dose combination of cagrilintide and semaglutide, with semaglutide 2.4 mg in adults with overweight or obesity, with or without type 2 diabetes. The combination produced greater weight loss: mean difference −6.89 percentage points (95% CI −8.70 to −5.06), about −7.16 kg, and −2.41 kg/m² of BMI. The chance of losing at least 20% of body weight was about twice as high (RR 2.10). There was no additional HbA1c reduction: difference −0.07 percentage points (95% CI −0.14 to 0.01); the fasting-glucose interval also lay inside a prespecified threshold of importance. Injection-site reactions were more common (RR 3.14; 95% CI 1.42 to 6.96). Gastrointestinal adverse events were not significantly more frequent (RR 1.09; 95% CI 0.97 to 1.21).",
     },
     means: {
-      ru: " Для части пациентов с СД2 более жёсткая цель по систолическому давлению может снижать крупные сердечно-сосудистые исходы. Решение о цели давления остаётся индивидуальным: учитывают переносимость, риск гипотонии, почечную функцию и действующие рекомендации, а не «универсальную» цифру для всех.",
-      en: " For some people with type 2 diabetes, a tighter systolic target may reduce major cardiovascular events. The blood-pressure goal remains individual: tolerability, hypotension risk, kidney function, and current guidelines matter more than one universal number.",
+      ru: " Это сравнение лекарств в исследованиях, а не повод менять терапию самостоятельно. Дополнительное снижение веса выглядит заметным, но устойчивость результата, сердечно-сосудистые исходы и состав тела ещё не определены. Выбор препарата остаётся за врачом — с учётом показаний и переносимости.",
+      en: " This is a comparison of medicines in trials, not a reason to change treatment on your own. The extra weight loss looks meaningful, but durability, cardiovascular outcomes, and body composition are still unknown. Drug choice stays with a clinician, based on indications and tolerability.",
     },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/39555827/",
-    sourceKind: "pubmed",
-  },
-  {
-    id: "digital-diabetes-education",
-    category: "medicine",
-    date: "2026-10-09",
-    dateLabel: { ru: "9 октября 2026", en: "9 October 2026" },
-    title: {
-      ru: "Цифровое обучение с «подталкиваниями» улучшило контроль при СД2 за 12 недель",
-      en: "Digital education with behavioral nudges improved type 2 diabetes control in 12 weeks",
-    },
-    happened: {
-      ru: " В многоцентровом рандомизированном исследовании 293 взрослых с сахарным диабетом 2-го типа сравнили стандартное цифровое обучение и программу с поведенческими «подталкиваниями». К 12-й неделе в группе вмешательства сильнее снизились HbA1c (скорректированная разница −0,38%), гликемия натощак, вес, ИМТ, артериальное давление и общий холестерин; также улучшились самоконтроль, самоэффективность и сила привычек.",
-      en: " In a multicenter randomized trial of 293 adults with type 2 diabetes, standard digital education was compared with a program that added behavioral nudges. By 12 weeks the intervention arm had greater reductions in HbA1c (adjusted difference −0.38%), fasting glucose, weight, BMI, blood pressure, and total cholesterol, plus better self-management, self-efficacy, and habit strength.",
-    },
-    means: {
-      ru: " Структурированное цифровое обучение может усиливать привычки самоконтроля, но это дополнение к лечению, а не замена лекарств и очной помощи. Нужны более длинные наблюдения, прежде чем переносить эффект на годы.",
-      en: " Structured digital education can strengthen self-management habits, but it complements care rather than replacing medicines or in-person support. Longer follow-up is needed before assuming lasting benefit.",
-    },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42695340/",
-    sourceKind: "pubmed",
-  },
-  {
-    id: "exercise-nutrition-hypertension",
-    category: "medicine",
-    date: "2026-10-08",
-    dateLabel: { ru: "8 октября 2026", en: "8 October 2026" },
-    title: {
-      ru: "Тренировки плюс консультации по питанию сильнее снизили глюкозу у пожилых с АГ",
-      en: "Exercise plus nutrition counseling lowered fasting glucose more in older adults with hypertension",
-    },
-    happened: {
-      ru: " В прагматичном рандомизированном исследовании 32 участников 50–80 лет с артериальной гипертензией сравнили комбинированные тренировки дважды в неделю и те же тренировки плюс шесть групповых консультаций по питанию без ограничения калорий. За 12 недель глюкоза натощак была ниже при добавлении питания (−10 мг/дл; p = 0,004). Систолическое давление снизилось внутри группы с консультациями, но между группами значимой разницы не было.",
-      en: " In a pragmatic randomized trial, 32 adults aged 50–80 with hypertension did twice-weekly combined exercise alone or the same training plus six group nutrition counseling sessions without calorie restriction. Over 12 weeks, fasting glucose was lower with added counseling (−10 mg/dL; p = 0.004). Systolic pressure fell within the counseling arm, but the between-group blood-pressure difference was not significant.",
-    },
-    means: {
-      ru: " Даже без жёсткой диеты акцент на качестве пищи рядом с регулярной нагрузкой может улучшать гликемию у пожилых с гипертензией. Выбор формата консультаций и безопасность тренировок нужно подбирать индивидуально.",
-      en: " Even without a strict diet, focusing on food quality alongside regular training may improve glycemia in older adults with hypertension. Counseling format and exercise safety still need individual tailoring.",
-    },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42693257/",
-    sourceKind: "pubmed",
-  },
-  {
-    id: "protein-frail-rt",
-    category: "nutrition",
-    date: "2026-10-05",
-    dateLabel: { ru: "5 октября 2026", en: "5 October 2026" },
-    title: {
-      ru: "Добавка белка при силовых тренировках у frail пожилых: эффект зависел от исходного рациона",
-      en: "Protein with resistance training in frail older adults: benefit depended on baseline intake",
-    },
-    happened: {
-      ru: " В рандомизированном исследовании frail пожилых (средний возраст 73,9 года) силовые тренировки до мышечного отказа сочетали с консультациями и сывороточным белком для достижения 1,2–1,5 г/кг/сутки либо оставили только тренировки. В целом сила жима ногами, мышечная масса и физическая работоспособность не выросли значимо сильнее в группе белка. В разведочном анализе больший прирост силы был у тех, кто до исследования ел меньше 1,2 г белка/кг/сутки, особенно при потреблении ниже 0,8 г/кг.",
-      en: " In a randomized trial of frail older adults (mean age 73.9), resistance training to failure was paired with counseling and whey to reach 1.2–1.5 g/kg/day protein, or training alone. Overall, leg-press strength, lean mass, and physical performance did not improve significantly more with protein. Exploratory analyses found larger strength gains when baseline intake was below 1.2 g/kg/day, especially below 0.8 g/kg.",
-    },
-    means: {
-      ru: " Для frail пожилых сначала имеет смысл закрыть дефицит белка в рационе, а не автоматически «добавлять ещё» при уже достаточном потреблении. Вывод о подгруппах требует подтверждения в более крупных исследованиях.",
-      en: " For frail older adults, closing a true protein gap may matter more than automatically adding more when intake is already adequate. The subgroup signal needs confirmation in larger trials.",
-    },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/41931963/",
-    sourceKind: "pubmed",
-  },
-  {
-    id: "whey-rt-older-nma",
-    category: "nutrition",
-    date: "2026-10-03",
-    dateLabel: { ru: "3 октября 2026", en: "3 October 2026" },
-    title: {
-      ru: "Сывороточный белок плюс силовые тренировки — лидер сети метаанализов у пожилых",
-      en: "Whey protein plus resistance training led a network meta-analysis in older adults",
-    },
-    happened: {
-      ru: " Сетевой метаанализ 235 рандомизированных исследований (20 980 нетренированных пожилых) сравнил сочетания источников белка и видов нагрузки. Лучшие оценки по мышечной массе и силе ног получила комбинация сывороточного белка и силовых тренировок (крупные эффекты, умеренная уверенность). Для показателей мобильности — подъём со стула, timed up and go — чаще лидировал сывороточный белок с многокомпонентными тренировками.",
-      en: " A network meta-analysis of 235 randomized trials (20,980 untrained older adults) compared protein sources with resistance, aerobic, or multicomponent training. Whey plus resistance training ranked best for muscle mass and leg strength (large effects, moderate certainty). For mobility outcomes such as chair rise and timed up and go, whey plus multicomponent training often ranked highest.",
-    },
-    means: {
-      ru: " Для пожилых без регулярных тренировок практичный ориентир — силовая или многокомпонентная нагрузка и достаточный белок, часто в форме удобного сывороточного источника. Это обобщение исследований, а не назначение добавок «всем подряд».",
-      en: " For previously untrained older adults, a practical pattern is resistance or multicomponent training plus adequate protein, often as a convenient whey source. This is a research synthesis, not a prescription of supplements for everyone.",
-    },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42124009/",
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42890523/",
     sourceKind: "meta",
   },
   {
-    id: "exercise-hba1c-dose",
+    id: "hyper-mastic-bp",
+    category: "medicine",
+    date: "2026-10-16",
+    dateLabel: { ru: "16 октября 2026", en: "16 October 2026" },
+    title: {
+      ru: "Мастика хиосская не снизила суточное давление при уже контролируемой гипертензии",
+      en: "Chios mastic did not lower 24-hour blood pressure in already controlled hypertension",
+    },
+    happened: {
+      ru: " В двойном слепом исследовании HYPER-MASTIC 106 взрослых со стабильной контролируемой гипертензией 3 месяца получали мастику хиосскую — 1500 или 2800 мг/сутки — либо плацебо. Суточное систолическое и диастолическое давление, главные точки, между группами значимо не различались. Маркеры окислительного стресса и активность протеасомы тоже не изменились. В подгруппе более высокого риска появились отличия транскриптома, в том числе в путях, связанных с контактами эндотелия.",
+      en: " In the double-blind HYPER-MASTIC trial, 106 adults with stable, well-controlled hypertension took Chios mastic at 1,500 or 2,800 mg/day, or placebo, for 3 months. Twenty-four-hour systolic and diastolic pressure, the primary endpoints, did not differ significantly between groups. Oxidative-stress markers and proteasome activity were also unchanged. In a higher-risk subgroup, transcriptomic differences appeared, including pathways related to endothelial junctions.",
+    },
+    means: {
+      ru: " Если давление уже контролируется, добавка мастики не выглядит способом дополнительно его снизить. Транскриптомные сдвиги в подгруппе — повод для новых исследований, а не основание принимать смолу. Лечение гипертензии по этой работе не меняют.",
+      en: " When blood pressure is already controlled, mastic does not look like a way to lower it further. Transcriptomic shifts in a subgroup are a reason for more research, not a reason to take the resin. This trial does not change hypertension treatment.",
+    },
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42885189/",
+    sourceKind: "pubmed",
+  },
+  {
+    id: "oa-vitamins-exercise",
+    category: "medicine",
+    date: "2026-10-16",
+    dateLabel: { ru: "16 октября 2026", en: "16 October 2026" },
+    title: {
+      ru: "Витамин D3 или E не усилил эффект домашних упражнений при артрозе колена",
+      en: "Active vitamin D3 or vitamin E did not add to home exercise for knee osteoarthritis",
+    },
+    happened: {
+      ru: " В пилотном рандомизированном исследовании 88 женщин в постменопаузе с артрозом колена (степень Келлгрена–Лоуренса 2–4, средний возраст 71,9 года) 24 недели делали изометрические упражнения для ног дважды в день: только упражнения, упражнения плюс активный витамин D3 или упражнения плюс витамин E. Наблюдение завершили 80 участниц. Во всех группах улучшились симптомы по шкале JKOM, сила квадрицепса и тест ходьбы на 10 метров. Между группами значимой разницы по симптомам, силе и физической работоспособности не было.",
+      en: " In a pilot randomized trial, 88 postmenopausal women with knee osteoarthritis (Kellgren–Lawrence grade 2–4, mean age 71.9) did isometric lower-limb exercises twice a day for 24 weeks: exercise alone, exercise plus active vitamin D3, or exercise plus vitamin E. Eighty participants completed follow-up. Every group improved JKOM symptoms, quadriceps strength, and the 10-meter walk. Symptoms, strength, and physical performance did not differ significantly between groups.",
+    },
+    means: {
+      ru: " В этом исследовании симптомы и функцию улучшала регулярная нагрузка, а не добавление витамина D3 или E. Это не отменяет лечение подтверждённого дефицита витамина D и не заменяет индивидуальный план при артрозе.",
+      en: " In this trial, regular exercise improved symptoms and function, and adding vitamin D3 or E did not. That does not set aside treatment of a confirmed vitamin D deficiency, and it does not replace an individual plan for osteoarthritis.",
+    },
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42888606/",
+    sourceKind: "pubmed",
+  },
+  {
+    id: "soy-menopause-diet",
+    category: "nutrition",
+    date: "2026-09-25",
+    dateLabel: { ru: "25 сентября 2026", en: "25 September 2026" },
+    title: {
+      ru: "Соевые продукты могут смягчать приливы, но уверенность в эффекте очень низкая",
+      en: "Soy foods may ease hot flashes, but certainty in the effect is very low",
+    },
+    happened: {
+      ru: " Систематический обзор 15 рандомизированных исследований (1952 женщины 40–65 лет) оценил цельные продукты и модели питания, без испытаний одних только добавок. Соевые вмешательства снижали частоту и тяжесть приливов (стандартизированная разница средних −0,79; 95% ДИ −1,34 до −0,23; 4 исследования, 206 участниц), но не общий балл вазомоторных симптомов (−0,43; 95% ДИ −1,12 до 0,26) и не психологические исходы (−0,21; 95% ДИ −0,47 до 0,05). Общая уверенность по GRADE — очень низкая.",
+      en: " A systematic review of 15 randomized trials (1,952 women aged 40–65) assessed whole foods and dietary patterns, not supplement-only trials. Soy interventions reduced hot-flash frequency and severity (standardized mean difference −0.79; 95% CI −1.34 to −0.23; 4 trials, 206 participants), but not the overall vasomotor score (−0.43; 95% CI −1.12 to 0.26) or psychological outcomes (−0.21; 95% CI −0.47 to 0.05). Overall GRADE certainty was very low.",
+    },
+    means: {
+      ru: " Соевые продукты можно оставить в рационе, если они подходят по переносимости. Ждать от них замены менопаузальной гормональной терапии или предсказуемого снятия всех симптомов нельзя: выборка по приливам небольшая, а разброс результатов большой. Тема разобрана по открытой странице Examine и самой статье, без платного пересказа.",
+      en: " Soy foods can stay in the diet when they are tolerated. They are not a substitute for menopausal hormone therapy, and they do not predictably clear every symptom: the hot-flash sample is small and the results are scattered. The topic follows a free Examine page and the paper itself, not a paid summary.",
+    },
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42790873/",
+    sourceKind: "meta",
+  },
+  {
+    id: "protein-leucine-adf",
+    category: "nutrition",
+    date: "2026-10-02",
+    dateLabel: { ru: "2 октября 2026", en: "2 October 2026" },
+    title: {
+      ru: "Белок и лейцин не улучшили состав тела при коротком питании через день",
+      en: "Protein and leucine did not improve body composition during short alternate-day fasting",
+    },
+    happened: {
+      ru: " В рандомизированном исследовании 61 мужчина старшего возраста с ИМТ от 23 кг/м² 28 дней питался через день. Добавки уравняли по калориям: контроль без белка и лейцина, лейцин 0,08 г/кг или белок 0,4 г/кг плюс лейцин 0,04 г/кг; в дни приёма пищи было три дозы, в дни голодания — одна. По составу тела взаимодействия группы и времени не было. Значимые различия между группами нашлись для диастолического давления и холестерина ЛПВП. В среднем за четыре недели снизились масса тела и ряд липидов, а сила и функциональные показатели выросли независимо от вида добавки.",
+      en: " In a randomized trial, 61 older men with BMI at least 23 kg/m² followed alternate-day fasting for 28 days. Supplements were calorie-matched: a control with no protein or leucine, leucine at 0.08 g/kg, or protein at 0.4 g/kg plus leucine at 0.04 g/kg, with three doses on feeding days and one on fasting days. There was no group-by-time interaction for body composition. Significant between-group differences appeared for diastolic pressure and HDL cholesterol. Over four weeks, body mass and several lipids fell on average, while strength and function rose regardless of the supplement.",
+    },
+    means: {
+      ru: " На коротком отрезке питания через день калорийно равная добавка белка или лейцина не дала дополнительного выигрыша по составу тела. Это не отменяет обычную норму белка в рационе и не описывает более длинные схемы снижения веса.",
+      en: " Over a short alternate-day fast, a calorie-matched protein or leucine supplement did not add a body-composition benefit. This does not remove the case for adequate protein in a usual diet, and it does not describe longer weight-loss plans.",
+    },
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42884706/",
+    sourceKind: "pubmed",
+  },
+  {
+    id: "frequency-set-distribution",
+    category: "training",
+    date: "2026-09-08",
+    dateLabel: { ru: "8 сентября 2026", en: "8 September 2026" },
+    title: {
+      ru: "Три тренировки вместо одной повысили объём работы, но не толщину мышцы",
+      en: "Three sessions instead of one raised work volume, but not muscle thickness",
+    },
+    happened: {
+      ru: " В исследовании 18 тренированных мужчин 6 недель тренировали ноги: присед, жим ногами и разгибания. На каждое упражнение было 3 подхода в неделю до концентрического отказа при 80% исходного 1ПМ — либо все подходы в одном занятии, либо те же подходы в трёх занятиях. При трёх занятиях объём (вес × повторения) был выше: +58% в приседе и +76% в жиме ногами. Сила и толщина квадрицепса выросли в обеих группах без значимой разницы между схемами.",
+      en: " In a study of 18 trained men, lower-body training lasted 6 weeks: back squat, leg press, and leg extension. Each exercise used 3 weekly sets to concentric failure at 80% of pretest 1RM, either all in one session or the same sets across three sessions. Three sessions produced more volume load (weight × reps): +58% in the squat and +76% in the leg press. Strength and quadriceps thickness rose in both groups, with no significant difference between schedules.",
+    },
+    means: {
+      ru: " При одном и том же числе подходов более частые занятия помогли сделать больше повторений, но за 6 недель это не дало большей толщины мышцы. Частоту разумно подбирать под восстановление и расписание. Практический смысл совпадает с публичным разбором MASS: частота распределяет объём, а не работает как отдельный ускоритель роста. Закрытый текст выпуска не использовался.",
+      en: " With the same number of sets, more frequent sessions helped complete more reps, but that did not produce thicker muscle over 6 weeks. Frequency is reasonably chosen around recovery and schedule. The practical reading matches the public MASS discussion: frequency distributes volume rather than acting as a separate growth accelerator. Paywalled issue text was not used.",
+    },
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42709978/",
+    sourceKind: "pubmed",
+  },
+  {
+    id: "exercise-frailty-modalities",
     category: "training",
     date: "2026-10-02",
     dateLabel: { ru: "2 октября 2026", en: "2 October 2026" },
     title: {
-      ru: "При СД2 основная польза тренировок для HbA1c набирается около 600 MET-мин/неделю",
-      en: "In type 2 diabetes, most exercise benefit for HbA1c appears around 600 MET-min/week",
+      ru: "Силовые тренировки связаны с меньшими баллами хрупкости, но данные неоднородны",
+      en: "Resistance training was linked to lower frailty scores, but the evidence is heterogeneous",
     },
     happened: {
-      ru: " Систематический обзор с сетевым и дозозависимым метаанализом включил 127 рандомизированных исследований и 8744 взрослых с сахарным диабетом 2-го типа. По снижению HbA1c выше ранжировались комбинированные mind-body силовые схемы и HIIT. Дозовая кривая была L-образной: основная клиническая польза достигалась около 600 MET-мин/неделю (средняя разница −0,57%), а после примерно 1000 MET-мин/неделю прирост эффекта заметно ослабевал.",
-      en: " A systematic review with network and dose-response meta-analyses included 127 randomized trials and 8,744 adults with type 2 diabetes. Combined mind-body resistance formats and HIIT ranked highest for HbA1c reduction. The dose curve was L-shaped: most clinical benefit appeared around 600 MET-min/week (mean difference −0.57%), with diminishing returns beyond roughly 1,000 MET-min/week.",
+      ru: " Метаанализ 10 статей (13 сравнений, 1361 наблюдение: 682 в группах упражнений и 679 в контроле) оценил силовые тренировки, ходьбу и тайцзи по отдельности. В целом упражнения были связаны с более низкими баллами хрупкости (стандартизированная разница средних −0,57; 95% ДИ −0,91 до −0,24), но неоднородность высокая (I² = 88%), а прогнозный интервал пересекает ноль. Для силовых сравнений оценка была значимой (−0,78; 95% ДИ −1,22 до −0,35). Для ходьбы и тайцзи оценки были неточными и статистически не значимыми. Прямого сравнения форматов между собой не было.",
+      en: " A meta-analysis of 10 articles (13 comparisons, 1,361 observations: 682 in exercise groups and 679 in control) assessed resistance training, walking, and Tai Chi separately. Overall, exercise was associated with lower frailty scores (standardized mean difference −0.57; 95% CI −0.91 to −0.24), but heterogeneity was high (I² = 88%) and the prediction interval crossed zero. Resistance-training comparisons had a significant estimate (−0.78; 95% CI −1.22 to −0.35). Walking and Tai Chi estimates were imprecise and not statistically significant. The formats were not compared head to head.",
     },
     means: {
-      ru: " Регулярность и достижение умеренного недельного объёма важнее погони за экстремальными объёмами. Выбор формата (в том числе HIIT) должен учитывать безопасность, сопутствующие болезни и переносимость.",
-      en: " Consistency and reaching a moderate weekly volume matter more than chasing extreme volumes. Modality choice, including HIIT, still depends on safety, comorbidities, and tolerance.",
+      ru: " Из трёх разобранных форматов силовая нагрузка выглядит наиболее подкреплённой, но обзор не доказывает, что она лучше ходьбы или тайцзи. Из-за разброса исследований одну «лучшую дозу» вывести нельзя. Формат стоит выбирать по переносимости и по тому, что человек готов делать постоянно.",
+      en: " Of the three formats reviewed, resistance training looks the best supported, but the review does not show that it beats walking or Tai Chi. The scatter across trials does not yield one best dose. Format is better chosen by tolerance and by what a person will keep doing.",
     },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42310699/",
+    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/42891303/",
     sourceKind: "meta",
-  },
-  {
-    id: "protein-meal-frequency",
-    category: "training",
-    date: "2026-09-28",
-    dateLabel: { ru: "28 сентября 2026", en: "28 September 2026" },
-    title: {
-      ru: "Три или пять белковых приёмов в день одинаково поддерживали рост силы и массы",
-      en: "Three or five high-protein meals a day supported similar strength and mass gains",
-    },
-    happened: {
-      ru: " В рандомизированном исследовании 32 молодых мужчин с опытом силовых тренировок сравнили распределение белка на три или пять приёмов с порцией больше 0,24 г/кг при одинаковом суточном белке. За 8 недель обе группы увеличили тощую массу, площадь сечения vastus lateralis и силу разгибания колена без значимых различий между схемами распределения.",
-      en: " In a randomized study of 32 young resistance-trained men, protein was distributed across three or five meals above 0.24 g/kg per meal with similar daily totals. Over 8 weeks both groups increased lean mass, vastus lateralis cross-sectional area, and knee-extension strength, with no meaningful between-group differences.",
-    },
-    means: {
-      ru: " При достаточном суточном белке и нормальной калорийности дробление на 3 или 5 «белковых» приёмов не выглядит критичным для набора силы и массы у тренированных молодых мужчин. Удобство рациона важнее жёсткого числа приёмов.",
-      en: " With adequate daily protein and energy intake, splitting intake into three versus five high-protein meals does not appear critical for mass and strength gains in trained young men. Practical meal patterns matter more than a rigid feeding count.",
-    },
-    sourceHref: "https://pubmed.ncbi.nlm.nih.gov/40673785/",
-    sourceKind: "pubmed",
   },
 ];
