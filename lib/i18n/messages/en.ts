@@ -65,7 +65,7 @@ export const en = {
     examTopic3: "Dictionary",
     examAction: "Open project ",
     examAria: "Open MED EXAM",
-    newsUpdated: "Updated 12 October 2026",
+    newsUpdated: "Updated 25 October 2026",
     newsEyebrow: "News feed",
     newsTitle: "What is new in health and medicine",
     newsLead:
@@ -265,7 +265,7 @@ export const en = {
     metaTitle: "Health and medicine news — BALANS",
     metaDescription:
       "BALANS news: short reviews of important updates in medicine, nutrition, and training.",
-    updated: "Updated 12 October 2026",
+    updated: "Updated 25 October 2026",
     title: "What is new in health and medicine",
     lead:
       "I briefly review studies and important updates, separating recommendations that are already usable from findings that still need confirmation.",
@@ -274,7 +274,7 @@ export const en = {
     filterNutrition: "Nutrition · 2",
     filterTraining: "Training · 2",
     issueNote:
-      "Issue of 12 October 2026: publications from late September through early October. Dates and conclusions checked against primary sources.",
+      "Issue of 25 October 2026: open material from late September through October. Dates and conclusions checked against primary sources.",
     feedAria: "News",
     categoryMedicine: "Medicine",
     categoryNutrition: "Nutrition",
@@ -284,6 +284,7 @@ export const en = {
     sourcePubMed: "Study on PubMed ",
     sourceCochrane: "Cochrane review on PubMed ",
     sourceMeta: "Meta-analysis on PubMed ",
+    sourceMass: "Public MASS article ",
     disclaimerStrong: "Important.",
     disclaimer:
       " The feed is educational. A research news item is not an individual recommendation and does not replace a medical consultation.",

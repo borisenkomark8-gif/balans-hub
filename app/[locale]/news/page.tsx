@@ -44,6 +44,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
     pubmed: t.news.sourcePubMed,
     cochrane: t.news.sourceCochrane,
     meta: t.news.sourceMeta,
+    mass: t.news.sourceMass,
   };
 
   return (
